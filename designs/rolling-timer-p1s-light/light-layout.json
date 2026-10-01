@@ -1,0 +1,73 @@
+{
+  "variant": "Dedicated 16:1 lightweight carrier; no mounting grid",
+  "frame_post_xy_mm": [
+    [
+      -76,
+      -52
+    ],
+    [
+      32,
+      -50
+    ],
+    [
+      -26,
+      55
+    ]
+  ],
+  "frame_post_quantity": 3,
+  "axes_xy_mm": {
+    "A": [
+      0,
+      0
+    ],
+    "B": [
+      -56.25,
+      0.0
+    ],
+    "C": [
+      -25.0,
+      -46.770717334674266
+    ],
+    "P": [
+      -25.0,
+      -94.8539784553595
+    ]
+  },
+  "bowl_bolt_xy_mm": [
+    [
+      -40,
+      55
+    ],
+    [
+      40,
+      55
+    ]
+  ],
+  "lower_rest_xy_mm": [
+    [
+      -40,
+      80
+    ],
+    [
+      40,
+      80
+    ]
+  ],
+  "bowl_fasteners": "2 x M3x10 cap/pan-head screws and 2 x plain M3 nuts",
+  "bolt_clearance_diameter_mm": 3.4,
+  "head_recess_diameter_mm": 7,
+  "head_seat_z_mm": 70.5,
+  "nut_bearing_face_z_mm": 63.6,
+  "grip_length_mm": 6.9,
+  "plain_nut_thickness_mm": 2.4,
+  "nominal_tip_beyond_nut_mm": 0.7,
+  "nut_pocket_across_flats_mm": 5.7,
+  "nut_pocket_depth_mm": 3,
+  "removed_parts": [
+    "09_bucket_pin",
+    "31_B_rear_pivot_module",
+    "32_B_front_pivot_module",
+    "33_module_pin"
+  ],
+  "note": "All gear, pendulum, main shaft and journal positions are unchanged. Frame-post XY positions are new. This is not the interchangeable grid-frame upgrade."
+}

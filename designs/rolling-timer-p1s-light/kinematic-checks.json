@@ -1,0 +1,17 @@
+{
+  "pendulum_period_s": 0.7506014214242075,
+  "beat_s": 0.37530071071210375,
+  "nominal_run_s": 477.847706045862,
+  "drum_rotation_s": 360.2886822836196,
+  "mm_per_beat": 0.7853981633974482,
+  "five_minute_distance_mm": 627.8150887915053,
+  "escapement_tip_penetration_mm": 1.9233254007988336e-05,
+  "spur_penetration_mm": 0,
+  "escape_cycle_advance_degrees": 12.00002343548362,
+  "gear_centre_distance_mm": 56.25,
+  "nominal_input_torque_Nm": 0.11074581626281349,
+  "ideal_escape_torque_Nm": 0.006921613516425843,
+  "ballast_offset_uphill_mm": 18.815123388177625,
+  "torque_example_assumed_mass_kg": 0.9,
+  "torque_example_assumed_slope_deg": 6
+}

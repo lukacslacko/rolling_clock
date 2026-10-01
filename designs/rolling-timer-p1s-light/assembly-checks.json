@@ -1,0 +1,8 @@
+{
+  "unintended_intersections": [],
+  "nominal_pose_checked": true,
+  "max_print_dimension_mm": 240,
+  "all_meshes_watertight": true,
+  "assembly_instances_including_hardware": 43,
+  "printed_instances": 39
+}

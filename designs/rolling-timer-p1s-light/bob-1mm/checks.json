@@ -1,0 +1,60 @@
+{
+  "revision": "1 mm outer walls / 2026-10-01",
+  "parts": {
+    "25_open_pendulum_bob_1mm": {
+      "dimensions_mm": [
+        31.2,
+        13.2,
+        24.0
+      ],
+      "volume_cm3": 4.01736,
+      "watertight": true,
+      "single_body": true
+    },
+    "26_bob_pin_short": {
+      "dimensions_mm": [
+        5.4,
+        5.4,
+        14.8
+      ],
+      "volume_cm3": 0.12374,
+      "watertight": true,
+      "single_body": true
+    }
+  },
+  "wall_thickness_mm": {
+    "left": 1.0,
+    "right": 1.0,
+    "rear": 1.0,
+    "front": 1.0,
+    "floor": 2.4000000000000057
+  },
+  "rod_slot_mm": [
+    7.4,
+    6.6
+  ],
+  "pin_hole_diameter_mm": 3.1,
+  "pin_shank_diameter_mm": 2.9,
+  "pin_shank_length_mm": 13.2,
+  "pin_overall_length_mm": 14.8,
+  "iron_pocket_capacity_cm3_old_and_new": 4.644864,
+  "pin_location_from_pendulum_pivot_mm": 150,
+  "original_source_reconstruction_difference_mm3": 0.0064234287692056915,
+  "new_volume_outside_old_exterior_envelope_mm3": 3.7600131341797294e-14,
+  "pendulum_sweep_deg": [
+    -25,
+    15
+  ],
+  "pendulum_sweep_samples": 81,
+  "nominal_clearances_mm": {
+    "bob_to_front_frame_mm": 3.4000000000000057,
+    "rear_pin_head_to_front_frame_mm": 1.7999999999999972,
+    "bob_and_pin_to_front_case_spokes_mm": 2.4000000000000057,
+    "case_post_radial_clearance_mm": 11.050418630823245,
+    "radial_separation_from_case_hub_mm": 28.907616356138384
+  },
+  "max_intersection_mm3": 0,
+  "intersections": [],
+  "drum_clearance_check": "Axial separation from spokes and radial separation from hubs/posts cover all drum angles within the checked pendulum sweep.",
+  "limits": "Ideal CAD dimensions. Existing prototype runs according to user; replacement not physically printed or tested. Does not model print error, flex, axial play or screw/assembly tolerances."
+}

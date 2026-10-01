@@ -1,0 +1,18 @@
+{
+  "spur_profile_samples": 121,
+  "max_spur_overlap_mm2": 0.0,
+  "anchor_profile_samples": 241,
+  "max_anchor_overlap_mm2": 1.8142134015923069e-09,
+  "mechanism_3d_poses": 41,
+  "pendulum_poses": 41,
+  "pendulum_angle_range_deg": [
+    -25,
+    15
+  ],
+  "pendulum_max_radius_mm": 108.09320652369904,
+  "fixed_carrier_max_radius_mm": 107.64757312638311,
+  "rotating_case_posts_inner_radius_mm": 111.25,
+  "keyed_rotor_full_turn_samples": 73,
+  "unintended_intersections": [],
+  "limitations": "Rigid CAD geometry only. No extrusion error, elastic deflection, friction, wear, carrier rocking, or operating reliability simulation."
+}

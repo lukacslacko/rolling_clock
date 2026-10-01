@@ -1,0 +1,444 @@
+{
+  "01_case_wheel": {
+    "qty": 2,
+    "print_dimensions_mm": [
+      240.0,
+      240.0,
+      10.0
+    ],
+    "solid_volume_cm3": 62.568,
+    "print_note": "Flat spokes on bed; 240 mm circle. No brim outside the rim.",
+    "color": "case",
+    "triangles": 7938,
+    "watertight": true
+  },
+  "02_case_post": {
+    "qty": 6,
+    "print_dimensions_mm": [
+      8.5,
+      8.5,
+      138.0
+    ],
+    "solid_volume_cm3": 7.531,
+    "print_note": "Upright with brim. The two case wheels capture the shoulders.",
+    "color": "case",
+    "triangles": 1148,
+    "watertight": true
+  },
+  "03_main_shaft": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      8.0,
+      140.0,
+      8.0
+    ],
+    "solid_volume_cm3": 8.125,
+    "print_note": "Lie on a long flat as exported; solid, 4-6 walls. 8 mm square with 1.4 mm corner chamfers. Clear retention holes.",
+    "color": "pins",
+    "triangles": 808,
+    "watertight": true
+  },
+  "04_main_crosspin": {
+    "qty": 3,
+    "print_dimensions_mm": [
+      6.0,
+      6.0,
+      25.6
+    ],
+    "solid_volume_cm3": 0.31,
+    "print_note": "Print upright on its head; brim. Do not force a tight pin.",
+    "color": "pins",
+    "triangles": 764,
+    "watertight": true
+  },
+  "05_rear_carrier": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      128.3,
+      188.854,
+      41.0
+    ],
+    "solid_volume_cm3": 29.434,
+    "print_note": "Dedicated light 16:1 frame. Flat outside face on bed. Integral B pivot upward.",
+    "color": "frame",
+    "triangles": 9656,
+    "watertight": true
+  },
+  "06_front_carrier": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      120.0,
+      163.854,
+      9.0
+    ],
+    "solid_volume_cm3": 20.381,
+    "print_note": "Dedicated light 16:1 frame. Outside face on bed; bearing bosses and blind B seat upward.",
+    "color": "frame",
+    "triangles": 8696,
+    "watertight": true
+  },
+  "07_carrier_post": {
+    "qty": 3,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      47.0
+    ],
+    "solid_volume_cm3": 3.029,
+    "print_note": "Same post as R2; only three needed. Upright.",
+    "color": "frame",
+    "triangles": 1148,
+    "watertight": true
+  },
+  "08_open_ballast_bucket": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      110.0,
+      60.0,
+      46.0
+    ],
+    "solid_volume_cm3": 50.415,
+    "print_note": "Open mouth upward. Two M3 nut pockets inside the upper front wall; lower pads have no fasteners.",
+    "color": "ballast",
+    "triangles": 3156,
+    "watertight": true
+  },
+  "10_drive_72": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      92.5,
+      92.5,
+      8.0
+    ],
+    "solid_volume_cm3": 17.901,
+    "print_note": "Wheel face flat on bed, hub upward.",
+    "color": "case",
+    "triangles": 13060,
+    "watertight": true
+  },
+  "11_compound_18_72": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      92.5,
+      92.5,
+      16.0
+    ],
+    "solid_volume_cm3": 21.06,
+    "print_note": "Large wheel on bed; pinion teeth run through all 16 mm so they start on the bed. Phase is built in.",
+    "color": "train",
+    "triangles": 14358,
+    "watertight": true
+  },
+  "12_escape_compound": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      67.741,
+      67.99,
+      17.0
+    ],
+    "solid_volume_cm3": 11.392,
+    "print_note": "Escape wheel on bed; pinion teeth run through all 17 mm. Preserve escape tooth tips.",
+    "color": "escape",
+    "triangles": 4734,
+    "watertight": true
+  },
+  "13_gear_pivot": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      49.0
+    ],
+    "solid_volume_cm3": 1.485,
+    "print_note": "Escape shaft only. Upright on flange, brim; solid. Both ends supported.",
+    "color": "pins",
+    "triangles": 764,
+    "watertight": true
+  },
+  "15_B_front_spacer": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      11.4
+    ],
+    "solid_volume_cm3": 0.528,
+    "print_note": "Flat annular face on bed. Keep thrust faces smooth.",
+    "color": "pins",
+    "triangles": 768,
+    "watertight": true
+  },
+  "16_C_rear_spacer": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      14.4
+    ],
+    "solid_volume_cm3": 0.667,
+    "print_note": "Flat annular face on bed. Keep thrust faces smooth.",
+    "color": "pins",
+    "triangles": 768,
+    "watertight": true
+  },
+  "17_C_front_spacer": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      4.4
+    ],
+    "solid_volume_cm3": 0.204,
+    "print_note": "Flat annular face on bed. Keep thrust faces smooth.",
+    "color": "pins",
+    "triangles": 768,
+    "watertight": true
+  },
+  "34_main_front_thrust_sleeve": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      17.6,
+      17.6,
+      19.2
+    ],
+    "solid_volume_cm3": 3.43,
+    "print_note": "Flat face on bed. Chamfered square bore keys this thrust part to the main shaft.",
+    "color": "pins",
+    "triangles": 416,
+    "watertight": true
+  },
+  "35_main_rear_thrust_washer": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      19.6,
+      19.6,
+      0.6
+    ],
+    "solid_volume_cm3": 0.142,
+    "print_note": "Flat face on bed. Chamfered square bore keys this thrust part to the main shaft.",
+    "color": "pins",
+    "triangles": 416,
+    "watertight": true
+  },
+  "18_pallet_anchor": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      66.539,
+      32.038,
+      26.0
+    ],
+    "solid_volume_cm3": 2.842,
+    "print_note": "Pallet faces flat on bed, sleeve upward. No supports on contact edges.",
+    "color": "regulator",
+    "triangles": 3944,
+    "watertight": true
+  },
+  "19_anchor_pivot": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      67.0
+    ],
+    "solid_volume_cm3": 1.993,
+    "print_note": "Upright on flange; brim, solid. Supported at rear plate and front bridge.",
+    "color": "pins",
+    "triangles": 764,
+    "watertight": true
+  },
+  "20_anchor_rear_spacer": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      9.0,
+      9.0,
+      27.4
+    ],
+    "solid_volume_cm3": 0.861,
+    "print_note": "Flat annular face on bed. Keep thrust faces smooth.",
+    "color": "pins",
+    "triangles": 768,
+    "watertight": true
+  },
+  "21_anchor_front_washer": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      9.0,
+      9.0,
+      1.4
+    ],
+    "solid_volume_cm3": 0.044,
+    "print_note": "Flat annular face on bed. Keep thrust faces smooth.",
+    "color": "pins",
+    "triangles": 768,
+    "watertight": true
+  },
+  "22_anchor_bridge": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      50.0,
+      26.0,
+      4.0
+    ],
+    "solid_volume_cm3": 2.687,
+    "print_note": "Flat on bed.",
+    "color": "frame",
+    "triangles": 2420,
+    "watertight": true
+  },
+  "23_bridge_post": {
+    "qty": 2,
+    "print_dimensions_mm": [
+      9.0,
+      9.0,
+      23.0
+    ],
+    "solid_volume_cm3": 1.003,
+    "print_note": "Upright.",
+    "color": "frame",
+    "triangles": 1148,
+    "watertight": true
+  },
+  "24_pendulum": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      26.0,
+      176.0,
+      6.0
+    ],
+    "solid_volume_cm3": 8.017,
+    "print_note": "Rod and clamp on bed; One M3\u00d716 plus nut clamps the beat.",
+    "color": "regulator",
+    "triangles": 3826,
+    "watertight": true
+  },
+  "25_open_pendulum_bob": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      34.0,
+      16.0,
+      24.0
+    ],
+    "solid_volume_cm3": 7.168,
+    "print_note": "Open mouth up. Slide over rod; set centre initially to the 150 mm hole.",
+    "color": "regulator",
+    "triangles": 840,
+    "watertight": true
+  },
+  "26_bob_pin": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      5.4,
+      5.4,
+      17.6
+    ],
+    "solid_volume_cm3": 0.142,
+    "print_note": "Print upright on its head; brim. Do not force a tight pin.",
+    "color": "pins",
+    "triangles": 764,
+    "watertight": true
+  },
+  "27_fit_coupon": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      112.0,
+      42.0,
+      5.0
+    ],
+    "solid_volume_cm3": 20.81,
+    "print_note": "Not an assembly part. Notched corner is lower-left in the fit diagram.",
+    "color": "frame",
+    "triangles": 3988,
+    "watertight": true
+  },
+  "28_fit_test_6mm": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      20.0
+    ],
+    "solid_volume_cm3": 0.666,
+    "print_note": "Coupon test shaft; upright.",
+    "color": "pins",
+    "triangles": 764,
+    "watertight": true
+  },
+  "29_fit_test_12mm": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      16.0,
+      16.0,
+      20.0
+    ],
+    "solid_volume_cm3": 2.436,
+    "print_note": "Coupon test shaft; upright.",
+    "color": "pins",
+    "triangles": 764,
+    "watertight": true
+  },
+  "30_fit_test_4mm": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      6.0,
+      6.0,
+      16.0
+    ],
+    "solid_volume_cm3": 0.232,
+    "print_note": "Coupon test pin; upright.",
+    "color": "pins",
+    "triangles": 764,
+    "watertight": true
+  },
+  "36_rear_round_journal": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      12.0,
+      12.0,
+      66.6
+    ],
+    "solid_volume_cm3": 3.234,
+    "print_note": "Upright on flat end; brim. OD 12 mm runs in existing 12.4 mm carrier bore. Square socket slides on shaft.",
+    "color": "pins",
+    "triangles": 416,
+    "watertight": true
+  },
+  "37_front_round_journal": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      12.0,
+      12.0,
+      23.6
+    ],
+    "solid_volume_cm3": 1.146,
+    "print_note": "Upright on flat end; brim. OD 12 mm runs in existing 12.4 mm carrier bore. Square socket slides on shaft.",
+    "color": "pins",
+    "triangles": 416,
+    "watertight": true
+  },
+  "38_square_fit_coupon": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      54.0,
+      20.0,
+      5.0
+    ],
+    "solid_volume_cm3": 4.398,
+    "print_note": "Not an assembly part. Notch at lower-left: 8.20, 8.30, 8.40 mm across flats, left to right.",
+    "color": "frame",
+    "triangles": 216,
+    "watertight": true
+  },
+  "39_square_fit_key": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      8.0,
+      20.0,
+      8.0
+    ],
+    "solid_volume_cm3": 1.202,
+    "print_note": "Not an assembly part. Same profile and lying-flat orientation as main shaft.",
+    "color": "pins",
+    "triangles": 28,
+    "watertight": true
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "U01_BD_rear_module": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      51.0,
+      72.0,
+      36.0
+    ],
+    "solid_volume_cm3": 7.645,
+    "print_note": "Replaces 31. Integral \u00d86 B pivot and \u00d88 cantilever D pivot.",
+    "color": "frame",
+    "triangles": 5732,
+    "watertight": true
+  },
+  "U02_B_compound": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      92.5,
+      92.5,
+      14.0
+    ],
+    "solid_volume_cm3": 20.368,
+    "print_note": "Replaces 11. Large wheel on bed; pinion above.",
+    "color": "train",
+    "triangles": 14358,
+    "watertight": true
+  },
+  "U03_D_18_36_compound": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      47.5,
+      47.5,
+      14.0
+    ],
+    "solid_volume_cm3": 9.212,
+    "print_note": "Wheel on bed. Recess in its front hub accepts the flush retaining collar.",
+    "color": "train",
+    "triangles": 9550,
+    "watertight": true
+  },
+  "U04_reversed_escape_compound": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      67.741,
+      67.99,
+      11.0
+    ],
+    "solid_volume_cm3": 9.317,
+    "print_note": "Replaces 12. Escape wheel face on bed. This wheel runs clockwise viewed from the pendulum/front side.",
+    "color": "escape",
+    "triangles": 4736,
+    "watertight": true
+  },
+  "U05_reversed_anchor": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      66.539,
+      32.038,
+      26.0
+    ],
+    "solid_volume_cm3": 2.842,
+    "print_note": "Replaces 18. Sleeve up. Mirrored pallets match the third external mesh.",
+    "color": "regulator",
+    "triangles": 3944,
+    "watertight": true
+  },
+  "U06_B_front_spacer": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      13.4
+    ],
+    "solid_volume_cm3": 0.621,
+    "print_note": "Replacement thrust spacer; flat on bed.",
+    "color": "pins",
+    "triangles": 768,
+    "watertight": true
+  },
+  "U07_C_rear_spacer": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      20.8
+    ],
+    "solid_volume_cm3": 0.964,
+    "print_note": "Replacement thrust spacer; flat on bed.",
+    "color": "pins",
+    "triangles": 768,
+    "watertight": true
+  },
+  "U08_C_front_spacer": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      10.0,
+      10.0,
+      4.8
+    ],
+    "solid_volume_cm3": 0.222,
+    "print_note": "Replacement thrust spacer; flat on bed.",
+    "color": "pins",
+    "triangles": 768,
+    "watertight": true
+  },
+  "U10_D_rear_spacer": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      11.0,
+      11.0,
+      8.8
+    ],
+    "solid_volume_cm3": 0.348,
+    "print_note": "Replacement thrust spacer; flat on bed.",
+    "color": "pins",
+    "triangles": 768,
+    "watertight": true
+  },
+  "U11_D_recessed_collar": {
+    "qty": 1,
+    "print_dimensions_mm": [
+      12.0,
+      12.0,
+      1.6
+    ],
+    "solid_volume_cm3": 0.102,
+    "print_note": "Press onto the fixed \u00d88 pivot within the gear counterbore. Top flush with pivot tip at Z99.4; preserve endplay and try fit first.",
+    "color": "pins",
+    "triangles": 768,
+    "watertight": true
+  }
+}

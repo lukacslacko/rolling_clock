@@ -1,0 +1,65 @@
+{
+  "ratio": 32,
+  "pairs": [
+    [
+      72,
+      18
+    ],
+    [
+      72,
+      18
+    ],
+    [
+      36,
+      18
+    ]
+  ],
+  "D_axis_xy_mm": [
+    -57.39485244636212,
+    -56.23834824100063
+  ],
+  "D_pivot_diameter_mm": 8,
+  "rear_module_mounts_xy_mm": [
+    [
+      -80,
+      0
+    ],
+    [
+      -60,
+      -40
+    ],
+    [
+      -40,
+      -20
+    ],
+    [
+      -80,
+      -60
+    ],
+    [
+      -40,
+      -60
+    ]
+  ],
+  "extra_part_33_pins": 2,
+  "input_to_escape_direction": "opposite; replace both escapement wheel and anchor with supplied mirrored versions",
+  "replaced_base_parts": [
+    "11_compound_18_72",
+    "12_escape_compound",
+    "18_pallet_anchor",
+    "15_B_front_spacer",
+    "16_C_rear_spacer",
+    "17_C_front_spacer",
+    "31_B_rear_pivot_module"
+  ],
+  "kept": "Both reusable plates, drum wheels and posts, main shaft, C/P shafts, front B module, pendulum and ballast bucket.",
+  "max_added_module_radius_mm": 105.49968475171747,
+  "spur_samples": 121,
+  "max_spur_overlap_mm2": 0,
+  "C_D_total_axial_endplay_mm_each": 0.4,
+  "minimum_D_gear_to_escape_wheel_axial_gap_mm_including_endplay": 0.6,
+  "unintended_nominal_intersections": [],
+  "intentional_interference": "0.1 mm diametral interference at D shaft collar; calibrate the fit.",
+  "nominal_5_min_travel_mm": 313.90754439575267,
+  "status": "Development geometry; static pose and spur meshes checked. Reversed pallet geometry is the reflection of the checked 16:1 construction. Requires printing and running trials."
+}

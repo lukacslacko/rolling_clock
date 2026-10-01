@@ -1,0 +1,461 @@
+{
+  "variant": "lightweight 16:1",
+  "meshes": [
+    {
+      "file": "01_case_wheel.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        240.0,
+        240.0,
+        10.0
+      ],
+      "volume_cm3": 62.56816135511937,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "02_case_post.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        8.5,
+        8.5,
+        138.0
+      ],
+      "volume_cm3": 7.531379557163331,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "03_main_shaft.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        8.0,
+        140.0,
+        8.0
+      ],
+      "volume_cm3": 8.12495864320525,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "04_main_crosspin.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        6.0,
+        6.0,
+        25.600000381469727
+      ],
+      "volume_cm3": 0.3100893215783784,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "05_rear_carrier.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        128.3000030517578,
+        188.85397338867188,
+        41.0
+      ],
+      "volume_cm3": 29.433714104307423,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "06_front_carrier.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        120.0,
+        163.85397338867188,
+        9.0
+      ],
+      "volume_cm3": 20.380920325571537,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "07_carrier_post.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        10.0,
+        10.0,
+        47.0
+      ],
+      "volume_cm3": 3.0294729271695306,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "08_open_ballast_bucket.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        110.0,
+        60.0,
+        46.0
+      ],
+      "volume_cm3": 50.41550697027261,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "10_drive_72.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        92.5,
+        92.5,
+        8.0
+      ],
+      "volume_cm3": 17.90057654540953,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "11_compound_18_72.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        92.5,
+        92.5,
+        16.0
+      ],
+      "volume_cm3": 21.06009106508673,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "12_escape_compound.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        67.74124145507812,
+        67.98963928222656,
+        17.0
+      ],
+      "volume_cm3": 11.39217297544353,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "13_gear_pivot.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        10.0,
+        10.0,
+        49.0
+      ],
+      "volume_cm3": 1.4849126260760543,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "15_B_front_spacer.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        10.0,
+        10.0,
+        11.399999618530273
+      ],
+      "volume_cm3": 0.5282396059328167,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "16_C_rear_spacer.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        10.0,
+        10.0,
+        14.399999618530273
+      ],
+      "volume_cm3": 0.6672500331983184,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "17_C_front_spacer.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        10.0,
+        10.0,
+        4.400000095367432
+      ],
+      "volume_cm3": 0.203881964408425,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "18_pallet_anchor.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        66.5393295288086,
+        32.03770065307617,
+        26.0
+      ],
+      "volume_cm3": 2.8421851088196766,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "19_anchor_pivot.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        10.0,
+        10.0,
+        67.0
+      ],
+      "volume_cm3": 1.9934873518028968,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "20_anchor_rear_spacer.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        9.0,
+        9.0,
+        27.399999618530273
+      ],
+      "volume_cm3": 0.8610422068354141,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "21_anchor_front_washer.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        9.0,
+        9.0,
+        1.399999976158142
+      ],
+      "volume_cm3": 0.0439948571468409,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "22_anchor_bridge.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        50.0,
+        26.0,
+        4.0
+      ],
+      "volume_cm3": 2.686523741290525,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "23_bridge_post.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        9.0,
+        9.0,
+        23.0
+      ],
+      "volume_cm3": 1.0030224367374194,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "24_pendulum.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        26.0,
+        176.0,
+        6.0
+      ],
+      "volume_cm3": 8.01688382032714,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "25_open_pendulum_bob.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        34.0,
+        16.0,
+        24.0
+      ],
+      "volume_cm3": 7.168078205240114,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "26_bob_pin.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        5.400000095367432,
+        5.400000095367432,
+        17.600000381469727
+      ],
+      "volume_cm3": 0.14222512268146048,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "27_fit_coupon.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        112.0,
+        42.0,
+        5.0
+      ],
+      "volume_cm3": 20.809642001399894,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "28_fit_test_6mm.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        10.0,
+        10.0,
+        20.0
+      ],
+      "volume_cm3": 0.6655422346272526,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "29_fit_test_12mm.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        16.0,
+        16.0,
+        20.0
+      ],
+      "volume_cm3": 2.4361357511143935,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "30_fit_test_4mm.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        6.0,
+        6.0,
+        16.0
+      ],
+      "volume_cm3": 0.2323119180421828,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "34_main_front_thrust_sleeve.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        17.600000381469727,
+        17.600000381469727,
+        19.200000762939453
+      ],
+      "volume_cm3": 3.4300568561849794,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "35_main_rear_thrust_washer.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        19.600000381469727,
+        19.600000381469727,
+        0.6000000238418579
+      ],
+      "volume_cm3": 0.14222442606232,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "36_rear_round_journal.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        66.5999984741211
+      ],
+      "volume_cm3": 3.2337039413951576,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "37_front_round_journal.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        12.0,
+        12.0,
+        23.600000381469727
+      ],
+      "volume_cm3": 1.1458771171014357,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "38_square_fit_coupon.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        54.0,
+        20.0,
+        5.0
+      ],
+      "volume_cm3": 4.397661982110277,
+      "bed_z_mm": 0.0
+    },
+    {
+      "file": "39_square_fit_key.stl",
+      "watertight": true,
+      "bodies": 1,
+      "dimensions_mm": [
+        8.0,
+        20.0,
+        8.0
+      ],
+      "volume_cm3": 1.2015999959945678,
+      "bed_z_mm": 0.0
+    }
+  ],
+  "changed_from_R2": [
+    "05_rear_carrier.stl",
+    "06_front_carrier.stl",
+    "08_open_ballast_bucket.stl"
+  ],
+  "byte_identical_to_R2": [
+    "01_case_wheel.stl",
+    "02_case_post.stl",
+    "03_main_shaft.stl",
+    "04_main_crosspin.stl",
+    "07_carrier_post.stl",
+    "10_drive_72.stl",
+    "11_compound_18_72.stl",
+    "12_escape_compound.stl",
+    "13_gear_pivot.stl",
+    "15_B_front_spacer.stl",
+    "16_C_rear_spacer.stl",
+    "17_C_front_spacer.stl",
+    "18_pallet_anchor.stl",
+    "19_anchor_pivot.stl",
+    "20_anchor_rear_spacer.stl",
+    "21_anchor_front_washer.stl",
+    "22_anchor_bridge.stl",
+    "23_bridge_post.stl",
+    "24_pendulum.stl",
+    "25_open_pendulum_bob.stl",
+    "26_bob_pin.stl",
+    "27_fit_coupon.stl",
+    "28_fit_test_6mm.stl",
+    "29_fit_test_12mm.stl",
+    "30_fit_test_4mm.stl",
+    "34_main_front_thrust_sleeve.stl",
+    "35_main_rear_thrust_washer.stl",
+    "36_rear_round_journal.stl",
+    "37_front_round_journal.stl",
+    "38_square_fit_coupon.stl",
+    "39_square_fit_key.stl"
+  ],
+  "carrier_pair_CAD_volume_cm3": 49.815,
+  "R2_grid_pair_CAD_volume_cm3": 145.20100000000002,
+  "carrier_pair_CAD_volume_reduction_percent": 65.69238503867054,
+  "bolt_grip_mm": 6.899999999999999,
+  "M3x10_tip_beyond_plain_2p4mm_nut_mm": 0.7000000000000015,
+  "printed_instances": 39,
+  "hardware_instances": 4,
+  "minimum_case_post_clearance_from_checked_fixed_envelope_mm": 3.602426873616892,
+  "all_geometric_checks_passed": true,
+  "limits": "CAD volume is not slicer time or actual filament use. No physical printing, deflection, joint strength, friction, or sustained running tests. Screw/nut meshes are threadless envelopes."
+}

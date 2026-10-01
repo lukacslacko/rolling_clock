@@ -1,0 +1,314 @@
+[
+  {
+    "name": "01_case_wheel",
+    "part": "01_case_wheel",
+    "file": "00_01_case_wheel.stl",
+    "color": "case"
+  },
+  {
+    "name": "front_case_wheel",
+    "part": "01_case_wheel",
+    "file": "01_01_case_wheel.stl",
+    "color": "case"
+  },
+  {
+    "name": "02_case_post",
+    "part": "02_case_post",
+    "file": "02_02_case_post.stl",
+    "color": "case"
+  },
+  {
+    "name": "02_case_post",
+    "part": "02_case_post",
+    "file": "03_02_case_post.stl",
+    "color": "case"
+  },
+  {
+    "name": "02_case_post",
+    "part": "02_case_post",
+    "file": "04_02_case_post.stl",
+    "color": "case"
+  },
+  {
+    "name": "02_case_post",
+    "part": "02_case_post",
+    "file": "05_02_case_post.stl",
+    "color": "case"
+  },
+  {
+    "name": "02_case_post",
+    "part": "02_case_post",
+    "file": "06_02_case_post.stl",
+    "color": "case"
+  },
+  {
+    "name": "02_case_post",
+    "part": "02_case_post",
+    "file": "07_02_case_post.stl",
+    "color": "case"
+  },
+  {
+    "name": "03_main_shaft",
+    "part": "03_main_shaft",
+    "file": "08_03_main_shaft.stl",
+    "color": "pins"
+  },
+  {
+    "name": "04_main_crosspin",
+    "part": "04_main_crosspin",
+    "file": "09_04_main_crosspin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "04_main_crosspin",
+    "part": "04_main_crosspin",
+    "file": "10_04_main_crosspin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "04_main_crosspin",
+    "part": "04_main_crosspin",
+    "file": "11_04_main_crosspin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "05_rear_carrier",
+    "part": "05_rear_carrier",
+    "file": "12_05_rear_carrier.stl",
+    "color": "frame"
+  },
+  {
+    "name": "06_front_carrier",
+    "part": "06_front_carrier",
+    "file": "13_06_front_carrier.stl",
+    "color": "frame"
+  },
+  {
+    "name": "07_carrier_post",
+    "part": "07_carrier_post",
+    "file": "14_07_carrier_post.stl",
+    "color": "frame"
+  },
+  {
+    "name": "07_carrier_post",
+    "part": "07_carrier_post",
+    "file": "15_07_carrier_post.stl",
+    "color": "frame"
+  },
+  {
+    "name": "07_carrier_post",
+    "part": "07_carrier_post",
+    "file": "16_07_carrier_post.stl",
+    "color": "frame"
+  },
+  {
+    "name": "07_carrier_post",
+    "part": "07_carrier_post",
+    "file": "17_07_carrier_post.stl",
+    "color": "frame"
+  },
+  {
+    "name": "08_open_ballast_bucket",
+    "part": "08_open_ballast_bucket",
+    "file": "18_08_open_ballast_bucket.stl",
+    "color": "ballast"
+  },
+  {
+    "name": "09_bucket_pin",
+    "part": "09_bucket_pin",
+    "file": "19_09_bucket_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "09_bucket_pin",
+    "part": "09_bucket_pin",
+    "file": "20_09_bucket_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "09_bucket_pin",
+    "part": "09_bucket_pin",
+    "file": "21_09_bucket_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "09_bucket_pin",
+    "part": "09_bucket_pin",
+    "file": "22_09_bucket_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "10_drive_72",
+    "part": "10_drive_72",
+    "file": "23_10_drive_72.stl",
+    "color": "case"
+  },
+  {
+    "name": "11_compound_18_72",
+    "part": "11_compound_18_72",
+    "file": "24_11_compound_18_72.stl",
+    "color": "train"
+  },
+  {
+    "name": "12_escape_compound",
+    "part": "12_escape_compound",
+    "file": "25_12_escape_compound.stl",
+    "color": "escape"
+  },
+  {
+    "name": "13_gear_pivot",
+    "part": "13_gear_pivot",
+    "file": "26_13_gear_pivot.stl",
+    "color": "pins"
+  },
+  {
+    "name": "31_B_rear_pivot_module",
+    "part": "31_B_rear_pivot_module",
+    "file": "27_31_B_rear_pivot_module.stl",
+    "color": "frame"
+  },
+  {
+    "name": "32_B_front_pivot_module",
+    "part": "32_B_front_pivot_module",
+    "file": "28_32_B_front_pivot_module.stl",
+    "color": "frame"
+  },
+  {
+    "name": "33_module_pin",
+    "part": "33_module_pin",
+    "file": "29_33_module_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "33_module_pin",
+    "part": "33_module_pin",
+    "file": "30_33_module_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "33_module_pin",
+    "part": "33_module_pin",
+    "file": "31_33_module_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "33_module_pin",
+    "part": "33_module_pin",
+    "file": "32_33_module_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "33_module_pin",
+    "part": "33_module_pin",
+    "file": "33_33_module_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "33_module_pin",
+    "part": "33_module_pin",
+    "file": "34_33_module_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "15_B_front_spacer",
+    "part": "15_B_front_spacer",
+    "file": "35_15_B_front_spacer.stl",
+    "color": "pins"
+  },
+  {
+    "name": "16_C_rear_spacer",
+    "part": "16_C_rear_spacer",
+    "file": "36_16_C_rear_spacer.stl",
+    "color": "pins"
+  },
+  {
+    "name": "17_C_front_spacer",
+    "part": "17_C_front_spacer",
+    "file": "37_17_C_front_spacer.stl",
+    "color": "pins"
+  },
+  {
+    "name": "34_main_front_thrust_sleeve",
+    "part": "34_main_front_thrust_sleeve",
+    "file": "38_34_main_front_thrust_sleeve.stl",
+    "color": "pins"
+  },
+  {
+    "name": "35_main_rear_thrust_washer",
+    "part": "35_main_rear_thrust_washer",
+    "file": "39_35_main_rear_thrust_washer.stl",
+    "color": "pins"
+  },
+  {
+    "name": "18_pallet_anchor",
+    "part": "18_pallet_anchor",
+    "file": "40_18_pallet_anchor.stl",
+    "color": "regulator"
+  },
+  {
+    "name": "19_anchor_pivot",
+    "part": "19_anchor_pivot",
+    "file": "41_19_anchor_pivot.stl",
+    "color": "pins"
+  },
+  {
+    "name": "20_anchor_rear_spacer",
+    "part": "20_anchor_rear_spacer",
+    "file": "42_20_anchor_rear_spacer.stl",
+    "color": "pins"
+  },
+  {
+    "name": "21_anchor_front_washer",
+    "part": "21_anchor_front_washer",
+    "file": "43_21_anchor_front_washer.stl",
+    "color": "pins"
+  },
+  {
+    "name": "22_anchor_bridge",
+    "part": "22_anchor_bridge",
+    "file": "44_22_anchor_bridge.stl",
+    "color": "frame"
+  },
+  {
+    "name": "23_bridge_post",
+    "part": "23_bridge_post",
+    "file": "45_23_bridge_post.stl",
+    "color": "frame"
+  },
+  {
+    "name": "23_bridge_post",
+    "part": "23_bridge_post",
+    "file": "46_23_bridge_post.stl",
+    "color": "frame"
+  },
+  {
+    "name": "24_pendulum",
+    "part": "24_pendulum",
+    "file": "47_24_pendulum.stl",
+    "color": "regulator"
+  },
+  {
+    "name": "25_open_pendulum_bob",
+    "part": "25_open_pendulum_bob",
+    "file": "48_25_open_pendulum_bob.stl",
+    "color": "regulator"
+  },
+  {
+    "name": "26_bob_pin",
+    "part": "26_bob_pin",
+    "file": "49_26_bob_pin.stl",
+    "color": "pins"
+  },
+  {
+    "name": "36_rear_round_journal",
+    "part": "36_rear_round_journal",
+    "file": "50_36_rear_round_journal.stl",
+    "color": "pins"
+  },
+  {
+    "name": "37_front_round_journal",
+    "part": "37_front_round_journal",
+    "file": "51_37_front_round_journal.stl",
+    "color": "pins"
+  }
+]
