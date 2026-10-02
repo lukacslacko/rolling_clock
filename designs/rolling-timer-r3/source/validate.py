@@ -11,6 +11,39 @@ def overlap(a,c):
     return max(0.,float((a^c).volume()))
 def about(m,axis,deg):return m.translate((-axis[0],-axis[1],0)).rotate((0,0,float(deg))).translate((*axis,0))
 def allowed(a,c):return a.get('allowed_interference_with')==c['name'] or c.get('allowed_interference_with')==a['name']
+
+def check_nut_access():
+    # Independent dimensional gauges in the generated solids: a loose entry
+    # must not accidentally widen the seated nut's anti-rotation walls.
+    findings=[]
+    slots=[('common','02_square_case_post',b.NUT_WIDTH,lambda m:m.translate((0,0,12.5))),
+           ('common','07_square_frame_post',b.NUT_WIDTH,lambda m:m.translate((0,0,81.4))),
+           ('common','23_square_bridge_post',b.NUT_WIDTH,lambda m:m.translate((0,0,135.4))),
+           ('common','13_bolted_gear_pivot',b.NUT_WIDTH,lambda m:m.translate((0,0,80.9))),
+           ('common','19_bolted_anchor_pivot',b.NUT_WIDTH,lambda m:m.translate((0,0,80.9))),
+           ('common','01_case_wheel',b.NUT_WIDTH,lambda m:m.rotate((0,90,0)).translate((5.6,0,6))),
+           ('common','10_drive_72',b.NUT_WIDTH,lambda m:m.rotate((0,90,0)).translate((5.6,0,91))),
+           ('common','25_screw_fixed_bob',b.NUT_WIDTH,lambda m:m.mirror((0,1,0)).rotate((0,0,90)).translate((0,150,151.2)))]
+    slots += [('fit-tests','40_nut_post_coupon_'+suffix,width,lambda m:m.translate((0,0,3.4)))
+              for width,suffix in [(5.25,'525'),(5.4,'540'),(5.6,'560')]]
+    for folder,name,width,pose in slots:
+        m=b.parts[folder,name]['m']
+        # Probe the actual 5.8 mm straight mouth, ahead of the tapered region.
+        free=overlap(m,pose(cub(-3.75,-(b.NUT_ENTRY_WIDTH-.01)/2,.1,.08,b.NUT_ENTRY_WIDTH-.01,.1)))
+        seat=overlap(m,pose(cub(-.2,-(width-.01)/2,.1,.4,width-.01,.1)))
+        held=overlap(m,pose(cub(-.2,-(width+.1)/2,.1,.4,width+.1,.1)))
+        assert free<1e-6 and seat<1e-6 and held>.001,(name,free,seat,held)
+        # Nominal M3 nut enters without interference before reaching the
+        # taper/seat. The final calibrated interference remains intentional.
+        nut=extr(Polygon([polar(5.5/math.sqrt(3),k*math.pi/3) for k in range(6)]),.2,2.4)
+        path=max(overlap(m,pose(nut.translate((u,0,0)))) for u in np.linspace(-18,-6.8,29))
+        assert path<1e-6,(name,path)
+        findings.append({'part':folder+'/'+name,'entry_mm':b.NUT_ENTRY_WIDTH,'seat_mm':width,
+                         'free_entry_and_snug_seat_gauges_passed':True,'unseated_nut_path_overlap_mm3':path})
+    print('Nut channels: dimensional gauges and insertion paths passed for',len(findings),'parts.',flush=True)
+    return findings
+
+nut_access=check_nut_access()
 reports={};all_bad=[]
 for ratio,items in b.assemblies.items():
     bad=[];nutfits=[]
@@ -105,7 +138,7 @@ for ratio,items in b.assemblies.items():
                     np.linalg.norm(axes['D'])+(38.75 if ratio==32 else 46.25) if ratio!=16 else 0)
     headroom=109-max(fixed_radius,pend_radius,gear_radius)
     assert all(a['tip_beyond_nut_mm']>=.39 for a in items if a.get('type')=='screw')
-    rep={'ratio':ratio,'static_unintended_intersections':bad,'intended_calibrated_nut_trap_intersections':nutfits,
+    rep={'ratio':ratio,'nut_insertion_channels':nut_access,'static_unintended_intersections':bad,'intended_calibrated_nut_trap_intersections':nutfits,
       'axial_endplay_intersections':endbad,'gear_axial_float_mm':[-.3,.3],'carrier_to_rotor_axial_float_mm':[-.4,.4],'drive_hub_to_B_wheel_min_gap_with_endplay_mm':.5,
       'spur_samples':121,'max_spur_overlap_mm2':spurmax,'anchor_samples':241,'max_anchor_overlap_mm2':anchormax,
       'mechanism_3d_samples':41,'mechanism_intersections':mechbad,'pendulum_angle_range_deg':[-15,15],

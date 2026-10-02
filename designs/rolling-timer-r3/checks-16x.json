@@ -1,16 +1,95 @@
 {
   "ratio": 16,
+  "nut_insertion_channels": [
+    {
+      "part": "common/02_square_case_post",
+      "entry_mm": 5.8,
+      "seat_mm": 5.25,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    },
+    {
+      "part": "common/07_square_frame_post",
+      "entry_mm": 5.8,
+      "seat_mm": 5.25,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    },
+    {
+      "part": "common/23_square_bridge_post",
+      "entry_mm": 5.8,
+      "seat_mm": 5.25,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    },
+    {
+      "part": "common/13_bolted_gear_pivot",
+      "entry_mm": 5.8,
+      "seat_mm": 5.25,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    },
+    {
+      "part": "common/19_bolted_anchor_pivot",
+      "entry_mm": 5.8,
+      "seat_mm": 5.25,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    },
+    {
+      "part": "common/01_case_wheel",
+      "entry_mm": 5.8,
+      "seat_mm": 5.25,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    },
+    {
+      "part": "common/10_drive_72",
+      "entry_mm": 5.8,
+      "seat_mm": 5.25,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    },
+    {
+      "part": "common/25_screw_fixed_bob",
+      "entry_mm": 5.8,
+      "seat_mm": 5.25,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    },
+    {
+      "part": "fit-tests/40_nut_post_coupon_525",
+      "entry_mm": 5.8,
+      "seat_mm": 5.25,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    },
+    {
+      "part": "fit-tests/40_nut_post_coupon_540",
+      "entry_mm": 5.8,
+      "seat_mm": 5.4,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    },
+    {
+      "part": "fit-tests/40_nut_post_coupon_560",
+      "entry_mm": 5.8,
+      "seat_mm": 5.6,
+      "free_entry_and_snug_seat_gauges_passed": true,
+      "unseated_nut_path_overlap_mm3": 0.0
+    }
+  ],
   "static_unintended_intersections": [],
   "intended_calibrated_nut_trap_intersections": [
     [
       "rear_case_wheel",
       "axle_cross_6_nut",
-      1.948557
+      1.942188
     ],
     [
       "front_case_wheel",
       "axle_cross_174_nut",
-      1.948557
+      1.942188
     ],
     [
       "case_post_1",
@@ -75,37 +154,37 @@
     [
       "axle_cross_91_nut",
       "10_drive_72",
-      1.948557
+      1.942188
     ],
     [
       "frame_post_1",
       "frame_rear_0_nut",
-      1.948557
+      1.942188
     ],
     [
       "frame_post_1",
       "frame_front_0_nut",
-      1.948557
+      1.942188
     ],
     [
       "frame_post_2",
       "frame_rear_1_nut",
-      1.948557
+      1.942188
     ],
     [
       "frame_post_2",
       "frame_front_1_nut",
-      1.948557
+      1.942188
     ],
     [
       "frame_post_3",
       "frame_rear_2_nut",
-      1.948557
+      1.942188
     ],
     [
       "frame_post_3",
       "frame_front_2_nut",
-      1.948557
+      1.942188
     ],
     [
       "08_open_ballast_bowl",
@@ -120,37 +199,37 @@
     [
       "B_pivot",
       "B_pivot_bolt_nut",
-      1.948557
+      1.942188
     ],
     [
       "C_pivot",
       "C_pivot_bolt_nut",
-      1.948557
+      1.942188
     ],
     [
       "19_bolted_anchor_pivot",
       "anchor_pivot_bolt_nut",
-      1.948557
+      1.942188
     ],
     [
       "bridge_post_0",
       "bridge_rear_0_nut",
-      1.948557
+      1.942188
     ],
     [
       "bridge_post_0",
       "bridge_front_0_nut",
-      1.948557
+      1.942188
     ],
     [
       "bridge_post_1",
       "bridge_rear_1_nut",
-      1.948557
+      1.942188
     ],
     [
       "bridge_post_1",
       "bridge_front_1_nut",
-      1.948557
+      1.942188
     ],
     [
       "24_offset_pendulum",
@@ -160,7 +239,7 @@
     [
       "25_screw_fixed_bob",
       "bob_bolt_nut",
-      1.867367
+      1.861263
     ]
   ],
   "axial_endplay_intersections": [],

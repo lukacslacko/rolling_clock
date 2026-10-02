@@ -83,7 +83,7 @@ picture('post-nut-detail',27,147,435,341,True)
 y=482
 for s in [
  '<b>Print the small pair first:</b> 40_nut_post_coupon_525 and 41_post_seat_coupon from STL/fit-tests/.',
- 'Slide a real M3 nut into the <b>5.25 mm slot</b>. It must sit flat on the screw axis. The post should slip into the 12.4 mm lip opening without spreading it.',
+ 'Slide a real M3 nut through the <b>5.8 mm entry channel</b> and its taper into the <b>5.25 mm seat</b>. Align the thread with the screw axis. The post must slip into the 12.4 mm locating lip.',
  'Use one <b>M3x10</b> screw through the seat coupon. Tighten until the flat faces meet. Test 5.40 or 5.60 mm alternatives if needed; adjust NUT_WIDTH and regenerate rather than scaling the whole design.',
  '<b>16x:</b> 15 M3x10, 17 M3x16, 32 nuts.<br/><b>32x / 64x:</b> 16 M3x10, 17 M3x16, 33 nuts.'
 ]:y=para(s,490,y,316,11.5,16)-14
@@ -152,7 +152,7 @@ step_page('Clamp the pendulum and close the bridge','07 / adjustable beat, rigid
 
 step_page('Fasten the bob with a real screw','08 / no toothpick or printed small pin',('bob-detail','bob-front-detail'),[
  'Slide bob <b>25</b> over the straight lower part of the rod, with both iron pockets facing upward. Start at the <b>150 mm hole</b>: fourth from the pivot, second from the free end.',
- 'Drop a plain M3 nut into the central slot on the <b>front side</b> of the bob. This slot is separate from the two iron pockets. Align its thread with the rod hole.',
+ 'Drop a plain M3 nut into the <b>5.8 mm front channel</b>, separate from the iron pockets. Slide it through the taper into the <b>5.25 mm seat</b>, with its thread aligned to the rod hole.',
  'Insert one <b>M3x16</b> from the rear, toward the front nut. Tighten until the bob is held; do not crush its thin outside walls.',
  'With the frame upright, add <b>15-20 g total</b> iron, approximately evenly divided. Keep the main ballast bowl empty until the drum is fitted.'
 ], 'Nominal clearances: bob to frame 9.4 mm; screw head to frame 6.2 mm; screw tip to front spokes 15.6 mm. The 1 mm outer walls save space; the central web and thicker floor carry the attachment and ballast loads.',True)

@@ -28,7 +28,8 @@ The guide also describes the other ratios for future changes.
 
 Hardware: {l['M3x10']} M3x10 screws, {l['M3x16']} M3x16 screws,
 and {l['M3x10']+l['M3x16']} plain M3 nuts (about 2.4 mm thick).
-Default nut slots: 5.25 mm. Print and try the two small joint coupons first.
+Nut seats: 5.25 mm; insertion channels: 5.8 mm with a tapered transition.
+Print and try the two small joint coupons first.
 PLA / 0.4 mm nozzle / 0.2 mm layers. Keep the supplied orientations.
 The wheel is 248 mm diameter: no outside brim on the 256 mm P1S bed.
 

@@ -8,7 +8,8 @@ from primitives import *
 from shapely import affinity
 ROOT=Path(__file__).resolve().parents[1]
 MODEL=json.loads((ROOT/'escapement-reference.json').read_text())
-NUT_WIDTH=5.25 # User's calibrated trap width; validate with coupon before printing.
+NUT_WIDTH=5.25 # Final anti-rotation seat only; validate with coupon before printing.
+NUT_ENTRY_WIDTH=5.8 # Loose insertion path, independent of the calibrated seat.
 NUT_DEPTH=2.8
 W=180.; REAR=72.; FRONT=126.; PEND_Z=145.
 A=np.array([0.,0.]); Bslow=np.array([-56.25,0.]); C=np.array([30.,-45.])
@@ -71,9 +72,29 @@ def screw(name,point,axis,length):
     nut=pose(extr(nutpoly,offset,2.4)-cyl(1.6,offset-1,4.4))
     current.append({'part':name+'_nut','folder':'hardware','name':name+'_nut','m':nut,'color':'steel','group':group,'hardware':True,'type':'nut','allowed_interference_with':owner})
 
+def nut_channel(start,end=3.5,width=NUT_WIDTH):
+    """Side-entry outline: travel along +X to a nut centred at the origin.
+
+    Keep the passage loose, then taper over 2 mm into the seated nut's
+    parallel flats. The closed end and the screw axis remain unchanged.
+    """
+    seat_start=-width/(2*math.sqrt(3))
+    taper_start=seat_start-2
+    assert start<taper_start and width<NUT_ENTRY_WIDTH
+    return Polygon([(start,-NUT_ENTRY_WIDTH/2),(taper_start,-NUT_ENTRY_WIDTH/2),
+                    (seat_start,-width/2),(end,-width/2),(end,width/2),
+                    (seat_start,width/2),(taper_start,NUT_ENTRY_WIDTH/2),
+                    (start,NUT_ENTRY_WIDTH/2)])
+
+def hex_entry(z,height,phase=0,widening=True):
+    """Short flared mouth for a nut inserted directly into a hex seat."""
+    start,end=(NUT_WIDTH,NUT_ENTRY_WIDTH) if widening else (NUT_ENTRY_WIDTH,NUT_WIDTH)
+    p=Polygon([polar(start/math.sqrt(3),k*math.pi/3+phase) for k in range(6)])
+    return section(p).extrude(height,scale_top=(end/start,end/start)).translate((0,0,z))
+
 def nut_slot(m,z,side=12,width=NUT_WIDTH):
     # Axial bolt is Z. Nut enters from -X; two parallel Y walls resist rotation.
-    return m-cub(-side/2-.1,-width/2,z,side/2+3.6,width,NUT_DEPTH)
+    return m-extr(nut_channel(-side/2-.1,width=width),z,NUT_DEPTH)
 
 def socket_lip(xy,z,size=12,h=1.5):
     outer=box(-size/2-1.7,-size/2-1.7,size/2+1.7,size/2+1.7)
@@ -92,7 +113,8 @@ def cross_hub(m,z):
     # M3x16, head underside x=-5.6; nut bearing face x=5.6.
     m-=hx(1.7,-12,0,z,24)
     m-=hx(3.6,-12,0,z,6.4)
-    m-=cub(5.6,-NUT_WIDTH/2,z-3.25,NUT_DEPTH,NUT_WIDTH,13)
+    # +Z entry, with the final nut centred on the transverse screw axis.
+    m-=extr(nut_channel(-10,3.25),0,NUT_DEPTH).rotate((0,90,0)).translate((5.6,0,z))
     return m
 
 # Deeper rolling rim; post screws have clearance and apply axial clamping only.
@@ -157,6 +179,7 @@ hexnut=Polygon([polar(NUT_WIDTH/math.sqrt(3),k*math.pi/3) for k in range(6)])
 for q in BOWL_BOLTS:
     bucket+=cyl(5.8,64.8,3.2,q)
     bucket-=extr(hexnut,64.7,2.9).translate((*q,0));bucket=hole(bucket,q,1.7,64,10)
+    bucket-=hex_entry(64.8,.4,widening=False).translate((*q,0))
 register('08_open_ballast_bowl',bucket,rot=(-90,0,0),note='Mouth up. Two M3x10 screws and two nuts; lower pads rest on the frame.',color='ballast')
 
 inputgear=extr(spoked(spur(72),38,12),84,6)+cyl(11,84,10.8)
@@ -198,14 +221,16 @@ pend-=hy(1.7,-15,-9,148,22)
 pend-=hy(3.6,-15,-9,148,3)
 nh=Polygon([polar(NUT_WIDTH/math.sqrt(3),k*math.pi/3+math.pi/6) for k in range(6)])
 pend-=extr(nh,0,2.8).rotate((-90,0,0)).translate((-15,4.2,148))
+pend-=hex_entry(6.6,.4,math.pi/6).rotate((-90,0,0)).translate((-15,0,148))
 for yy in (135,140,145,150,155):pend=hole(pend,(0,yy),1.7,144,9)
 register('24_offset_pendulum',pend,rot=(180,0,0),note='Broad face on bed. Dogleg clears the main shaft. M3x16 clamp; 3.4 mm bob holes.',color='regulator')
 bob=cub(-15.6,138,141.4,31.2,24,13.2)-cub(-14.6,136,142.4,29.2,23.6,11.2)
 bob+=cub(-5,138,141.4,10,24,13.2)
 bob-=cub(-3.7,137,144.7,7.4,26,6.6)
 bob=hole(bob,(0,150),1.7,140,20)
-bob-=cub(-NUT_WIDTH/2,137,151.2,NUT_WIDTH,16.25,2.8)
-register('25_screw_fixed_bob',bob,rot=(-90,0,0),note='Open mouth up. 1 mm outer walls; captive nut drops into front central slot. Use one M3x16 through the selected rod hole.',color='regulator')
+bob_channel=Polygon([(v,150+u) for u,v in nut_channel(-13,3.25).exterior.coords])
+bob-=extr(bob_channel,151.2,NUT_DEPTH)
+register('25_screw_fixed_bob',bob,rot=(-90,0,0),note='Open mouth up. 1 mm outer walls; 5.8 mm nut channel tapers to a 5.25 mm seat. Use one M3x16 through the selected rod hole.',color='regulator')
 for name,z,h,r in [('34_main_front_thrust_sleeve',95.2,26.4,7.5),('35_main_rear_thrust_washer',82.4,1.2,8),('36_rear_round_journal',12.4,70,6),('37_front_round_journal',122,45.6,6)]:
     register(name,key_hole(cyl(r,z,h),z-1,h+2),note=f'Flat annular end on bed, {h:g} mm long. Square bore keys to axle.',color='pins')
 
@@ -215,7 +240,7 @@ for width,suffix in [(5.25,'525'),(5.4,'540'),(5.6,'560')]:
     m=cub(-6,-6,0,12,12,20)
     for zz in (3.4,20-3.4-NUT_DEPTH):m=nut_slot(m,zz,12,width)
     m-=cyl(1.7,-1,22)
-    register('40_nut_post_coupon_'+suffix,m,folder='fit-tests',rot=(0,90,0),note=f'Trial nut slot {width:g} mm. Slide nut from open side; use actual M3x10 screw through coupon plate.')
+    register('40_nut_post_coupon_'+suffix,m,folder='fit-tests',rot=(0,90,0),note=f'Trial nut seat {width:g} mm, entry channel {NUT_ENTRY_WIDTH:g} mm. Slide nut from open side; use actual M3x10 screw through coupon plate.')
 plate=cub(-10,-10,0,20,20,6)+socket_lip(A,6)
 plate-=cyl(1.7,-1,10);plate-=cyl(3.6,-1,3.2)
 register('41_post_seat_coupon',plate,folder='fit-tests',note='Clamps to coupon with M3x10; 12 mm post slips into 12.4 mm lip opening.')

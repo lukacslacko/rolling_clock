@@ -21,7 +21,7 @@ Hardware: **15 M3x10**, **17 M3x16**, **32 plain M3 nuts**. Fit coupons are opti
 | [common/22_bolted_anchor_bridge.stl](STL/common/22_bolted_anchor_bridge.stl) | 1 | 70 x 40 x 7.5 | Outer face on bed; shallow locating lips upward. M3x10 at each end. |
 | [common/23_square_bridge_post.stl](STL/common/23_square_bridge_post.stl) | 2 | 27 x 12 x 12 | Flat side on bed, nut mouths up. Two M3x10 per post. Hard shoulders set the bridge position. |
 | [common/24_offset_pendulum.stl](STL/common/24_offset_pendulum.stl) | 1 | 42.5 x 177 x 6 | Broad face on bed. Dogleg clears the main shaft. M3x16 clamp; 3.4 mm bob holes. |
-| [common/25_screw_fixed_bob.stl](STL/common/25_screw_fixed_bob.stl) | 1 | 31.2 x 13.2 x 24 | Open mouth up. 1 mm outer walls; captive nut drops into front central slot. Use one M3x16 through the selected rod hole. |
+| [common/25_screw_fixed_bob.stl](STL/common/25_screw_fixed_bob.stl) | 1 | 31.2 x 13.2 x 24 | Open mouth up. 1 mm outer walls; 5.8 mm nut channel tapers to a 5.25 mm seat. Use one M3x16 through the selected rod hole. |
 | [common/34_main_front_thrust_sleeve.stl](STL/common/34_main_front_thrust_sleeve.stl) | 1 | 15 x 15 x 26.4 | Flat annular end on bed, 26.4 mm long. Square bore keys to axle. |
 | [common/35_main_rear_thrust_washer.stl](STL/common/35_main_rear_thrust_washer.stl) | 1 | 16 x 16 x 1.2 | Flat annular end on bed, 1.2 mm long. Square bore keys to axle. |
 | [common/36_rear_round_journal.stl](STL/common/36_rear_round_journal.stl) | 1 | 12 x 12 x 70 | Flat annular end on bed, 70 mm long. Square bore keys to axle. |
