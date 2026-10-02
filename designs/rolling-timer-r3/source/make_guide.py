@@ -17,7 +17,7 @@ for ratio,layout in LAY.items():
     for key,n in sorted(layout['print_quantities'].items(),key=lambda x:(0 if x[0].startswith('common/') else 1,x[0])):
         p=PARTS[key];dims=' x '.join(f'{v:g}' for v in p['dimensions_mm'])
         rows.append(f'| [{key}.stl]({p["file"]}) | {n} | {dims} | {p["print_note"]} |')
-    rows+=['','## Fit coupons first','','- [5.25 mm nut-post coupon](STL/fit-tests/40_nut_post_coupon_525.stl)','- [Matching frame-seat coupon](STL/fit-tests/41_post_seat_coupon.stl)','- Alternative nut slots: [5.40 mm](STL/fit-tests/40_nut_post_coupon_540.stl), [5.60 mm](STL/fit-tests/40_nut_post_coupon_560.stl).','','Print at 100% scale in the exported orientation. Do not rescale complete gears to change a fit. All parts must be R3.']
+    rows+=['','## Fit coupons first','','- [5.60 mm nut-post coupon - selected production fit](STL/fit-tests/40_nut_post_coupon_560.stl)','- [Matching frame-seat coupon](STL/fit-tests/41_post_seat_coupon.stl)','- Alternative nut seats: [5.25 mm](STL/fit-tests/40_nut_post_coupon_525.stl), [5.40 mm](STL/fit-tests/40_nut_post_coupon_540.stl). All insertion channels are 5.8 mm.','','Print at 100% scale in the exported orientation. Do not rescale complete gears to change a fit. All parts must be R3.']
     (ROOT/f'PRINT-LIST-{ratio}x.md').write_text('\n'.join(rows)+'\n')
 FONT_PAIRS=[(Path('/System/Library/Fonts/Supplemental'),'Arial.ttf','Arial Bold.ttf'),(Path('C:/Windows/Fonts'),'arial.ttf','arialbd.ttf'),(Path('/usr/share/fonts/truetype/liberation2'),'LiberationSans-Regular.ttf','LiberationSans-Bold.ttf'),(Path('/usr/share/fonts/truetype/dejavu'),'DejaVuSans.ttf','DejaVuSans-Bold.ttf')]
 fonts=next(((d/a,d/b) for d,a,b in FONT_PAIRS if (d/a).exists() and (d/b).exists()),None)
@@ -82,9 +82,9 @@ heading('Check the nut fit before the large prints','01 / materials and small co
 picture('post-nut-detail',27,147,435,341,True)
 y=482
 for s in [
- '<b>Print the small pair first:</b> 40_nut_post_coupon_525 and 41_post_seat_coupon from STL/fit-tests/.',
- 'Slide a real M3 nut through the <b>5.8 mm entry channel</b> and its taper into the <b>5.25 mm seat</b>. Align the thread with the screw axis. The post must slip into the 12.4 mm locating lip.',
- 'Use one <b>M3x10</b> screw through the seat coupon. Tighten until the flat faces meet. Test 5.40 or 5.60 mm alternatives if needed; adjust NUT_WIDTH and regenerate rather than scaling the whole design.',
+ '<b>Selected by the builder after printing:</b> the 5.6 mm seat. To confirm on another setup, print 40_nut_post_coupon_560 and 41_post_seat_coupon from STL/fit-tests/.',
+ 'Slide a real M3 nut through the <b>5.8 mm entry channel</b> and its taper into the <b>5.6 mm seat</b>. Align the thread with the screw axis. The post must slip into the 12.4 mm locating lip.',
+ 'Use one <b>M3x10</b> screw through the seat coupon. Tighten until the flat faces meet. The 5.25 and 5.40 mm comparison coupons remain available; do not scale complete parts to change a fit.',
  '<b>16x:</b> 15 M3x10, 17 M3x16, 32 nuts.<br/><b>32x / 64x:</b> 16 M3x10, 17 M3x16, 33 nuts.'
 ]:y=para(s,490,y,316,11.5,16)-14
 assert y>=120,y
@@ -152,7 +152,7 @@ step_page('Clamp the pendulum and close the bridge','07 / adjustable beat, rigid
 
 step_page('Fasten the bob with a real screw','08 / no toothpick or printed small pin',('bob-detail','bob-front-detail'),[
  'Slide bob <b>25</b> over the straight lower part of the rod, with both iron pockets facing upward. Start at the <b>150 mm hole</b>: fourth from the pivot, second from the free end.',
- 'Drop a plain M3 nut into the <b>5.8 mm front channel</b>, separate from the iron pockets. Slide it through the taper into the <b>5.25 mm seat</b>, with its thread aligned to the rod hole.',
+ 'Drop a plain M3 nut into the <b>5.8 mm front channel</b>, separate from the iron pockets. Slide it through the taper into the <b>5.6 mm seat</b>, with its thread aligned to the rod hole.',
  'Insert one <b>M3x16</b> from the rear, toward the front nut. Tighten until the bob is held; do not crush its thin outside walls.',
  'With the frame upright, add <b>15-20 g total</b> iron, approximately evenly divided. Keep the main ballast bowl empty until the drum is fitted.'
 ], 'Nominal clearances: bob to frame 9.4 mm; screw head to frame 6.2 mm; screw tip to front spokes 15.6 mm. The 1 mm outer walls save space; the central web and thicker floor carry the attachment and ballast loads.',True)

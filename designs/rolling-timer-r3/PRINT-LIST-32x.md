@@ -21,7 +21,7 @@ Hardware: **16 M3x10**, **17 M3x16**, **33 plain M3 nuts**. Fit coupons are opti
 | [common/22_bolted_anchor_bridge.stl](STL/common/22_bolted_anchor_bridge.stl) | 1 | 70 x 40 x 7.5 | Outer face on bed; shallow locating lips upward. M3x10 at each end. |
 | [common/23_square_bridge_post.stl](STL/common/23_square_bridge_post.stl) | 2 | 27 x 12 x 12 | Flat side on bed, nut mouths up. Two M3x10 per post. Hard shoulders set the bridge position. |
 | [common/24_offset_pendulum.stl](STL/common/24_offset_pendulum.stl) | 1 | 42.5 x 177 x 6 | Broad face on bed. Dogleg clears the main shaft. M3x16 clamp; 3.4 mm bob holes. |
-| [common/25_screw_fixed_bob.stl](STL/common/25_screw_fixed_bob.stl) | 1 | 31.2 x 13.2 x 24 | Open mouth up. 1 mm outer walls; 5.8 mm nut channel tapers to a 5.25 mm seat. Use one M3x16 through the selected rod hole. |
+| [common/25_screw_fixed_bob.stl](STL/common/25_screw_fixed_bob.stl) | 1 | 31.2 x 13.2 x 24 | Open mouth up. 1 mm outer walls; 5.8 mm nut channel tapers to a 5.6 mm seat. Use one M3x16 through the selected rod hole. |
 | [common/34_main_front_thrust_sleeve.stl](STL/common/34_main_front_thrust_sleeve.stl) | 1 | 15 x 15 x 26.4 | Flat annular end on bed, 26.4 mm long. Square bore keys to axle. |
 | [common/35_main_rear_thrust_washer.stl](STL/common/35_main_rear_thrust_washer.stl) | 1 | 16 x 16 x 1.2 | Flat annular end on bed, 1.2 mm long. Square bore keys to axle. |
 | [common/36_rear_round_journal.stl](STL/common/36_rear_round_journal.stl) | 1 | 12 x 12 x 70 | Flat annular end on bed, 70 mm long. Square bore keys to axle. |
@@ -39,8 +39,8 @@ Hardware: **16 M3x10**, **17 M3x16**, **33 plain M3 nuts**. Fit coupons are opti
 
 ## Fit coupons first
 
-- [5.25 mm nut-post coupon](STL/fit-tests/40_nut_post_coupon_525.stl)
+- [5.60 mm nut-post coupon - selected production fit](STL/fit-tests/40_nut_post_coupon_560.stl)
 - [Matching frame-seat coupon](STL/fit-tests/41_post_seat_coupon.stl)
-- Alternative nut slots: [5.40 mm](STL/fit-tests/40_nut_post_coupon_540.stl), [5.60 mm](STL/fit-tests/40_nut_post_coupon_560.stl).
+- Alternative nut seats: [5.25 mm](STL/fit-tests/40_nut_post_coupon_525.stl), [5.40 mm](STL/fit-tests/40_nut_post_coupon_540.stl). All insertion channels are 5.8 mm.
 
 Print at 100% scale in the exported orientation. Do not rescale complete gears to change a fit. All parts must be R3.

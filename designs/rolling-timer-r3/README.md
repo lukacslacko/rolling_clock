@@ -34,11 +34,11 @@ The 248 mm wheel leaves only 4 mm on each side of a nominal 256 mm bed: **no out
 
 ### Fit coupons first
 
-The final anti-rotation seats are the requested **5.25 mm** wide. The side-loading insertion channels are **5.8 mm** wide, with a 2 mm taper into the seat, including the bob, square posts, pivot feet and axle-retaining hubs. Direct-entry hex pockets in the pendulum clamp and ballast bowl have a short 5.8 mm flared mouth. `NUT_WIDTH` and `NUT_ENTRY_WIDTH` in `source/build.py` control these dimensions independently.
+The final anti-rotation seats are **5.6 mm** wide throughout, selected by the builder after printing and trying the fit coupons. The side-loading insertion channels are **5.8 mm** wide, with a 2 mm taper into the seat, including the bob, square posts, pivot feet and axle-retaining hubs. Direct-entry hex pockets in the pendulum clamp and ballast bowl use the same 5.6 mm seats with a short 5.8 mm flared mouth. `NUT_WIDTH` and `NUT_ENTRY_WIDTH` in `source/build.py` control these dimensions independently.
 
-Print `40_nut_post_coupon_525.stl` and `41_post_seat_coupon.stl` in their supplied orientations, and try an actual nut and M3x10 screw. The nut should slide freely along the entry, then fit firmly in the seat with its thread on the screw axis. The two flat faces must close without the locating lips spreading. Coupon alternatives have 5.40 and 5.60 mm seats, all with the same 5.8 mm entry. If another seat width suits your nuts and printer, change `NUT_WIDTH` and regenerate; do not scale complete gear or frame files.
+To confirm the fit on another printer or with different nuts, print `40_nut_post_coupon_560.stl` and `41_post_seat_coupon.stl` in their supplied orientations, and try an actual nut and M3x10 screw. The nut should slide freely along the entry, then sit with its thread on the screw axis without rotating when tightened. The two flat faces must close without the locating lips spreading. The original 5.25 and 5.40 mm comparison coupons are retained at their labelled dimensions, all with the same 5.8 mm entry. If another seat width suits your nuts and printer, change `NUT_WIDTH` and regenerate; do not scale complete gear or frame files.
 
-The hardware models use nominal 5.5 mm-across-flats nuts. Their small overlaps with the 5.25 mm traps are **intentional, user-calibrated interference**, separately listed in the check reports. The CAD cannot establish your printed slot size. Tighten plastic joints only until seated; use the nut, not a self-tapped plastic thread.
+The hardware models use nominal 5.5 mm-across-flats nuts, leaving 0.1 mm total clearance across the production seat. The physical coupon test determines the printed fit; the complete R3 assembly still awaits a running trial. Tighten plastic joints only until seated; use the nut, not a self-tapped plastic thread.
 
 ## Hardware
 

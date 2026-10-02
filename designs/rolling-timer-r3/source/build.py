@@ -8,7 +8,7 @@ from primitives import *
 from shapely import affinity
 ROOT=Path(__file__).resolve().parents[1]
 MODEL=json.loads((ROOT/'escapement-reference.json').read_text())
-NUT_WIDTH=5.25 # Final anti-rotation seat only; validate with coupon before printing.
+NUT_WIDTH=5.6 # Final anti-rotation seat, selected after the builder's coupon test.
 NUT_ENTRY_WIDTH=5.8 # Loose insertion path, independent of the calibrated seat.
 NUT_DEPTH=2.8
 W=180.; REAR=72.; FRONT=126.; PEND_Z=145.
@@ -45,7 +45,7 @@ def place(name,xyz=(0,0,0),rot=(0,0,0),folder='common',group='fixed',label=None)
 
 def screw(name,point,axis,length):
     """Worst-case 6.5 x 3.2 mm head and nominal 5.5 AF x 2.4 mm nut.
-    Nuts may intentionally overlap the user's 5.25 mm calibrated trap walls.
+    The coupon-selected 5.6 mm seats clear the nominal nut's 5.5 mm flats.
     """
     group='case' if name.startswith('case_') else 'rotor' if name.startswith('axle_') else 'pendulum' if name in ('pendulum_clamp','bob_bolt') else 'fixed'
     if name.startswith('case_'):offset=12.5;owner='case_post_'+name.rsplit('_',1)[1]
@@ -68,6 +68,10 @@ def screw(name,point,axis,length):
     m=pose(cyl(1.5,0,length)+cyl(3.25,-3.2,3.2))
     current.append({'part':name,'folder':'hardware','name':name,'m':m,'color':'steel','group':group,'hardware':True,'type':'screw','length':length,'nut_grip_mm':offset,'tip_beyond_nut_mm':length-offset-2.4,'axis':v.tolist(),'point':list(point)})
     phase=math.pi/6 if name in ('pendulum_clamp','bob_bolt') else 0
+    if name.startswith('case_'):
+        # Each post is rotated radially. Match its nut flats; the front
+        # fastener's 180-degree X rotation reverses the local nut angle.
+        phase=math.atan2(point[1],point[0])*(-1 if v[2]<0 else 1)
     nutpoly=Polygon([polar(5.5/math.sqrt(3),k*math.pi/3+phase) for k in range(6)])
     nut=pose(extr(nutpoly,offset,2.4)-cyl(1.6,offset-1,4.4))
     current.append({'part':name+'_nut','folder':'hardware','name':name+'_nut','m':nut,'color':'steel','group':group,'hardware':True,'type':'nut','allowed_interference_with':owner})
@@ -230,7 +234,7 @@ bob-=cub(-3.7,137,144.7,7.4,26,6.6)
 bob=hole(bob,(0,150),1.7,140,20)
 bob_channel=Polygon([(v,150+u) for u,v in nut_channel(-13,3.25).exterior.coords])
 bob-=extr(bob_channel,151.2,NUT_DEPTH)
-register('25_screw_fixed_bob',bob,rot=(-90,0,0),note='Open mouth up. 1 mm outer walls; 5.8 mm nut channel tapers to a 5.25 mm seat. Use one M3x16 through the selected rod hole.',color='regulator')
+register('25_screw_fixed_bob',bob,rot=(-90,0,0),note=f'Open mouth up. 1 mm outer walls; {NUT_ENTRY_WIDTH:g} mm nut channel tapers to a {NUT_WIDTH:g} mm seat. Use one M3x16 through the selected rod hole.',color='regulator')
 for name,z,h,r in [('34_main_front_thrust_sleeve',95.2,26.4,7.5),('35_main_rear_thrust_washer',82.4,1.2,8),('36_rear_round_journal',12.4,70,6),('37_front_round_journal',122,45.6,6)]:
     register(name,key_hole(cyl(r,z,h),z-1,h+2),note=f'Flat annular end on bed, {h:g} mm long. Square bore keys to axle.',color='pins')
 

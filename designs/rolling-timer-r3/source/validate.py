@@ -10,7 +10,10 @@ def overlap(a,c):
     if any(min(ba[k+3],bc[k+3])-max(ba[k],bc[k])<1e-5 for k in range(3)):return 0.
     return max(0.,float((a^c).volume()))
 def about(m,axis,deg):return m.translate((-axis[0],-axis[1],0)).rotate((0,0,float(deg))).translate((*axis,0))
-def allowed(a,c):return a.get('allowed_interference_with')==c['name'] or c.get('allowed_interference_with')==a['name']
+def allowed(a,c):
+    # A deliberately undersize calibration may overlap the nominal 5.5 mm
+    # nut. The production 5.6 mm seats must pass without this exemption.
+    return b.NUT_WIDTH<5.5 and (a.get('allowed_interference_with')==c['name'] or c.get('allowed_interference_with')==a['name'])
 
 def check_nut_access():
     # Independent dimensional gauges in the generated solids: a loose entry
@@ -34,7 +37,7 @@ def check_nut_access():
         held=overlap(m,pose(cub(-.2,-(width+.1)/2,.1,.4,width+.1,.1)))
         assert free<1e-6 and seat<1e-6 and held>.001,(name,free,seat,held)
         # Nominal M3 nut enters without interference before reaching the
-        # taper/seat. The final calibrated interference remains intentional.
+        # taper/seat. Smaller alternative coupons intentionally grip tighter.
         nut=extr(Polygon([polar(5.5/math.sqrt(3),k*math.pi/3) for k in range(6)]),.2,2.4)
         path=max(overlap(m,pose(nut.translate((u,0,0)))) for u in np.linspace(-18,-6.8,29))
         assert path<1e-6,(name,path)
@@ -149,7 +152,7 @@ for ratio,items in b.assemblies.items():
       'rolling_rim_radius_mm':124,'post_body_max_radius_mm':math.hypot(119,5),
       'print_meshes_watertight_connected_within_250mm':True,
       'hardware':{k:layout[k] for k in ('M3x10','M3x16')},
-      'limits':'Rigid CAD, sampled gear/pendulum motion and analytic radial bounds. No fit, friction, structural or wear simulation. Standard 5.5 mm AF nuts intentionally overlap 5.25 mm calibrated traps; test coupons. Screw heads bounded by 6.5 mm diameter x 3.2 mm height.'}
+      'limits':f'Rigid CAD, sampled gear/pendulum motion and analytic radial bounds. No fit, friction, structural or wear simulation. Nominal nut AF: 5.5 mm; configured seat: {b.NUT_WIDTH:g} mm; insertion channel: {b.NUT_ENTRY_WIDTH:g} mm. The builder selected the 5.6 mm seat after printing fit coupons. Screw heads bounded by 6.5 mm diameter x 3.2 mm height.'}
     reports[ratio]=rep
     (ROOT/f'checks-{ratio}x.json').write_text(json.dumps(rep,indent=2))
     failures=bad+mechbad+pendbad+rotorbad+endbad
