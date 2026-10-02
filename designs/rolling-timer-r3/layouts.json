@@ -1,0 +1,230 @@
+{
+  "16": {
+    "ratio": 16,
+    "axes": {
+      "A": [
+        0.0,
+        0.0
+      ],
+      "B": [
+        56.03967358169784,
+        4.85978238779856
+      ],
+      "C": [
+        30.0,
+        -45.0
+      ],
+      "P": [
+        21.650429330109848,
+        -92.35276834176128
+      ]
+    },
+    "pinion_phase_rad": {
+      "B": 3.399579603175559,
+      "C": -7.2933973788681286
+    },
+    "pairs": [
+      [
+        72,
+        18
+      ],
+      [
+        72,
+        18
+      ]
+    ],
+    "direction_from_pendulum_side": "input counterclockwise; escape counterclockwise",
+    "M3x10": 15,
+    "M3x16": 17,
+    "nominal_seconds_per_metre": 462.4332639153503,
+    "print_quantities": {
+      "common/01_case_wheel": 2,
+      "common/02_square_case_post": 6,
+      "common/03_square_main_axle": 1,
+      "common/05_shared_rear_frame": 1,
+      "common/06_shared_front_frame": 1,
+      "common/07_square_frame_post": 3,
+      "common/08_open_ballast_bowl": 1,
+      "common/10_drive_72": 1,
+      "common/13_bolted_gear_pivot": 2,
+      "common/19_bolted_anchor_pivot": 1,
+      "16x/11_B_18_72": 1,
+      "16x/12_escape_compound": 1,
+      "16x/15_B_rear_spacer": 1,
+      "16x/16_B_front_spacer": 1,
+      "16x/17_C_rear_spacer": 1,
+      "16x/27_C_front_spacer": 1,
+      "16x/18_anchor_forward": 1,
+      "common/20_anchor_rear_spacer": 1,
+      "common/21_anchor_front_spacer": 1,
+      "common/22_bolted_anchor_bridge": 1,
+      "common/23_square_bridge_post": 2,
+      "common/24_offset_pendulum": 1,
+      "common/25_screw_fixed_bob": 1,
+      "common/34_main_front_thrust_sleeve": 1,
+      "common/35_main_rear_thrust_washer": 1,
+      "common/36_rear_round_journal": 1,
+      "common/37_front_round_journal": 1
+    }
+  },
+  "32": {
+    "ratio": 32,
+    "axes": {
+      "A": [
+        0.0,
+        0.0
+      ],
+      "B": [
+        -56.25,
+        0.0
+      ],
+      "C": [
+        30.0,
+        -45.0
+      ],
+      "P": [
+        21.650429330109848,
+        -92.35276834176128
+      ],
+      "D": [
+        -26.192361766493043,
+        -47.545776719111664
+      ]
+    },
+    "pinion_phase_rad": {
+      "B": 18.675022996339326,
+      "C": 3.1726940510521953,
+      "D": -2.068181661199768
+    },
+    "pairs": [
+      [
+        72,
+        18
+      ],
+      [
+        72,
+        18
+      ],
+      [
+        60,
+        30
+      ]
+    ],
+    "direction_from_pendulum_side": "input counterclockwise; escape clockwise",
+    "M3x10": 16,
+    "M3x16": 17,
+    "nominal_seconds_per_metre": 924.8665278307006,
+    "print_quantities": {
+      "common/01_case_wheel": 2,
+      "common/02_square_case_post": 6,
+      "common/03_square_main_axle": 1,
+      "common/05_shared_rear_frame": 1,
+      "common/06_shared_front_frame": 1,
+      "common/07_square_frame_post": 3,
+      "common/08_open_ballast_bowl": 1,
+      "common/10_drive_72": 1,
+      "common/13_bolted_gear_pivot": 3,
+      "common/19_bolted_anchor_pivot": 1,
+      "32x/11_B_18_72": 1,
+      "32x/12_escape_compound": 1,
+      "32x/14_D_18_60": 1,
+      "32x/15_B_rear_spacer": 1,
+      "32x/16_B_front_spacer": 1,
+      "32x/17_C_rear_spacer": 1,
+      "32x/27_C_front_spacer": 1,
+      "32x/28_D_rear_spacer": 1,
+      "32x/29_D_front_spacer": 1,
+      "slow-common/18_anchor_reversed": 1,
+      "common/20_anchor_rear_spacer": 1,
+      "common/21_anchor_front_spacer": 1,
+      "common/22_bolted_anchor_bridge": 1,
+      "common/23_square_bridge_post": 2,
+      "common/24_offset_pendulum": 1,
+      "common/25_screw_fixed_bob": 1,
+      "common/34_main_front_thrust_sleeve": 1,
+      "common/35_main_rear_thrust_washer": 1,
+      "common/36_rear_round_journal": 1,
+      "common/37_front_round_journal": 1
+    }
+  },
+  "64": {
+    "ratio": 64,
+    "axes": {
+      "A": [
+        0.0,
+        0.0
+      ],
+      "B": [
+        -56.25,
+        0.0
+      ],
+      "C": [
+        30.0,
+        -45.0
+      ],
+      "P": [
+        21.650429330109848,
+        -92.35276834176128
+      ],
+      "D": [
+        -26.192361766493043,
+        -47.545776719111664
+      ]
+    },
+    "pinion_phase_rad": {
+      "B": 18.675022996339326,
+      "C": 3.19342831602713,
+      "D": -2.068181661199768
+    },
+    "pairs": [
+      [
+        72,
+        18
+      ],
+      [
+        72,
+        18
+      ],
+      [
+        72,
+        18
+      ]
+    ],
+    "direction_from_pendulum_side": "input counterclockwise; escape clockwise",
+    "M3x10": 16,
+    "M3x16": 17,
+    "nominal_seconds_per_metre": 1849.7330556614013,
+    "print_quantities": {
+      "common/01_case_wheel": 2,
+      "common/02_square_case_post": 6,
+      "common/03_square_main_axle": 1,
+      "common/05_shared_rear_frame": 1,
+      "common/06_shared_front_frame": 1,
+      "common/07_square_frame_post": 3,
+      "common/08_open_ballast_bowl": 1,
+      "common/10_drive_72": 1,
+      "common/13_bolted_gear_pivot": 3,
+      "common/19_bolted_anchor_pivot": 1,
+      "64x/11_B_18_72": 1,
+      "64x/12_escape_compound": 1,
+      "64x/14_D_18_72": 1,
+      "64x/15_B_rear_spacer": 1,
+      "64x/16_B_front_spacer": 1,
+      "64x/17_C_rear_spacer": 1,
+      "64x/27_C_front_spacer": 1,
+      "64x/28_D_rear_spacer": 1,
+      "64x/29_D_front_spacer": 1,
+      "slow-common/18_anchor_reversed": 1,
+      "common/20_anchor_rear_spacer": 1,
+      "common/21_anchor_front_spacer": 1,
+      "common/22_bolted_anchor_bridge": 1,
+      "common/23_square_bridge_post": 2,
+      "common/24_offset_pendulum": 1,
+      "common/25_screw_fixed_bob": 1,
+      "common/34_main_front_thrust_sleeve": 1,
+      "common/35_main_rear_thrust_washer": 1,
+      "common/36_rear_round_journal": 1,
+      "common/37_front_round_journal": 1
+    }
+  }
+}

@@ -1,0 +1,602 @@
+{
+  "common/01_case_wheel": {
+    "qty": 2,
+    "file": "STL/common/01_case_wheel.stl",
+    "color": "case",
+    "dimensions_mm": [
+      248.0,
+      248.0,
+      12.0
+    ],
+    "volume_cm3": 101.268,
+    "print_note": "Flat outer face on bed, hub and locating lips up. No outer brim; diameter 248 mm."
+  },
+  "common/02_square_case_post": {
+    "qty": 6,
+    "file": "STL/common/02_square_case_post.stl",
+    "color": "case",
+    "dimensions_mm": [
+      166.0,
+      10.0,
+      10.0
+    ],
+    "volume_cm3": 16.165,
+    "print_note": "Long flat side on bed; both nut-slot mouths upward. Preload two M3 nuts. End bolts M3x16."
+  },
+  "common/03_square_main_axle": {
+    "qty": 1,
+    "file": "STL/common/03_square_main_axle.stl",
+    "color": "case",
+    "dimensions_mm": [
+      8.0,
+      180.0,
+      8.0
+    ],
+    "volume_cm3": 10.597,
+    "print_note": "Long flat on bed; solid. Cross-holes at 6, 91 and 174 mm from the rear end."
+  },
+  "common/05_shared_rear_frame": {
+    "qty": 1,
+    "file": "STL/common/05_shared_rear_frame.stl",
+    "color": "frame",
+    "dimensions_mm": [
+      171.0,
+      186.353,
+      10.0
+    ],
+    "volume_cm3": 68.485,
+    "print_note": "Flat outside face on bed; lips and main collar up. Universal 16/32/64 frame."
+  },
+  "common/06_shared_front_frame": {
+    "qty": 1,
+    "file": "STL/common/06_shared_front_frame.stl",
+    "color": "frame",
+    "dimensions_mm": [
+      171.0,
+      178.353,
+      10.0
+    ],
+    "volume_cm3": 58.734,
+    "print_note": "Outside face on bed; all locating lips point up. Bridge posts locate in the bridge at their other ends."
+  },
+  "common/07_square_frame_post": {
+    "qty": 3,
+    "file": "STL/common/07_square_frame_post.stl",
+    "color": "frame",
+    "dimensions_mm": [
+      48.0,
+      12.0,
+      12.0
+    ],
+    "volume_cm3": 6.448,
+    "print_note": "Long flat side on bed, nut slots up. Flat ends set the 48 mm frame gap; M3x10 at both ends."
+  },
+  "common/08_open_ballast_bowl": {
+    "qty": 1,
+    "file": "STL/common/08_open_ballast_bowl.stl",
+    "color": "ballast",
+    "dimensions_mm": [
+      104.0,
+      62.0,
+      46.0
+    ],
+    "volume_cm3": 49.431,
+    "print_note": "Mouth up. Two M3x10 screws and two nuts; lower pads rest on the frame."
+  },
+  "common/10_drive_72": {
+    "qty": 1,
+    "file": "STL/common/10_drive_72.stl",
+    "color": "input",
+    "dimensions_mm": [
+      92.5,
+      92.5,
+      10.8
+    ],
+    "volume_cm3": 18.733,
+    "print_note": "Broad wheel on bed, hub up. M3x16 retains the square axle."
+  },
+  "common/13_bolted_gear_pivot": {
+    "qty": 2,
+    "file": "STL/common/13_bolted_gear_pivot.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      50.5
+    ],
+    "volume_cm3": 2.759,
+    "print_note": "Square foot on bed; 8 mm journal up. One M3x10 at rear; tip has 0.5 mm clearance in the front blind seat."
+  },
+  "common/19_bolted_anchor_pivot": {
+    "qty": 1,
+    "file": "STL/common/19_bolted_anchor_pivot.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      10.0,
+      10.0,
+      83.5
+    ],
+    "volume_cm3": 4.227,
+    "print_note": "Square foot on bed. M3x10 at rear; bridge supports the long tip."
+  },
+  "16x/18_anchor_forward": {
+    "qty": 1,
+    "file": "STL/16x/18_anchor_forward.stl",
+    "color": "regulator",
+    "dimensions_mm": [
+      66.539,
+      33.038,
+      34.0
+    ],
+    "volume_cm3": 3.603,
+    "print_note": "Pallet faces on bed, sleeve up. Used only with 16x escape wheel."
+  },
+  "slow-common/18_anchor_reversed": {
+    "qty": 1,
+    "file": "STL/slow-common/18_anchor_reversed.stl",
+    "color": "regulator",
+    "dimensions_mm": [
+      66.539,
+      33.038,
+      34.0
+    ],
+    "volume_cm3": 3.603,
+    "print_note": "Pallet faces on bed, sleeve up. Used with 32x or 64x reversed escape wheels."
+  },
+  "common/20_anchor_rear_spacer": {
+    "qty": 1,
+    "file": "STL/common/20_anchor_rear_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      34.2
+    ],
+    "volume_cm3": 1.971,
+    "print_note": "Flat annular face on bed; 34.2 mm long."
+  },
+  "common/21_anchor_front_spacer": {
+    "qty": 1,
+    "file": "STL/common/21_anchor_front_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      7.7
+    ],
+    "volume_cm3": 0.444,
+    "print_note": "Flat annular face on bed; 7.7 mm long."
+  },
+  "common/22_bolted_anchor_bridge": {
+    "qty": 1,
+    "file": "STL/common/22_bolted_anchor_bridge.stl",
+    "color": "frame",
+    "dimensions_mm": [
+      70.0,
+      40.0,
+      7.5
+    ],
+    "volume_cm3": 8.452,
+    "print_note": "Outer face on bed; shallow locating lips upward. M3x10 at each end."
+  },
+  "common/23_square_bridge_post": {
+    "qty": 2,
+    "file": "STL/common/23_square_bridge_post.stl",
+    "color": "frame",
+    "dimensions_mm": [
+      27.0,
+      12.0,
+      12.0
+    ],
+    "volume_cm3": 3.424,
+    "print_note": "Flat side on bed, nut mouths up. Two M3x10 per post. Hard shoulders set the bridge position."
+  },
+  "common/24_offset_pendulum": {
+    "qty": 1,
+    "file": "STL/common/24_offset_pendulum.stl",
+    "color": "regulator",
+    "dimensions_mm": [
+      42.5,
+      177.0,
+      6.0
+    ],
+    "volume_cm3": 8.788,
+    "print_note": "Broad face on bed. Dogleg clears the main shaft. M3x16 clamp; 3.4 mm bob holes."
+  },
+  "common/25_screw_fixed_bob": {
+    "qty": 1,
+    "file": "STL/common/25_screw_fixed_bob.stl",
+    "color": "regulator",
+    "dimensions_mm": [
+      31.2,
+      13.2,
+      24.0
+    ],
+    "volume_cm3": 3.816,
+    "print_note": "Open mouth up. 1 mm outer walls; captive nut drops into front central slot. Use one M3x16 through the selected rod hole."
+  },
+  "common/34_main_front_thrust_sleeve": {
+    "qty": 1,
+    "file": "STL/common/34_main_front_thrust_sleeve.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      15.0,
+      15.0,
+      26.4
+    ],
+    "volume_cm3": 2.96,
+    "print_note": "Flat annular end on bed, 26.4 mm long. Square bore keys to axle."
+  },
+  "common/35_main_rear_thrust_washer": {
+    "qty": 1,
+    "file": "STL/common/35_main_rear_thrust_washer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      16.0,
+      16.0,
+      1.2
+    ],
+    "volume_cm3": 0.164,
+    "print_note": "Flat annular end on bed, 1.2 mm long. Square bore keys to axle."
+  },
+  "common/36_rear_round_journal": {
+    "qty": 1,
+    "file": "STL/common/36_rear_round_journal.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      70.0
+    ],
+    "volume_cm3": 3.399,
+    "print_note": "Flat annular end on bed, 70 mm long. Square bore keys to axle."
+  },
+  "common/37_front_round_journal": {
+    "qty": 1,
+    "file": "STL/common/37_front_round_journal.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      45.6
+    ],
+    "volume_cm3": 2.214,
+    "print_note": "Flat annular end on bed, 45.6 mm long. Square bore keys to axle."
+  },
+  "fit-tests/40_nut_post_coupon_525": {
+    "qty": 1,
+    "file": "STL/fit-tests/40_nut_post_coupon_525.stl",
+    "color": "frame",
+    "dimensions_mm": [
+      20.0,
+      12.0,
+      12.0
+    ],
+    "volume_cm3": 2.47,
+    "print_note": "Trial nut slot 5.25 mm. Slide nut from open side; use actual M3x10 screw through coupon plate."
+  },
+  "fit-tests/40_nut_post_coupon_540": {
+    "qty": 1,
+    "file": "STL/fit-tests/40_nut_post_coupon_540.stl",
+    "color": "frame",
+    "dimensions_mm": [
+      20.0,
+      12.0,
+      12.0
+    ],
+    "volume_cm3": 2.462,
+    "print_note": "Trial nut slot 5.4 mm. Slide nut from open side; use actual M3x10 screw through coupon plate."
+  },
+  "fit-tests/40_nut_post_coupon_560": {
+    "qty": 1,
+    "file": "STL/fit-tests/40_nut_post_coupon_560.stl",
+    "color": "frame",
+    "dimensions_mm": [
+      20.0,
+      12.0,
+      12.0
+    ],
+    "volume_cm3": 2.451,
+    "print_note": "Trial nut slot 5.6 mm. Slide nut from open side; use actual M3x10 screw through coupon plate."
+  },
+  "fit-tests/41_post_seat_coupon": {
+    "qty": 1,
+    "file": "STL/fit-tests/41_post_seat_coupon.stl",
+    "color": "frame",
+    "dimensions_mm": [
+      20.0,
+      20.0,
+      7.5
+    ],
+    "volume_cm3": 2.401,
+    "print_note": "Clamps to coupon with M3x10; 12 mm post slips into 12.4 mm lip opening."
+  },
+  "16x/11_B_18_72": {
+    "qty": 1,
+    "file": "STL/16x/11_B_18_72.stl",
+    "color": "compound",
+    "dimensions_mm": [
+      92.5,
+      92.5,
+      18.0
+    ],
+    "volume_cm3": 21.292,
+    "print_note": "Large wheel on bed; pinion teeth continue down to the bed. Pinion faces rear in assembly."
+  },
+  "16x/12_escape_compound": {
+    "qty": 1,
+    "file": "STL/16x/12_escape_compound.stl",
+    "color": "escape",
+    "dimensions_mm": [
+      67.907,
+      67.907,
+      25.0
+    ],
+    "volume_cm3": 13.581,
+    "print_note": "Escape face on bed; pinion extends through wheel. Use matching anchor direction."
+  },
+  "16x/15_B_rear_spacer": {
+    "qty": 1,
+    "file": "STL/16x/15_B_rear_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      1.2
+    ],
+    "volume_cm3": 0.069,
+    "print_note": "Flat annular face on bed; 1.2 mm long."
+  },
+  "16x/16_B_front_spacer": {
+    "qty": 1,
+    "file": "STL/16x/16_B_front_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      23.7
+    ],
+    "volume_cm3": 1.366,
+    "print_note": "Flat annular face on bed; 23.7 mm long."
+  },
+  "16x/17_C_rear_spacer": {
+    "qty": 1,
+    "file": "STL/16x/17_C_rear_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      13.2
+    ],
+    "volume_cm3": 0.761,
+    "print_note": "Flat annular face on bed; 13.2 mm long."
+  },
+  "16x/27_C_front_spacer": {
+    "qty": 1,
+    "file": "STL/16x/27_C_front_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      4.7
+    ],
+    "volume_cm3": 0.271,
+    "print_note": "Flat annular face on bed; 4.7 mm long."
+  },
+  "32x/11_B_18_72": {
+    "qty": 1,
+    "file": "STL/32x/11_B_18_72.stl",
+    "color": "compound",
+    "dimensions_mm": [
+      92.5,
+      92.5,
+      18.0
+    ],
+    "volume_cm3": 21.336,
+    "print_note": "Large wheel on bed; pinion teeth continue down to the bed. Pinion faces rear in assembly."
+  },
+  "32x/14_D_18_60": {
+    "qty": 1,
+    "file": "STL/32x/14_D_18_60.stl",
+    "color": "extra",
+    "dimensions_mm": [
+      77.5,
+      77.5,
+      18.0
+    ],
+    "volume_cm3": 17.461,
+    "print_note": "Large wheel on bed; pinion faces rear. Both pivot ends supported."
+  },
+  "32x/12_escape_compound": {
+    "qty": 1,
+    "file": "STL/32x/12_escape_compound.stl",
+    "color": "escape",
+    "dimensions_mm": [
+      67.741,
+      67.99,
+      13.0
+    ],
+    "volume_cm3": 18.165,
+    "print_note": "Escape face on bed; pinion extends through wheel. Use matching anchor direction."
+  },
+  "32x/15_B_rear_spacer": {
+    "qty": 1,
+    "file": "STL/32x/15_B_rear_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      1.2
+    ],
+    "volume_cm3": 0.069,
+    "print_note": "Flat annular face on bed; 1.2 mm long."
+  },
+  "32x/16_B_front_spacer": {
+    "qty": 1,
+    "file": "STL/32x/16_B_front_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      23.7
+    ],
+    "volume_cm3": 1.366,
+    "print_note": "Flat annular face on bed; 23.7 mm long."
+  },
+  "32x/17_C_rear_spacer": {
+    "qty": 1,
+    "file": "STL/32x/17_C_rear_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      25.2
+    ],
+    "volume_cm3": 1.452,
+    "print_note": "Flat annular face on bed; 25.2 mm long."
+  },
+  "32x/27_C_front_spacer": {
+    "qty": 1,
+    "file": "STL/32x/27_C_front_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      4.7
+    ],
+    "volume_cm3": 0.271,
+    "print_note": "Flat annular face on bed; 4.7 mm long."
+  },
+  "32x/28_D_rear_spacer": {
+    "qty": 1,
+    "file": "STL/32x/28_D_rear_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      13.2
+    ],
+    "volume_cm3": 0.761,
+    "print_note": "Flat annular face on bed; 13.2 mm long."
+  },
+  "32x/29_D_front_spacer": {
+    "qty": 1,
+    "file": "STL/32x/29_D_front_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      11.7
+    ],
+    "volume_cm3": 0.674,
+    "print_note": "Flat annular face on bed; 11.7 mm long."
+  },
+  "64x/11_B_18_72": {
+    "qty": 1,
+    "file": "STL/64x/11_B_18_72.stl",
+    "color": "compound",
+    "dimensions_mm": [
+      92.5,
+      92.5,
+      18.0
+    ],
+    "volume_cm3": 21.336,
+    "print_note": "Large wheel on bed; pinion teeth continue down to the bed. Pinion faces rear in assembly."
+  },
+  "64x/14_D_18_72": {
+    "qty": 1,
+    "file": "STL/64x/14_D_18_72.stl",
+    "color": "extra",
+    "dimensions_mm": [
+      92.5,
+      92.5,
+      18.0
+    ],
+    "volume_cm3": 21.226,
+    "print_note": "Large wheel on bed; pinion faces rear. Both pivot ends supported."
+  },
+  "64x/12_escape_compound": {
+    "qty": 1,
+    "file": "STL/64x/12_escape_compound.stl",
+    "color": "escape",
+    "dimensions_mm": [
+      67.741,
+      67.99,
+      13.0
+    ],
+    "volume_cm3": 9.709,
+    "print_note": "Escape face on bed; pinion extends through wheel. Use matching anchor direction."
+  },
+  "64x/15_B_rear_spacer": {
+    "qty": 1,
+    "file": "STL/64x/15_B_rear_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      1.2
+    ],
+    "volume_cm3": 0.069,
+    "print_note": "Flat annular face on bed; 1.2 mm long."
+  },
+  "64x/16_B_front_spacer": {
+    "qty": 1,
+    "file": "STL/64x/16_B_front_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      23.7
+    ],
+    "volume_cm3": 1.366,
+    "print_note": "Flat annular face on bed; 23.7 mm long."
+  },
+  "64x/17_C_rear_spacer": {
+    "qty": 1,
+    "file": "STL/64x/17_C_rear_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      25.2
+    ],
+    "volume_cm3": 1.452,
+    "print_note": "Flat annular face on bed; 25.2 mm long."
+  },
+  "64x/27_C_front_spacer": {
+    "qty": 1,
+    "file": "STL/64x/27_C_front_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      4.7
+    ],
+    "volume_cm3": 0.271,
+    "print_note": "Flat annular face on bed; 4.7 mm long."
+  },
+  "64x/28_D_rear_spacer": {
+    "qty": 1,
+    "file": "STL/64x/28_D_rear_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      13.2
+    ],
+    "volume_cm3": 0.761,
+    "print_note": "Flat annular face on bed; 13.2 mm long."
+  },
+  "64x/29_D_front_spacer": {
+    "qty": 1,
+    "file": "STL/64x/29_D_front_spacer.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      12.0,
+      12.0,
+      11.7
+    ],
+    "volume_cm3": 0.674,
+    "print_note": "Flat annular face on bed; 11.7 mm long."
+  }
+}

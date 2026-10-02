@@ -1,0 +1,211 @@
+{
+  "ratio": 32,
+  "static_unintended_intersections": [],
+  "intended_calibrated_nut_trap_intersections": [
+    [
+      "rear_case_wheel",
+      "axle_cross_6_nut",
+      1.948557
+    ],
+    [
+      "front_case_wheel",
+      "axle_cross_174_nut",
+      1.948557
+    ],
+    [
+      "case_post_1",
+      "case_rear_1_nut",
+      2.51884
+    ],
+    [
+      "case_post_1",
+      "case_front_1_nut",
+      2.51884
+    ],
+    [
+      "case_post_2",
+      "case_rear_2_nut",
+      2.51884
+    ],
+    [
+      "case_post_2",
+      "case_front_2_nut",
+      2.51884
+    ],
+    [
+      "case_post_3",
+      "case_rear_3_nut",
+      2.51884
+    ],
+    [
+      "case_post_3",
+      "case_front_3_nut",
+      2.51884
+    ],
+    [
+      "case_post_4",
+      "case_rear_4_nut",
+      2.51884
+    ],
+    [
+      "case_post_4",
+      "case_front_4_nut",
+      2.51884
+    ],
+    [
+      "case_post_5",
+      "case_rear_5_nut",
+      2.51884
+    ],
+    [
+      "case_post_5",
+      "case_front_5_nut",
+      2.51884
+    ],
+    [
+      "case_post_6",
+      "case_rear_6_nut",
+      2.51884
+    ],
+    [
+      "case_post_6",
+      "case_front_6_nut",
+      2.51884
+    ],
+    [
+      "axle_cross_91_nut",
+      "10_drive_72",
+      1.948557
+    ],
+    [
+      "frame_post_1",
+      "frame_rear_0_nut",
+      1.948557
+    ],
+    [
+      "frame_post_1",
+      "frame_front_0_nut",
+      1.948557
+    ],
+    [
+      "frame_post_2",
+      "frame_rear_1_nut",
+      1.948557
+    ],
+    [
+      "frame_post_2",
+      "frame_front_1_nut",
+      1.948557
+    ],
+    [
+      "frame_post_3",
+      "frame_rear_2_nut",
+      1.948557
+    ],
+    [
+      "frame_post_3",
+      "frame_front_2_nut",
+      1.948557
+    ],
+    [
+      "08_open_ballast_bowl",
+      "bowl_0_nut",
+      5.585864
+    ],
+    [
+      "08_open_ballast_bowl",
+      "bowl_1_nut",
+      5.585864
+    ],
+    [
+      "B_pivot",
+      "B_pivot_bolt_nut",
+      1.948557
+    ],
+    [
+      "C_pivot",
+      "C_pivot_bolt_nut",
+      1.948557
+    ],
+    [
+      "D_pivot",
+      "D_pivot_bolt_nut",
+      1.948557
+    ],
+    [
+      "19_bolted_anchor_pivot",
+      "anchor_pivot_bolt_nut",
+      1.948557
+    ],
+    [
+      "bridge_post_0",
+      "bridge_rear_0_nut",
+      1.948557
+    ],
+    [
+      "bridge_post_0",
+      "bridge_front_0_nut",
+      1.948557
+    ],
+    [
+      "bridge_post_1",
+      "bridge_rear_1_nut",
+      1.948557
+    ],
+    [
+      "bridge_post_1",
+      "bridge_front_1_nut",
+      1.948557
+    ],
+    [
+      "24_offset_pendulum",
+      "pendulum_clamp_nut",
+      5.338045
+    ],
+    [
+      "25_screw_fixed_bob",
+      "bob_bolt_nut",
+      1.867367
+    ]
+  ],
+  "axial_endplay_intersections": [],
+  "gear_axial_float_mm": [
+    -0.3,
+    0.3
+  ],
+  "carrier_to_rotor_axial_float_mm": [
+    -0.4,
+    0.4
+  ],
+  "drive_hub_to_B_wheel_min_gap_with_endplay_mm": 0.5,
+  "spur_samples": 121,
+  "max_spur_overlap_mm2": 0,
+  "anchor_samples": 241,
+  "max_anchor_overlap_mm2": 1.8142134015923069e-09,
+  "mechanism_3d_samples": 41,
+  "mechanism_intersections": [],
+  "pendulum_angle_range_deg": [
+    -15,
+    15
+  ],
+  "pendulum_sweep_samples": 61,
+  "pendulum_intersections": [],
+  "case_full_turn_samples": 73,
+  "case_intersections": [],
+  "fixed_max_radius_mm": 106.64154912396725,
+  "pendulum_max_radius_mm": 106.15603920258032,
+  "gear_max_swept_radius_mm": 102.5,
+  "case_post_inner_swept_radius_mm": 109,
+  "minimum_radial_case_post_gap_mm": 2.358450876032748,
+  "bob_to_frame_axial_gap_mm": 9.4,
+  "bob_screw_head_to_frame_axial_gap_mm": 6.2,
+  "bob_screw_tip_to_front_spokes_mm": 15.6,
+  "rolling_rim_radius_mm": 124,
+  "post_body_max_radius_mm": 119.10499569707393,
+  "print_meshes_watertight_connected_within_250mm": true,
+  "hardware": {
+    "M3x10": 16,
+    "M3x16": 17
+  },
+  "limits": "Rigid CAD, sampled gear/pendulum motion and analytic radial bounds. No fit, friction, structural or wear simulation. Standard 5.5 mm AF nuts intentionally overlap 5.25 mm calibrated traps; test coupons. Screw heads bounded by 6.5 mm diameter x 3.2 mm height."
+}

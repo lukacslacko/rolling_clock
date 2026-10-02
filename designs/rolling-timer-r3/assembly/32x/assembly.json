@@ -1,0 +1,1452 @@
+[
+  {
+    "part": "01_case_wheel",
+    "folder": "common",
+    "name": "rear_case_wheel",
+    "color": "case",
+    "group": "case",
+    "file": "00_rear_case_wheel.stl"
+  },
+  {
+    "part": "01_case_wheel",
+    "folder": "common",
+    "name": "front_case_wheel",
+    "color": "case",
+    "group": "case",
+    "file": "01_front_case_wheel.stl"
+  },
+  {
+    "part": "02_square_case_post",
+    "folder": "common",
+    "name": "case_post_1",
+    "color": "case",
+    "group": "case",
+    "file": "02_case_post_1.stl"
+  },
+  {
+    "part": "case_rear_1",
+    "folder": "hardware",
+    "name": "case_rear_1",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      98.72689603142601,
+      56.99999999999999,
+      0
+    ],
+    "file": "03_case_rear_1.stl"
+  },
+  {
+    "part": "case_rear_1_nut",
+    "folder": "hardware",
+    "name": "case_rear_1_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_1",
+    "file": "04_case_rear_1_nut.stl"
+  },
+  {
+    "part": "case_front_1",
+    "folder": "hardware",
+    "name": "case_front_1",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      98.72689603142601,
+      56.99999999999999,
+      180.0
+    ],
+    "file": "05_case_front_1.stl"
+  },
+  {
+    "part": "case_front_1_nut",
+    "folder": "hardware",
+    "name": "case_front_1_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_1",
+    "file": "06_case_front_1_nut.stl"
+  },
+  {
+    "part": "02_square_case_post",
+    "folder": "common",
+    "name": "case_post_2",
+    "color": "case",
+    "group": "case",
+    "file": "07_case_post_2.stl"
+  },
+  {
+    "part": "case_rear_2",
+    "folder": "hardware",
+    "name": "case_rear_2",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      6.980486755139913e-15,
+      114.0,
+      0
+    ],
+    "file": "08_case_rear_2.stl"
+  },
+  {
+    "part": "case_rear_2_nut",
+    "folder": "hardware",
+    "name": "case_rear_2_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_2",
+    "file": "09_case_rear_2_nut.stl"
+  },
+  {
+    "part": "case_front_2",
+    "folder": "hardware",
+    "name": "case_front_2",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      6.980486755139913e-15,
+      114.0,
+      180.0
+    ],
+    "file": "10_case_front_2.stl"
+  },
+  {
+    "part": "case_front_2_nut",
+    "folder": "hardware",
+    "name": "case_front_2_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_2",
+    "file": "11_case_front_2_nut.stl"
+  },
+  {
+    "part": "02_square_case_post",
+    "folder": "common",
+    "name": "case_post_3",
+    "color": "case",
+    "group": "case",
+    "file": "12_case_post_3.stl"
+  },
+  {
+    "part": "case_rear_3",
+    "folder": "hardware",
+    "name": "case_rear_3",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      -98.72689603142601,
+      56.99999999999999,
+      0
+    ],
+    "file": "13_case_rear_3.stl"
+  },
+  {
+    "part": "case_rear_3_nut",
+    "folder": "hardware",
+    "name": "case_rear_3_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_3",
+    "file": "14_case_rear_3_nut.stl"
+  },
+  {
+    "part": "case_front_3",
+    "folder": "hardware",
+    "name": "case_front_3",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      -98.72689603142601,
+      56.99999999999999,
+      180.0
+    ],
+    "file": "15_case_front_3.stl"
+  },
+  {
+    "part": "case_front_3_nut",
+    "folder": "hardware",
+    "name": "case_front_3_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_3",
+    "file": "16_case_front_3_nut.stl"
+  },
+  {
+    "part": "02_square_case_post",
+    "folder": "common",
+    "name": "case_post_4",
+    "color": "case",
+    "group": "case",
+    "file": "17_case_post_4.stl"
+  },
+  {
+    "part": "case_rear_4",
+    "folder": "hardware",
+    "name": "case_rear_4",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      -98.726896031426,
+      -57.000000000000014,
+      0
+    ],
+    "file": "18_case_rear_4.stl"
+  },
+  {
+    "part": "case_rear_4_nut",
+    "folder": "hardware",
+    "name": "case_rear_4_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_4",
+    "file": "19_case_rear_4_nut.stl"
+  },
+  {
+    "part": "case_front_4",
+    "folder": "hardware",
+    "name": "case_front_4",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      -98.726896031426,
+      -57.000000000000014,
+      180.0
+    ],
+    "file": "20_case_front_4.stl"
+  },
+  {
+    "part": "case_front_4_nut",
+    "folder": "hardware",
+    "name": "case_front_4_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_4",
+    "file": "21_case_front_4_nut.stl"
+  },
+  {
+    "part": "02_square_case_post",
+    "folder": "common",
+    "name": "case_post_5",
+    "color": "case",
+    "group": "case",
+    "file": "22_case_post_5.stl"
+  },
+  {
+    "part": "case_rear_5",
+    "folder": "hardware",
+    "name": "case_rear_5",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      -2.094146026541974e-14,
+      -114.0,
+      0
+    ],
+    "file": "23_case_rear_5.stl"
+  },
+  {
+    "part": "case_rear_5_nut",
+    "folder": "hardware",
+    "name": "case_rear_5_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_5",
+    "file": "24_case_rear_5_nut.stl"
+  },
+  {
+    "part": "case_front_5",
+    "folder": "hardware",
+    "name": "case_front_5",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      -2.094146026541974e-14,
+      -114.0,
+      180.0
+    ],
+    "file": "25_case_front_5.stl"
+  },
+  {
+    "part": "case_front_5_nut",
+    "folder": "hardware",
+    "name": "case_front_5_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_5",
+    "file": "26_case_front_5_nut.stl"
+  },
+  {
+    "part": "02_square_case_post",
+    "folder": "common",
+    "name": "case_post_6",
+    "color": "case",
+    "group": "case",
+    "file": "27_case_post_6.stl"
+  },
+  {
+    "part": "case_rear_6",
+    "folder": "hardware",
+    "name": "case_rear_6",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      98.72689603142598,
+      -57.00000000000005,
+      0
+    ],
+    "file": "28_case_rear_6.stl"
+  },
+  {
+    "part": "case_rear_6_nut",
+    "folder": "hardware",
+    "name": "case_rear_6_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_6",
+    "file": "29_case_rear_6_nut.stl"
+  },
+  {
+    "part": "case_front_6",
+    "folder": "hardware",
+    "name": "case_front_6",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 12.5,
+    "tip_beyond_nut_mm": 1.1,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      98.72689603142598,
+      -57.00000000000005,
+      180.0
+    ],
+    "file": "30_case_front_6.stl"
+  },
+  {
+    "part": "case_front_6_nut",
+    "folder": "hardware",
+    "name": "case_front_6_nut",
+    "color": "steel",
+    "group": "case",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "case_post_6",
+    "file": "31_case_front_6_nut.stl"
+  },
+  {
+    "part": "03_square_main_axle",
+    "folder": "common",
+    "name": "03_square_main_axle",
+    "color": "case",
+    "group": "rotor",
+    "file": "32_03_square_main_axle.stl"
+  },
+  {
+    "part": "axle_cross_6",
+    "folder": "hardware",
+    "name": "axle_cross_6",
+    "color": "steel",
+    "group": "rotor",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 11.2,
+    "tip_beyond_nut_mm": 2.400000000000001,
+    "axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "point": [
+      -5.6,
+      0,
+      6
+    ],
+    "file": "33_axle_cross_6.stl"
+  },
+  {
+    "part": "axle_cross_6_nut",
+    "folder": "hardware",
+    "name": "axle_cross_6_nut",
+    "color": "steel",
+    "group": "rotor",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "rear_case_wheel",
+    "file": "34_axle_cross_6_nut.stl"
+  },
+  {
+    "part": "axle_cross_91",
+    "folder": "hardware",
+    "name": "axle_cross_91",
+    "color": "steel",
+    "group": "rotor",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 11.2,
+    "tip_beyond_nut_mm": 2.400000000000001,
+    "axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "point": [
+      -5.6,
+      0,
+      91
+    ],
+    "file": "35_axle_cross_91.stl"
+  },
+  {
+    "part": "axle_cross_91_nut",
+    "folder": "hardware",
+    "name": "axle_cross_91_nut",
+    "color": "steel",
+    "group": "rotor",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "10_drive_72",
+    "file": "36_axle_cross_91_nut.stl"
+  },
+  {
+    "part": "axle_cross_174",
+    "folder": "hardware",
+    "name": "axle_cross_174",
+    "color": "steel",
+    "group": "rotor",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 11.2,
+    "tip_beyond_nut_mm": 2.400000000000001,
+    "axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "point": [
+      -5.6,
+      0,
+      174
+    ],
+    "file": "37_axle_cross_174.stl"
+  },
+  {
+    "part": "axle_cross_174_nut",
+    "folder": "hardware",
+    "name": "axle_cross_174_nut",
+    "color": "steel",
+    "group": "rotor",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "front_case_wheel",
+    "file": "38_axle_cross_174_nut.stl"
+  },
+  {
+    "part": "05_shared_rear_frame",
+    "folder": "common",
+    "name": "05_shared_rear_frame",
+    "color": "frame",
+    "group": "fixed",
+    "file": "39_05_shared_rear_frame.stl"
+  },
+  {
+    "part": "06_shared_front_frame",
+    "folder": "common",
+    "name": "06_shared_front_frame",
+    "color": "frame",
+    "group": "fixed",
+    "file": "40_06_shared_front_frame.stl"
+  },
+  {
+    "part": "07_square_frame_post",
+    "folder": "common",
+    "name": "frame_post_1",
+    "color": "frame",
+    "group": "fixed",
+    "file": "41_frame_post_1.stl"
+  },
+  {
+    "part": "frame_rear_0",
+    "folder": "hardware",
+    "name": "frame_rear_0",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 7.2,
+    "tip_beyond_nut_mm": 0.3999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      -81,
+      51,
+      74.2
+    ],
+    "file": "42_frame_rear_0.stl"
+  },
+  {
+    "part": "frame_rear_0_nut",
+    "folder": "hardware",
+    "name": "frame_rear_0_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "frame_post_1",
+    "file": "43_frame_rear_0_nut.stl"
+  },
+  {
+    "part": "frame_front_0",
+    "folder": "hardware",
+    "name": "frame_front_0",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 7.2,
+    "tip_beyond_nut_mm": 0.3999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      -81,
+      51,
+      129.8
+    ],
+    "file": "44_frame_front_0.stl"
+  },
+  {
+    "part": "frame_front_0_nut",
+    "folder": "hardware",
+    "name": "frame_front_0_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "frame_post_1",
+    "file": "45_frame_front_0_nut.stl"
+  },
+  {
+    "part": "07_square_frame_post",
+    "folder": "common",
+    "name": "frame_post_2",
+    "color": "frame",
+    "group": "fixed",
+    "file": "46_frame_post_2.stl"
+  },
+  {
+    "part": "frame_rear_1",
+    "folder": "hardware",
+    "name": "frame_rear_1",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 7.2,
+    "tip_beyond_nut_mm": 0.3999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      72,
+      -60,
+      74.2
+    ],
+    "file": "47_frame_rear_1.stl"
+  },
+  {
+    "part": "frame_rear_1_nut",
+    "folder": "hardware",
+    "name": "frame_rear_1_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "frame_post_2",
+    "file": "48_frame_rear_1_nut.stl"
+  },
+  {
+    "part": "frame_front_1",
+    "folder": "hardware",
+    "name": "frame_front_1",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 7.2,
+    "tip_beyond_nut_mm": 0.3999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      72,
+      -60,
+      129.8
+    ],
+    "file": "49_frame_front_1.stl"
+  },
+  {
+    "part": "frame_front_1_nut",
+    "folder": "hardware",
+    "name": "frame_front_1_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "frame_post_2",
+    "file": "50_frame_front_1_nut.stl"
+  },
+  {
+    "part": "07_square_frame_post",
+    "folder": "common",
+    "name": "frame_post_3",
+    "color": "frame",
+    "group": "fixed",
+    "file": "51_frame_post_3.stl"
+  },
+  {
+    "part": "frame_rear_2",
+    "folder": "hardware",
+    "name": "frame_rear_2",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 7.2,
+    "tip_beyond_nut_mm": 0.3999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      65,
+      68,
+      74.2
+    ],
+    "file": "52_frame_rear_2.stl"
+  },
+  {
+    "part": "frame_rear_2_nut",
+    "folder": "hardware",
+    "name": "frame_rear_2_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "frame_post_3",
+    "file": "53_frame_rear_2_nut.stl"
+  },
+  {
+    "part": "frame_front_2",
+    "folder": "hardware",
+    "name": "frame_front_2",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 7.2,
+    "tip_beyond_nut_mm": 0.3999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      65,
+      68,
+      129.8
+    ],
+    "file": "54_frame_front_2.stl"
+  },
+  {
+    "part": "frame_front_2_nut",
+    "folder": "hardware",
+    "name": "frame_front_2_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "frame_post_3",
+    "file": "55_frame_front_2_nut.stl"
+  },
+  {
+    "part": "08_open_ballast_bowl",
+    "folder": "common",
+    "name": "08_open_ballast_bowl",
+    "color": "ballast",
+    "group": "fixed",
+    "file": "56_08_open_ballast_bowl.stl"
+  },
+  {
+    "part": "bowl_0",
+    "folder": "hardware",
+    "name": "bowl_0",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 6.4,
+    "tip_beyond_nut_mm": 1.1999999999999997,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      -36,
+      52,
+      74
+    ],
+    "file": "57_bowl_0.stl"
+  },
+  {
+    "part": "bowl_0_nut",
+    "folder": "hardware",
+    "name": "bowl_0_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "08_open_ballast_bowl",
+    "file": "58_bowl_0_nut.stl"
+  },
+  {
+    "part": "bowl_1",
+    "folder": "hardware",
+    "name": "bowl_1",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 6.4,
+    "tip_beyond_nut_mm": 1.1999999999999997,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      36,
+      52,
+      74
+    ],
+    "file": "59_bowl_1.stl"
+  },
+  {
+    "part": "bowl_1_nut",
+    "folder": "hardware",
+    "name": "bowl_1_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "08_open_ballast_bowl",
+    "file": "60_bowl_1_nut.stl"
+  },
+  {
+    "part": "10_drive_72",
+    "folder": "common",
+    "name": "10_drive_72",
+    "color": "input",
+    "group": "rotor",
+    "file": "61_10_drive_72.stl"
+  },
+  {
+    "part": "13_bolted_gear_pivot",
+    "folder": "common",
+    "name": "B_pivot",
+    "color": "pins",
+    "group": "fixed",
+    "file": "62_B_pivot.stl"
+  },
+  {
+    "part": "B_pivot_bolt",
+    "folder": "hardware",
+    "name": "B_pivot_bolt",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 6.7,
+    "tip_beyond_nut_mm": 0.8999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      -56.25,
+      0.0,
+      74.2
+    ],
+    "file": "63_B_pivot_bolt.stl"
+  },
+  {
+    "part": "B_pivot_bolt_nut",
+    "folder": "hardware",
+    "name": "B_pivot_bolt_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "B_pivot",
+    "file": "64_B_pivot_bolt_nut.stl"
+  },
+  {
+    "part": "13_bolted_gear_pivot",
+    "folder": "common",
+    "name": "C_pivot",
+    "color": "pins",
+    "group": "fixed",
+    "file": "65_C_pivot.stl"
+  },
+  {
+    "part": "C_pivot_bolt",
+    "folder": "hardware",
+    "name": "C_pivot_bolt",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 6.7,
+    "tip_beyond_nut_mm": 0.8999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      30.0,
+      -45.0,
+      74.2
+    ],
+    "file": "66_C_pivot_bolt.stl"
+  },
+  {
+    "part": "C_pivot_bolt_nut",
+    "folder": "hardware",
+    "name": "C_pivot_bolt_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "C_pivot",
+    "file": "67_C_pivot_bolt_nut.stl"
+  },
+  {
+    "part": "13_bolted_gear_pivot",
+    "folder": "common",
+    "name": "D_pivot",
+    "color": "pins",
+    "group": "fixed",
+    "file": "68_D_pivot.stl"
+  },
+  {
+    "part": "D_pivot_bolt",
+    "folder": "hardware",
+    "name": "D_pivot_bolt",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 6.7,
+    "tip_beyond_nut_mm": 0.8999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      -26.192361766493043,
+      -47.545776719111664,
+      74.2
+    ],
+    "file": "69_D_pivot_bolt.stl"
+  },
+  {
+    "part": "D_pivot_bolt_nut",
+    "folder": "hardware",
+    "name": "D_pivot_bolt_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "D_pivot",
+    "file": "70_D_pivot_bolt_nut.stl"
+  },
+  {
+    "part": "19_bolted_anchor_pivot",
+    "folder": "common",
+    "name": "19_bolted_anchor_pivot",
+    "color": "pins",
+    "group": "fixed",
+    "file": "71_19_bolted_anchor_pivot.stl"
+  },
+  {
+    "part": "anchor_pivot_bolt",
+    "folder": "hardware",
+    "name": "anchor_pivot_bolt",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 6.7,
+    "tip_beyond_nut_mm": 0.8999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      21.650429330109848,
+      -92.35276834176128,
+      74.2
+    ],
+    "file": "72_anchor_pivot_bolt.stl"
+  },
+  {
+    "part": "anchor_pivot_bolt_nut",
+    "folder": "hardware",
+    "name": "anchor_pivot_bolt_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "19_bolted_anchor_pivot",
+    "file": "73_anchor_pivot_bolt_nut.stl"
+  },
+  {
+    "part": "11_B_18_72",
+    "folder": "32x",
+    "name": "11_B_18_72",
+    "color": "compound",
+    "group": "B",
+    "file": "74_11_B_18_72.stl"
+  },
+  {
+    "part": "12_escape_compound",
+    "folder": "32x",
+    "name": "12_escape_compound",
+    "color": "escape",
+    "group": "C",
+    "file": "75_12_escape_compound.stl"
+  },
+  {
+    "part": "14_D_18_60",
+    "folder": "32x",
+    "name": "14_D_18_60",
+    "color": "extra",
+    "group": "D",
+    "file": "76_14_D_18_60.stl"
+  },
+  {
+    "part": "15_B_rear_spacer",
+    "folder": "32x",
+    "name": "15_B_rear_spacer",
+    "color": "pins",
+    "group": "fixed",
+    "file": "77_15_B_rear_spacer.stl"
+  },
+  {
+    "part": "16_B_front_spacer",
+    "folder": "32x",
+    "name": "16_B_front_spacer",
+    "color": "pins",
+    "group": "fixed",
+    "file": "78_16_B_front_spacer.stl"
+  },
+  {
+    "part": "17_C_rear_spacer",
+    "folder": "32x",
+    "name": "17_C_rear_spacer",
+    "color": "pins",
+    "group": "fixed",
+    "file": "79_17_C_rear_spacer.stl"
+  },
+  {
+    "part": "27_C_front_spacer",
+    "folder": "32x",
+    "name": "27_C_front_spacer",
+    "color": "pins",
+    "group": "fixed",
+    "file": "80_27_C_front_spacer.stl"
+  },
+  {
+    "part": "28_D_rear_spacer",
+    "folder": "32x",
+    "name": "28_D_rear_spacer",
+    "color": "pins",
+    "group": "fixed",
+    "file": "81_28_D_rear_spacer.stl"
+  },
+  {
+    "part": "29_D_front_spacer",
+    "folder": "32x",
+    "name": "29_D_front_spacer",
+    "color": "pins",
+    "group": "fixed",
+    "file": "82_29_D_front_spacer.stl"
+  },
+  {
+    "part": "18_anchor_reversed",
+    "folder": "slow-common",
+    "name": "18_anchor_reversed",
+    "color": "regulator",
+    "group": "anchor",
+    "file": "83_18_anchor_reversed.stl"
+  },
+  {
+    "part": "20_anchor_rear_spacer",
+    "folder": "common",
+    "name": "20_anchor_rear_spacer",
+    "color": "pins",
+    "group": "fixed",
+    "file": "84_20_anchor_rear_spacer.stl"
+  },
+  {
+    "part": "21_anchor_front_spacer",
+    "folder": "common",
+    "name": "21_anchor_front_spacer",
+    "color": "pins",
+    "group": "fixed",
+    "file": "85_21_anchor_front_spacer.stl"
+  },
+  {
+    "part": "22_bolted_anchor_bridge",
+    "folder": "common",
+    "name": "22_bolted_anchor_bridge",
+    "color": "frame",
+    "group": "fixed",
+    "file": "86_22_bolted_anchor_bridge.stl"
+  },
+  {
+    "part": "23_square_bridge_post",
+    "folder": "common",
+    "name": "bridge_post_0",
+    "color": "frame",
+    "group": "fixed",
+    "file": "87_bridge_post_0.stl"
+  },
+  {
+    "part": "bridge_rear_0",
+    "folder": "hardware",
+    "name": "bridge_rear_0",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 7.2,
+    "tip_beyond_nut_mm": 0.3999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      -4.349570669890152,
+      -68.35276834176128,
+      128.2
+    ],
+    "file": "88_bridge_rear_0.stl"
+  },
+  {
+    "part": "bridge_rear_0_nut",
+    "folder": "hardware",
+    "name": "bridge_rear_0_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "bridge_post_0",
+    "file": "89_bridge_rear_0_nut.stl"
+  },
+  {
+    "part": "bridge_front_0",
+    "folder": "hardware",
+    "name": "bridge_front_0",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 7.2,
+    "tip_beyond_nut_mm": 0.3999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      -4.349570669890152,
+      -68.35276834176128,
+      162.8
+    ],
+    "file": "90_bridge_front_0.stl"
+  },
+  {
+    "part": "bridge_front_0_nut",
+    "folder": "hardware",
+    "name": "bridge_front_0_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "bridge_post_0",
+    "file": "91_bridge_front_0_nut.stl"
+  },
+  {
+    "part": "23_square_bridge_post",
+    "folder": "common",
+    "name": "bridge_post_1",
+    "color": "frame",
+    "group": "fixed",
+    "file": "92_bridge_post_1.stl"
+  },
+  {
+    "part": "bridge_rear_1",
+    "folder": "hardware",
+    "name": "bridge_rear_1",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 7.2,
+    "tip_beyond_nut_mm": 0.3999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      47.650429330109844,
+      -68.35276834176128,
+      128.2
+    ],
+    "file": "93_bridge_rear_1.stl"
+  },
+  {
+    "part": "bridge_rear_1_nut",
+    "folder": "hardware",
+    "name": "bridge_rear_1_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "bridge_post_1",
+    "file": "94_bridge_rear_1_nut.stl"
+  },
+  {
+    "part": "bridge_front_1",
+    "folder": "hardware",
+    "name": "bridge_front_1",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "screw",
+    "length": 10,
+    "nut_grip_mm": 7.2,
+    "tip_beyond_nut_mm": 0.3999999999999999,
+    "axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "point": [
+      47.650429330109844,
+      -68.35276834176128,
+      162.8
+    ],
+    "file": "95_bridge_front_1.stl"
+  },
+  {
+    "part": "bridge_front_1_nut",
+    "folder": "hardware",
+    "name": "bridge_front_1_nut",
+    "color": "steel",
+    "group": "fixed",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "bridge_post_1",
+    "file": "96_bridge_front_1_nut.stl"
+  },
+  {
+    "part": "24_offset_pendulum",
+    "folder": "common",
+    "name": "24_offset_pendulum",
+    "color": "regulator",
+    "group": "pendulum",
+    "file": "97_24_offset_pendulum.stl"
+  },
+  {
+    "part": "25_screw_fixed_bob",
+    "folder": "common",
+    "name": "25_screw_fixed_bob",
+    "color": "regulator",
+    "group": "pendulum",
+    "file": "98_25_screw_fixed_bob.stl"
+  },
+  {
+    "part": "pendulum_clamp",
+    "folder": "hardware",
+    "name": "pendulum_clamp",
+    "color": "steel",
+    "group": "pendulum",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 10.2,
+    "tip_beyond_nut_mm": 3.400000000000001,
+    "axis": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "point": [
+      6.650429330109848,
+      -98.35276834176128,
+      148
+    ],
+    "file": "99_pendulum_clamp.stl"
+  },
+  {
+    "part": "pendulum_clamp_nut",
+    "folder": "hardware",
+    "name": "pendulum_clamp_nut",
+    "color": "steel",
+    "group": "pendulum",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "24_offset_pendulum",
+    "file": "100_pendulum_clamp_nut.stl"
+  },
+  {
+    "part": "bob_bolt",
+    "folder": "hardware",
+    "name": "bob_bolt",
+    "color": "steel",
+    "group": "pendulum",
+    "hardware": true,
+    "type": "screw",
+    "length": 16,
+    "nut_grip_mm": 9.8,
+    "tip_beyond_nut_mm": 3.7999999999999994,
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "point": [
+      21.650429330109848,
+      57.647231658238724,
+      141.4
+    ],
+    "file": "101_bob_bolt.stl"
+  },
+  {
+    "part": "bob_bolt_nut",
+    "folder": "hardware",
+    "name": "bob_bolt_nut",
+    "color": "steel",
+    "group": "pendulum",
+    "hardware": true,
+    "type": "nut",
+    "allowed_interference_with": "25_screw_fixed_bob",
+    "file": "102_bob_bolt_nut.stl"
+  },
+  {
+    "part": "34_main_front_thrust_sleeve",
+    "folder": "common",
+    "name": "34_main_front_thrust_sleeve",
+    "color": "pins",
+    "group": "rotor",
+    "file": "103_34_main_front_thrust_sleeve.stl"
+  },
+  {
+    "part": "35_main_rear_thrust_washer",
+    "folder": "common",
+    "name": "35_main_rear_thrust_washer",
+    "color": "pins",
+    "group": "rotor",
+    "file": "104_35_main_rear_thrust_washer.stl"
+  },
+  {
+    "part": "36_rear_round_journal",
+    "folder": "common",
+    "name": "36_rear_round_journal",
+    "color": "pins",
+    "group": "rotor",
+    "file": "105_36_rear_round_journal.stl"
+  },
+  {
+    "part": "37_front_round_journal",
+    "folder": "common",
+    "name": "37_front_round_journal",
+    "color": "pins",
+    "group": "rotor",
+    "file": "106_37_front_round_journal.stl"
+  }
+]

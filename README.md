@@ -6,6 +6,10 @@ Designed by László Lukács with OpenAI Codex for a Bambu Lab P1S, using PLA, a
 
 ![Assembled lightweight rolling clock](designs/rolling-timer-p1s-light/renders/light-assembled.png)
 
+## New prototype - bolted R3
+
+The [R3 design](designs/rolling-timer-r3/README.md) responds to the first build's physical feedback: square screw-fastened posts, a screw-fixed bob, more pendulum space, a deeper rolling rim and shared frames for 16:1, 32:1 and 64:1 gearing. It includes [a new 13-page illustrated guide](designs/rolling-timer-r3/BUILD-GUIDE.pdf) and separate print lists. **R3 is CAD-checked but not yet physically tested.** The first working version remains below and under tag `v0.1.0`.
+
 ## Current state — first working build
 
 On **1 October 2026**, the complete lightweight **16:1** mechanism ran on its first physical trial, following a successful hand-driven bench test. This repository preserves that design before the next round of improvements. Running duration, timing accuracy and long-term wear have not yet been measured.
