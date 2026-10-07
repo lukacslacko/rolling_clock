@@ -37,6 +37,15 @@
     "M3x10": 15,
     "M3x16": 17,
     "nominal_seconds_per_metre": 462.4332639153503,
+    "axial_extension_mm": 6,
+    "frame_gap_mm": 54,
+    "case_width_mm": 186.0,
+    "main_axle_cross_holes_mm": [
+      6,
+      97,
+      180
+    ],
+    "pivot_base_height_mm": 10.5,
     "print_quantities": {
       "common/01_case_wheel": 2,
       "common/02_square_case_post": 6,
@@ -114,6 +123,15 @@
     "M3x10": 16,
     "M3x16": 17,
     "nominal_seconds_per_metre": 924.8665278307006,
+    "axial_extension_mm": 6,
+    "frame_gap_mm": 54,
+    "case_width_mm": 186.0,
+    "main_axle_cross_holes_mm": [
+      6,
+      97,
+      180
+    ],
+    "pivot_base_height_mm": 10.5,
     "print_quantities": {
       "common/01_case_wheel": 2,
       "common/02_square_case_post": 6,
@@ -194,6 +212,15 @@
     "M3x10": 16,
     "M3x16": 17,
     "nominal_seconds_per_metre": 1849.7330556614013,
+    "axial_extension_mm": 6,
+    "frame_gap_mm": 54,
+    "case_width_mm": 186.0,
+    "main_axle_cross_holes_mm": [
+      6,
+      97,
+      180
+    ],
+    "pivot_base_height_mm": 10.5,
     "print_quantities": {
       "common/01_case_wheel": 2,
       "common/02_square_case_post": 6,

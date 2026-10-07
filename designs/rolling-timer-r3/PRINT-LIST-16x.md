@@ -7,15 +7,15 @@ Hardware: **15 M3x10**, **17 M3x16**, **32 plain M3 nuts**. Fit coupons are opti
 | File | Qty | Print envelope | Orientation / note |
 |---|---:|---|---|
 | [common/01_case_wheel.stl](STL/common/01_case_wheel.stl) | 2 | 248 x 248 x 12 | Flat outer face on bed, hub and locating lips up. No outer brim; diameter 248 mm. |
-| [common/02_square_case_post.stl](STL/common/02_square_case_post.stl) | 6 | 166 x 10 x 10 | Long flat side on bed; both nut-slot mouths upward. Preload two M3 nuts. End bolts M3x16. |
-| [common/03_square_main_axle.stl](STL/common/03_square_main_axle.stl) | 1 | 8 x 180 x 8 | Long flat on bed; solid. Cross-holes at 6, 91 and 174 mm from the rear end. |
+| [common/02_square_case_post.stl](STL/common/02_square_case_post.stl) | 6 | 172 x 10 x 10 | 172 mm long. Long flat side on bed; both nut-slot mouths upward. Preload two M3 nuts. End bolts M3x16. |
+| [common/03_square_main_axle.stl](STL/common/03_square_main_axle.stl) | 1 | 8 x 186 x 8 | 186 mm long. Long flat on bed; solid. Cross-holes at 6, 97 and 180 mm from the rear end. |
 | [common/05_shared_rear_frame.stl](STL/common/05_shared_rear_frame.stl) | 1 | 171 x 186.353 x 10 | Flat outside face on bed; lips and main collar up. Universal 16/32/64 frame. |
 | [common/06_shared_front_frame.stl](STL/common/06_shared_front_frame.stl) | 1 | 171 x 178.353 x 10 | Outside face on bed; all locating lips point up. Bridge posts locate in the bridge at their other ends. |
-| [common/07_square_frame_post.stl](STL/common/07_square_frame_post.stl) | 3 | 48 x 12 x 12 | Long flat side on bed, nut slots up. Flat ends set the 48 mm frame gap; M3x10 at both ends. |
+| [common/07_square_frame_post.stl](STL/common/07_square_frame_post.stl) | 3 | 54 x 12 x 12 | Long flat side on bed, nut slots up. Flat ends set the 54 mm frame gap; M3x10 at both ends. |
 | [common/08_open_ballast_bowl.stl](STL/common/08_open_ballast_bowl.stl) | 1 | 104 x 62 x 46 | Mouth up. Two M3x10 screws and two nuts; lower pads rest on the frame. |
 | [common/10_drive_72.stl](STL/common/10_drive_72.stl) | 1 | 92.5 x 92.5 x 10.8 | Broad wheel on bed, hub up. M3x16 retains the square axle. |
-| [common/13_bolted_gear_pivot.stl](STL/common/13_bolted_gear_pivot.stl) | 2 | 12 x 12 x 50.5 | Square foot on bed; 8 mm journal up. One M3x10 at rear; tip has 0.5 mm clearance in the front blind seat. |
-| [common/19_bolted_anchor_pivot.stl](STL/common/19_bolted_anchor_pivot.stl) | 1 | 10 x 10 x 83.5 | Square foot on bed. M3x10 at rear; bridge supports the long tip. |
+| [common/13_bolted_gear_pivot.stl](STL/common/13_bolted_gear_pivot.stl) | 2 | 12 x 12 x 56.5 | Solid print, square foot on bed; 10.5 mm foot and solid 8 mm journal. One M3x10 at rear; tip has 0.5 mm clearance in the front blind seat. |
+| [common/19_bolted_anchor_pivot.stl](STL/common/19_bolted_anchor_pivot.stl) | 1 | 10 x 10 x 89.5 | Solid print, square foot on bed; 10.5 mm foot fully contains the nut slot. M3x10 at rear; bridge supports the long tip. |
 | [common/20_anchor_rear_spacer.stl](STL/common/20_anchor_rear_spacer.stl) | 1 | 12 x 12 x 34.2 | Flat annular face on bed; 34.2 mm long. |
 | [common/21_anchor_front_spacer.stl](STL/common/21_anchor_front_spacer.stl) | 1 | 12 x 12 x 7.7 | Flat annular face on bed; 7.7 mm long. |
 | [common/22_bolted_anchor_bridge.stl](STL/common/22_bolted_anchor_bridge.stl) | 1 | 70 x 40 x 7.5 | Outer face on bed; shallow locating lips upward. M3x10 at each end. |
@@ -24,7 +24,7 @@ Hardware: **15 M3x10**, **17 M3x16**, **32 plain M3 nuts**. Fit coupons are opti
 | [common/25_screw_fixed_bob.stl](STL/common/25_screw_fixed_bob.stl) | 1 | 31.2 x 13.2 x 24 | Open mouth up. 1 mm outer walls; 5.8 mm nut channel tapers to a 5.6 mm seat. Use one M3x16 through the selected rod hole. |
 | [common/34_main_front_thrust_sleeve.stl](STL/common/34_main_front_thrust_sleeve.stl) | 1 | 15 x 15 x 26.4 | Flat annular end on bed, 26.4 mm long. Square bore keys to axle. |
 | [common/35_main_rear_thrust_washer.stl](STL/common/35_main_rear_thrust_washer.stl) | 1 | 16 x 16 x 1.2 | Flat annular end on bed, 1.2 mm long. Square bore keys to axle. |
-| [common/36_rear_round_journal.stl](STL/common/36_rear_round_journal.stl) | 1 | 12 x 12 x 70 | Flat annular end on bed, 70 mm long. Square bore keys to axle. |
+| [common/36_rear_round_journal.stl](STL/common/36_rear_round_journal.stl) | 1 | 12 x 12 x 76 | Flat annular end on bed, 76 mm long. Square bore keys to axle. |
 | [common/37_front_round_journal.stl](STL/common/37_front_round_journal.stl) | 1 | 12 x 12 x 45.6 | Flat annular end on bed, 45.6 mm long. Square bore keys to axle. |
 | [16x/11_B_18_72.stl](STL/16x/11_B_18_72.stl) | 1 | 92.5 x 92.5 x 18 | Large wheel on bed; pinion teeth continue down to the bed. Pinion faces rear in assembly. |
 | [16x/12_escape_compound.stl](STL/16x/12_escape_compound.stl) | 1 | 67.907 x 67.907 x 25 | Escape face on bed; pinion extends through wheel. Use matching anchor direction. |

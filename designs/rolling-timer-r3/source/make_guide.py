@@ -71,11 +71,11 @@ def step_page(title,kicker,image,steps,check,labels=False):
     band(check);c.showPage()
 
 heading('Build the bolted rolling clock','R3 / first assembly')
-para('A rigid frame, a wider pendulum compartment, and three gear ratios.',34,483,335,23,29)
+para('Solid pivot roots, a rigid frame, and three gear ratios.',34,483,335,23,29)
 para('<b>Start with 16:1.</b><br/>The same frames also accept 32:1 and 64:1. This guide shows the complete assembly, the captive-nut joints and the parts to change for slower rolling.',34,361,310,13,18)
-para('<b>Status:</b> the earlier lightweight clock ran successfully. R3 has passed CAD clearance checks and has not yet been printed or run. Keep the original working clock intact until this revision is proven.',34,249,305,11.5,16)
+para('<b>Status:</b> the earlier lightweight clock ran successfully. R3 parts and nut-fit coupons have been printed; the complete revised mechanism still needs a running test.',34,249,305,11.5,16)
 picture('assembled-16x',330,97,498,420)
-band('Use <b>PRINT-LIST-16x.md</b> for exact filenames and quantities. For the other ratios use their own lists. All numbered parts in this guide are R3 parts; earlier revisions are not interchangeable.')
+band('<b>Pivot correction:</b> use 54 mm frame posts, 10.5 mm pivot feet, the 186 mm axle and 76 mm rear journal. Already printed R3 gears, both frames, anchor bridge and bridge posts remain compatible. See README.md for the six changed files.')
 c.showPage()
 
 heading('Check the nut fit before the large prints','01 / materials and small coupons')
@@ -119,12 +119,12 @@ step_page('Bolt the rear frame and pivot feet','03 / begin the 16x mechanism','f
  'Lay <b>05</b> with its collars and locating lips facing you. The ballast-bowl bracket is at the bottom.',
  'Preload the nuts. Seat the two <b>13</b> gear pivots at <b>B16 and C</b>, and the long <b>19</b> pivot at P. Fasten each from behind with <b>M3x10</b>.',
  'Fit the three <b>07</b> square frame posts inside their locating lips. Use one <b>M3x10</b> from behind for each post; leave the front nuts loaded.',
- 'Bring the flat shoulders into contact. Do not use the screws to pull a crooked pivot or a tight locating lip into place.'
-], 'The front frame will be 48 mm from the rear frame\'s inside face, set by the flat-ended posts. The frame-post nuts must be fully seated. Gear journals remain printed, smooth, clearance-fit surfaces.',True)
+ 'Use the corrected pivots with <b>10.5 mm feet</b> and solid shaft roots. Bring their flat shoulders into contact with the frame before tightening.'
+], 'The front frame is 54 mm from the rear frame\'s inside face. Reprint the three old 48 mm posts. Each nut pocket is fully below the shaft, with 4.8 mm of material above it. Print both pivot types solid.',True)
 
 step_page('Fit the square axle and orange gear','04 / replace all crosspins with screws','axle-detail',[
- 'Identify and mark the rear end of <b>03</b>: the middle cross-hole is <b>91 mm</b> from that end (89 mm from the other). The end holes are each 6 mm from their nearest end.',
- 'Slide long rear journal <b>36 (70 mm)</b> onto the axle and through A. Add rear thrust washer <b>35 (1.2 mm)</b>.',
+ 'Use the corrected <b>186 mm axle 03</b>. Mark the rear end: the middle cross-hole is <b>97 mm</b> from it (89 mm from the other). End holes are 6 mm from each end.',
+ 'Slide long rear journal <b>36 (76 mm)</b> onto the axle and through A. Add rear thrust washer <b>35 (1.2 mm)</b>.',
  'Preload a nut into the orange gear\'s hub slot. Slide on <b>10</b>, tall hub forward, align the middle cross-hole and fit an <b>M3x16</b> screw. Its head sits in the circular side recess.',
  'Add keyed front thrust sleeve <b>34 (26.4 mm)</b> ahead of the orange hub. The square faces carry torque; the cross-screw holds the gear in position.'
 ], 'Main stack, rear to front: rear wheel hub -> 36 -> 35 -> orange gear 10 -> 34 -> front journal 37 -> front wheel hub. Wheel hubs are fitted later. Keep loose sleeves from sliding off during the bench build.',True)
@@ -161,7 +161,7 @@ step_page('Bench-test, then add bowl and drum','09 / finish the case around a fr
  'Support the fixed frame upright, without squeezing its bearings. Keep the loose axle sleeves seated with removable tape collars if necessary. Apply light <b>counterclockwise</b> input torque, seen from the pendulum side.',
  'Adjust the pendulum clamp angle until each half-swing releases one step and catches on the other pallet. Then snug the clamp. Remove temporary tape before final assembly.',
  'Fit empty bowl <b>08</b> with two <b>M3x10</b> screws from the gear side and nuts inside the cup. Both lower pads must touch the rear frame.',
- 'Preload nuts in both wheel hubs and all six case posts. Fit the rear wheel and its <b>M3x16 axle screw</b>; bolt the six posts to that wheel with six M3x16. Fit the front wheel, its axle screw, and six front post screws.'
+ 'Use six corrected <b>172 mm case posts</b>. Preload their nuts and both wheel-hub nuts. Fit the rear wheel and its M3x16 axle screw; bolt on the posts with six M3x16. Fit the front wheel, its axle screw and six post screws.'
 ], 'The case uses 12 post screws plus 2 axle screws. Snug opposite posts progressively with every shoulder seated. Turn the case through a full revolution while gently moving the pendulum before adding about 600 g to the bowl.')
 
 heading('Swap gearing without reprinting the frames','10 / the 32x and 64x options')
@@ -192,7 +192,7 @@ band('A little rocking can accompany the exchange of angular momentum between pe
 c.showPage()
 
 heading('Keep these lengths and screw counts handy','12 / assembly reference')
-rows=[('15','B rear','1.2','1.2'),('16','B front','23.7','23.7'),('17','C rear','13.2','25.2'),('27','C front','4.7','4.7'),('28 / 29','D rear / front','-','13.2 / 11.7'),('20','Anchor rear','34.2','34.2'),('21','Anchor front','7.7','7.7'),('34','Main front thrust','26.4','26.4'),('35','Main rear washer','1.2','1.2'),('36 / 37','Rear / front journal','70 / 45.6','70 / 45.6')]
+rows=[('15','B rear','1.2','1.2'),('16','B front','23.7','23.7'),('17','C rear','13.2','25.2'),('27','C front','4.7','4.7'),('28 / 29','D rear / front','-','13.2 / 11.7'),('20','Anchor rear','34.2','34.2'),('21','Anchor front','7.7','7.7'),('34','Main front thrust','26.4','26.4'),('35','Main rear washer','1.2','1.2'),('36 / 37','Rear / front journal','76 / 45.6','76 / 45.6')]
 text(34,482,'Part',10,BLUE,True);text(87,482,'Position',10,BLUE,True);text(249,482,'16x (mm)',10,BLUE,True);text(350,482,'32x / 64x (mm)',10,BLUE,True)
 y=451
 for i,(num,loc,a,b) in enumerate(rows):
@@ -206,5 +206,5 @@ para('<b>R3 check results:</b> closed connected print meshes; no unintended nomi
 band('This guide documents a geometrically checked prototype, not a physically tested R3 clock. Keep the first working version as a reference. Report the selected ratio, slope, ballast, measured run time and any contact or skipped beats.')
 c.showPage();assert page==13;c.save()
 # Browser entry point uses the PDF as the complete numbered build guide.
-(ROOT/'guide.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rolling clock R3 build guide</title><style>body{max-width:1050px;margin:30px auto;padding:0 20px;background:#f6f4ef;color:#243548;font:17px/1.6 system-ui}img{max-width:100%;display:block}a{color:#2868af}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:700px){.grid{display:block}}h1{line-height:1.2}</style><h1>Build the bolted rolling clock</h1><p>R3: shared frames for 16:1, 32:1 and 64:1. Geometrically checked; not yet physically tested.</p><p><a href="BUILD-GUIDE.pdf"><b>Open the complete 13-page illustrated build guide</b></a></p><p>Print lists: <a href="PRINT-LIST-16x.md">16x</a> / <a href="PRINT-LIST-32x.md">32x</a> / <a href="PRINT-LIST-64x.md">64x</a>. Begin with the nut-post and seat coupons, then the 16x mechanism. <a href="README.md">Full design notes</a>.</p><img src="renders/assembled-16x.png" alt="Assembled R3 clock"><div class="grid"><div><h2>Captive-nut posts</h2><img src="renders/post-nut-detail.png" alt="Square post and metal screw and nut"></div><div><h2>Screw-fixed bob</h2><img src="renders/bob-detail.png" alt="Thin-wall bob with screw and nut"></div></div><h2>Same frames, slower gearing</h2><div class="grid"><img src="renders/mechanism-32x.png" alt="32 to 1 mechanism"><img src="renders/mechanism-64x.png" alt="64 to 1 mechanism"></div></html>''')
+(ROOT/'guide.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rolling clock R3 build guide</title><style>body{max-width:1050px;margin:30px auto;padding:0 20px;background:#f6f4ef;color:#243548;font:17px/1.6 system-ui}img{max-width:100%;display:block}a{color:#2868af}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:700px){.grid{display:block}}h1{line-height:1.2}</style><h1>Build the bolted rolling clock</h1><p>R3: shared frames for 16:1, 32:1 and 64:1. Geometrically checked; not yet physically tested.</p><p><a href="BUILD-GUIDE.pdf"><b>Open the complete 13-page illustrated build guide</b></a></p><p><b>Pivot correction:</b> 10.5 mm pivot feet, 54 mm frame posts, 186 mm axle and 76 mm rear journal. Existing R3 gears, frames, anchor bridge and bridge posts remain compatible.</p><p>Print lists: <a href="PRINT-LIST-16x.md">16x</a> / <a href="PRINT-LIST-32x.md">32x</a> / <a href="PRINT-LIST-64x.md">64x</a>. Begin with the nut-post and seat coupons, then the 16x mechanism. <a href="README.md">Full design notes</a>.</p><img src="renders/assembled-16x.png" alt="Assembled R3 clock"><div class="grid"><div><h2>Captive-nut posts</h2><img src="renders/post-nut-detail.png" alt="Square post and metal screw and nut"></div><div><h2>Screw-fixed bob</h2><img src="renders/bob-detail.png" alt="Thin-wall bob with screw and nut"></div></div><h2>Same frames, slower gearing</h2><div class="grid"><img src="renders/mechanism-32x.png" alt="32 to 1 mechanism"><img src="renders/mechanism-64x.png" alt="64 to 1 mechanism"></div></html>''')
 print('Created',ROOT/'BUILD-GUIDE.pdf','pages',page)

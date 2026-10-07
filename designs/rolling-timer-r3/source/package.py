@@ -16,6 +16,41 @@ def main():
             assert len(z.namelist())==len(set(z.namelist())),path
         print(json.dumps({'file':str(path),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()}))
     pack(out/'rolling-timer-r3-complete.zip','rolling-timer-r3',[(p,str(p.relative_to(ROOT))) for p in sorted(paths)])
+    changed=['07_square_frame_post','13_bolted_gear_pivot','19_bolted_anchor_pivot',
+             '03_square_main_axle','36_rear_round_journal','02_square_case_post']
+    patch_files=[(ROOT/f'STL/common/{name}.stl',name+'.stl') for name in changed]
+    patch_files += [(ROOT/'LICENSE','LICENSE'),(ROOT/'renders/pivot-section.png','pivot-section.png')]
+    patch_note='''R3 pivot-base correction - 7 October 2026
+
+These six STL files replace the earlier R3 versions with the same names.
+The gear and anchor pivot feet are now 10.5 mm tall, fully containing the nut
+slots below a solid shaft root. Print both pivots solid (100% infill), foot down.
+Nut seats remain 5.6 mm; entry channels remain 5.8 mm. Screws are unchanged.
+
+For the 32:1 or 64:1 core, print:
+3 x 07_square_frame_post.stl       54 mm long
+3 x 13_bolted_gear_pivot.stl       56.5 mm total, 10.5 mm foot
+1 x 19_bolted_anchor_pivot.stl     89.5 mm total, 10.5 mm foot
+1 x 03_square_main_axle.stl       186 mm; cross-holes at 6, 97, 180 mm
+1 x 36_rear_round_journal.stl      76 mm long
+For a complete drum, also print:
+6 x 02_square_case_post.stl       172 mm long
+For 16:1 use two, rather than three, copies of pivot 13.
+
+All other R3 print shapes are unchanged. Reuse the printed gears, anchor,
+rear frame, anchor bridge and two bridge posts. Of the builder's reported
+printed set, only the three frame posts require replacement.
+
+Use the current build guide from the full kit or GitHub. The frame gap is
+54 mm and the drum plastic width is 186 mm. Earlier 48 mm frame posts,
+short pivots, 180 mm axle, 70 mm rear journal and 166 mm case posts must
+not be mixed into this corrected stack.
+
+Clearance and pivot-section checks passed for all three ratios. The new
+pivots still need a physical print and strength/running test.
+https://github.com/lukacslacko/rolling_clock
+'''
+    pack(out/'rolling-timer-r3-pivot-fix.zip','rolling-timer-r3-pivot-fix',patch_files,{'READ-ME.txt':patch_note})
     for ratio,l in layouts.items():
         files=[(ROOT/'BUILD-GUIDE.pdf','BUILD-GUIDE.pdf'),(ROOT/f'PRINT-LIST-{ratio}x.md','PRINT-LIST.md'),(ROOT/'LICENSE','LICENSE')]
         files += [(ROOT/parts[key]['file'],parts[key]['file']) for key in l['print_quantities']]
@@ -34,9 +69,12 @@ Print and try the two small joint coupons first.
 PLA / 0.4 mm nozzle / 0.2 mm layers. Keep the supplied orientations.
 The wheel is 248 mm diameter: no outside brim on the 256 mm P1S bed.
 
-R3 is geometrically checked but has not yet been physically tested.
+The complete R3 mechanism is geometrically checked but has not yet been run.
 Start with 16:1 before trying a slower gear set.
-Do not mix earlier-revision parts into this assembly.
+Pivot correction: 54 mm frame posts, 10.5 mm pivot feet, 186 mm axle,
+76 mm rear journal and 172 mm case posts. Older R3 gears, frames, anchor,
+bridge and bridge posts remain compatible. See README.md in the full package.
+Do not substitute the six earlier short parts or parts from R1/R2.
 Source and full design: https://github.com/lukacslacko/rolling_clock
 License: MIT; see LICENSE.
 '''

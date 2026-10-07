@@ -13,7 +13,28 @@ A new, **not yet physically tested** revision based on the first working lightwe
 - The pendulum has its own wider front compartment and a bent rod that clears the main axle. The escapement is tilted inward by 10 degrees as a matched wheel/pallet arrangement to keep the pendulum clamp inside the rotating posts. Its working pallet profiles follow the first successful build.
 - Both carrier frames support **16:1, 32:1 and 64:1**. Gear shafts are bolted to the rear frame and supported in clearance-fit blind seats in the front frame. The anchor pivot is supported by the rear frame and the bolted bridge. No bought bearings are needed.
 
-The drum is **248 mm diameter x 180 mm between its outer plastic faces**, about **186.4 mm including the bounded screw heads**. Every individual part fits the 256 mm P1S volume. The wheel has a 13 mm radial rolling rim. The post body's furthest corner is 4.90 mm inside the rolling circle; the wider locating pads stay at least about 2.9 mm inside it. All post screws load the wheel axially.
+The drum is **248 mm diameter x 186 mm between its outer plastic faces**, about **192.4 mm including the bounded screw heads**. Every individual part fits the 256 mm P1S volume. The wheel has a 13 mm radial rolling rim. The post body's furthest corner is 4.90 mm inside the rolling circle; the wider locating pads stay at least about 2.9 mm inside it. All post screws load the wheel axially.
+
+## Pivot-base correction - 7 October 2026
+
+The original 4.5 mm pivot foot was too short: its nut channel reached 1.2 mm into the 8 mm journal, leaving a weak connection. Both pivot types now have **10.5 mm square feet**, **4.8 mm of material above the nut channel**, and a blind screw bore that stops **3.7 mm below the shaft root**. The 8 mm shaft is solid from its root upward. Print pivots 13 and 19 with **100% infill**, foot down. Nut fit remains 5.6 mm with a 5.8 mm entry.
+
+The gear train, front frame, bridge and pendulum move forward together by 6 mm. Gear engagement, all gear spacers, pendulum clearance and screw lengths stay the same. At its closest axial position, the B gear is 6.4 mm ahead of its pivot nut.
+
+**Already printed R3 gears, anchor, rear frame, anchor bridge and both bridge posts can be reused. Reprint only the three frame posts from the builder's reported printed set.** Both frame shapes are unchanged; their spacing increases from 48 to 54 mm. Six print files change in total:
+
+| File in `STL/common/` | Qty, 32x core | Qty, complete 32x | Revised dimension |
+|---|---:|---:|---|
+| [07_square_frame_post.stl](STL/common/07_square_frame_post.stl) | 3 | 3 | 54 mm long |
+| [13_bolted_gear_pivot.stl](STL/common/13_bolted_gear_pivot.stl) | 3 | 3 | 10.5 mm foot; 56.5 mm total |
+| [19_bolted_anchor_pivot.stl](STL/common/19_bolted_anchor_pivot.stl) | 1 | 1 | 10.5 mm foot; 89.5 mm total |
+| [03_square_main_axle.stl](STL/common/03_square_main_axle.stl) | 1 | 1 | 186 mm; cross-holes at 6, 97, 180 mm |
+| [36_rear_round_journal.stl](STL/common/36_rear_round_journal.stl) | 1 | 1 | 76 mm long |
+| [02_square_case_post.stl](STL/common/02_square_case_post.stl) | 0 | 6 | 172 mm long |
+
+For 16x, use two copies of pivot 13; the other quantities are the same. The 64x quantities match 32x. Use all six corrected file types when completing the drum; all other R3 print shapes remain compatible.
+
+![Section through corrected gear pivot](renders/pivot-section.png)
 
 ## Files and printing
 
@@ -50,7 +71,7 @@ The hardware models use nominal 5.5 mm-across-flats nuts, leaving 0.1 mm total c
 
 These counts are within two dozen of each screw length and exclude optional fit-test hardware. Use plain nuts approximately 2.4 mm thick and screw heads no larger than 6.5 mm diameter x 3.2 mm high, with flat undersides. Screw length is measured under the head. No metal washers, threaded inserts or purchased bearings are required.
 
-The gear pivot feet use one rear screw each; their front tips are located in blind seats, without clamping the rotating gear. The three main frame posts set the 48 mm face-to-face spacing. Spare bearing positions remain empty.
+The gear pivot feet use one rear screw each; their front tips are located in blind seats, without clamping the rotating gear. The three main frame posts set the 54 mm face-to-face spacing. Spare bearing positions remain empty.
 
 ## Choosing a ratio
 
@@ -76,7 +97,7 @@ A little periodic rocking can result from the pendulum exchanging angular moment
 
 ## What was checked
 
-The three assembled configurations include worst-case screw-head envelopes and real nut envelopes. Checks cover each exported mesh, actual involute engagement, both escapement directions, nominal assembly interference, the full gear and carrier axial endplay, a 61-position pendulum sweep from -15 to +15 degrees, and 73 drum positions through a full rotation. Analytic radial bounds also cover every drum angle within the checked pendulum range.
+The three assembled configurations include worst-case screw-head envelopes and real nut envelopes. Checks cover each exported mesh, actual involute engagement, both escapement directions, nominal assembly interference, the full gear and carrier axial endplay, a 61-position pendulum sweep from -15 to +15 degrees, and 73 drum positions through a full rotation. Analytic radial bounds also cover every drum angle within the checked pendulum range. The pivot correction adds cross-section area checks through both feet, verifies a substantial cap above each nut pocket, and checks that the full 8 mm shaft is solid. These geometric checks are not a strength or fatigue simulation.
 
 Nominal axial gaps: **9.4 mm bob to front frame**, **6.2 mm bob-screw head to frame**, and **15.6 mm screw tip to front wheel spokes**. Overall clearance to the rotating case posts is at least **2.35 mm** within the checked range. The screw/nut stacks have full nominal nut engagement, with at least 0.4 mm of screw extending beyond the nut. Gear axial endplay is 0.6 mm; blind pivot seats leave 0.5 mm end clearance. At the combined endplay limits, the input hub still clears the large B wheel by 0.5 mm.
 
@@ -90,6 +111,6 @@ With Python 3.11+ and `source/requirements.txt` installed:
 python source/validate.py
 ```
 
-This regenerates all R3 meshes and runs the checks. It does not modify earlier designs. For illustrations, run `blender -b --factory-startup -t 6 --python source/render.py`. Rebuild the guide and print lists with `python source/make_guide.py` using ReportLab and Pillow. Create the complete archive and selected print kits with `python source/package.py --output /path/to/output-folder`. The checked-in outputs are ready to use without these tools.
+This regenerates all R3 meshes and runs the checks. It does not modify earlier designs. Generate the dimensioned pivot section with `python source/pivot_section.py` (requires Matplotlib). For illustrations, run `blender -b --factory-startup -t 6 --python source/render.py`. Rebuild the guide and print lists with `python source/make_guide.py` using ReportLab and Pillow. Create the complete archive and selected print kits with `python source/package.py --output /path/to/output-folder`. The checked-in outputs are ready to use without these tools.
 
 Released under the [MIT License](LICENSE), as part of [lukacslacko/rolling_clock](https://github.com/lukacslacko/rolling_clock).

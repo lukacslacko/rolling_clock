@@ -76,7 +76,7 @@
     "point": [
       98.72689603142601,
       56.99999999999999,
-      180.0
+      186.0
     ],
     "file": "05_case_front_1.stl"
   },
@@ -152,7 +152,7 @@
     "point": [
       6.980486755139913e-15,
       114.0,
-      180.0
+      186.0
     ],
     "file": "10_case_front_2.stl"
   },
@@ -228,7 +228,7 @@
     "point": [
       -98.72689603142601,
       56.99999999999999,
-      180.0
+      186.0
     ],
     "file": "15_case_front_3.stl"
   },
@@ -304,7 +304,7 @@
     "point": [
       -98.726896031426,
       -57.000000000000014,
-      180.0
+      186.0
     ],
     "file": "20_case_front_4.stl"
   },
@@ -380,7 +380,7 @@
     "point": [
       -2.094146026541974e-14,
       -114.0,
-      180.0
+      186.0
     ],
     "file": "25_case_front_5.stl"
   },
@@ -456,7 +456,7 @@
     "point": [
       98.72689603142598,
       -57.00000000000005,
-      180.0
+      186.0
     ],
     "file": "30_case_front_6.stl"
   },
@@ -514,9 +514,9 @@
     "file": "34_axle_cross_6_nut.stl"
   },
   {
-    "part": "axle_cross_91",
+    "part": "axle_cross_97",
     "folder": "hardware",
-    "name": "axle_cross_91",
+    "name": "axle_cross_97",
     "color": "steel",
     "group": "rotor",
     "hardware": true,
@@ -532,25 +532,25 @@
     "point": [
       -5.6,
       0,
-      91
+      97
     ],
-    "file": "35_axle_cross_91.stl"
+    "file": "35_axle_cross_97.stl"
   },
   {
-    "part": "axle_cross_91_nut",
+    "part": "axle_cross_97_nut",
     "folder": "hardware",
-    "name": "axle_cross_91_nut",
+    "name": "axle_cross_97_nut",
     "color": "steel",
     "group": "rotor",
     "hardware": true,
     "type": "nut",
     "allowed_interference_with": "10_drive_72",
-    "file": "36_axle_cross_91_nut.stl"
+    "file": "36_axle_cross_97_nut.stl"
   },
   {
-    "part": "axle_cross_174",
+    "part": "axle_cross_180",
     "folder": "hardware",
-    "name": "axle_cross_174",
+    "name": "axle_cross_180",
     "color": "steel",
     "group": "rotor",
     "hardware": true,
@@ -566,20 +566,20 @@
     "point": [
       -5.6,
       0,
-      174
+      180
     ],
-    "file": "37_axle_cross_174.stl"
+    "file": "37_axle_cross_180.stl"
   },
   {
-    "part": "axle_cross_174_nut",
+    "part": "axle_cross_180_nut",
     "folder": "hardware",
-    "name": "axle_cross_174_nut",
+    "name": "axle_cross_180_nut",
     "color": "steel",
     "group": "rotor",
     "hardware": true,
     "type": "nut",
     "allowed_interference_with": "front_case_wheel",
-    "file": "38_axle_cross_174_nut.stl"
+    "file": "38_axle_cross_180_nut.stl"
   },
   {
     "part": "05_shared_rear_frame",
@@ -658,7 +658,7 @@
     "point": [
       -81,
       51,
-      129.8
+      135.8
     ],
     "file": "44_frame_front_0.stl"
   },
@@ -734,7 +734,7 @@
     "point": [
       72,
       -60,
-      129.8
+      135.8
     ],
     "file": "49_frame_front_1.stl"
   },
@@ -810,7 +810,7 @@
     "point": [
       65,
       68,
-      129.8
+      135.8
     ],
     "file": "54_frame_front_2.stl"
   },
@@ -1142,7 +1142,7 @@
     "point": [
       -4.349570669890152,
       -68.35276834176128,
-      128.2
+      134.2
     ],
     "file": "82_bridge_rear_0.stl"
   },
@@ -1176,7 +1176,7 @@
     "point": [
       -4.349570669890152,
       -68.35276834176128,
-      162.8
+      168.8
     ],
     "file": "84_bridge_front_0.stl"
   },
@@ -1218,7 +1218,7 @@
     "point": [
       47.650429330109844,
       -68.35276834176128,
-      128.2
+      134.2
     ],
     "file": "87_bridge_rear_1.stl"
   },
@@ -1252,7 +1252,7 @@
     "point": [
       47.650429330109844,
       -68.35276834176128,
-      162.8
+      168.8
     ],
     "file": "89_bridge_front_1.stl"
   },
@@ -1302,7 +1302,7 @@
     "point": [
       6.650429330109848,
       -98.35276834176128,
-      148
+      154
     ],
     "file": "93_pendulum_clamp.stl"
   },
@@ -1336,7 +1336,7 @@
     "point": [
       21.650429330109848,
       57.647231658238724,
-      141.4
+      147.4
     ],
     "file": "95_bob_bolt.stl"
   },

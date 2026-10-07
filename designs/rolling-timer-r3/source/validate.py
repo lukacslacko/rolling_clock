@@ -21,12 +21,12 @@ def check_nut_access():
     findings=[]
     slots=[('common','02_square_case_post',b.NUT_WIDTH,lambda m:m.translate((0,0,12.5))),
            ('common','07_square_frame_post',b.NUT_WIDTH,lambda m:m.translate((0,0,81.4))),
-           ('common','23_square_bridge_post',b.NUT_WIDTH,lambda m:m.translate((0,0,135.4))),
+           ('common','23_square_bridge_post',b.NUT_WIDTH,lambda m:m.translate((0,0,135.4+b.AXIAL_EXTENSION))),
            ('common','13_bolted_gear_pivot',b.NUT_WIDTH,lambda m:m.translate((0,0,80.9))),
            ('common','19_bolted_anchor_pivot',b.NUT_WIDTH,lambda m:m.translate((0,0,80.9))),
            ('common','01_case_wheel',b.NUT_WIDTH,lambda m:m.rotate((0,90,0)).translate((5.6,0,6))),
-           ('common','10_drive_72',b.NUT_WIDTH,lambda m:m.rotate((0,90,0)).translate((5.6,0,91))),
-           ('common','25_screw_fixed_bob',b.NUT_WIDTH,lambda m:m.mirror((0,1,0)).rotate((0,0,90)).translate((0,150,151.2)))]
+           ('common','10_drive_72',b.NUT_WIDTH,lambda m:m.rotate((0,90,0)).translate((5.6,0,91+b.AXIAL_EXTENSION))),
+           ('common','25_screw_fixed_bob',b.NUT_WIDTH,lambda m:m.mirror((0,1,0)).rotate((0,0,90)).translate((0,150,151.2+b.AXIAL_EXTENSION)))]
     slots += [('fit-tests','40_nut_post_coupon_'+suffix,width,lambda m:m.translate((0,0,3.4)))
               for width,suffix in [(5.25,'525'),(5.4,'540'),(5.6,'560')]]
     for folder,name,width,pose in slots:
@@ -47,6 +47,29 @@ def check_nut_access():
     return findings
 
 nut_access=check_nut_access()
+
+def check_pivot_sections():
+    findings=[]
+    slot_top=80.9+b.NUT_DEPTH
+    for name,end in [('13_bolted_gear_pivot',128.5+b.AXIAL_EXTENSION),('19_bolted_anchor_pivot',161.5+b.AXIAL_EXTENSION)]:
+        m=b.parts['common',name]['m']
+        # Check material continuity, not just whether the mesh is connected.
+        # The nut pocket must remain entirely in the square base, below a
+        # substantial cap and a full solid shaft (the bolt bore stops blind).
+        roof=b.PIVOT_BASE_TOP-slot_top
+        solid_cap=b.PIVOT_BASE_TOP-b.PIVOT_BORE_END
+        required_shaft=cyl(3.999,b.PIVOT_BASE_TOP-.05,end-b.PIVOT_BASE_TOP)
+        missing_shaft=float((required_shaft-m).volume())
+        areas=[float(m.slice(float(z)).area()) for z in np.arange(78.1,b.PIVOT_BASE_TOP-.05,.2)]
+        assert roof>=4 and solid_cap>=3 and missing_shaft<1e-5,(name,roof,solid_cap,missing_shaft)
+        assert min(areas)>math.pi*4**2,(name,min(areas))
+        findings.append({'part':name,'base_height_mm':b.PIVOT_BASE_TOP-78,
+                         'cap_above_nut_slot_mm':round(roof,3),'solid_cap_above_bolt_bore_mm':round(solid_cap,3),
+                         'minimum_base_section_area_mm2':round(min(areas),3),'solid_8mm_shaft_verified':True})
+    print('Pivot sections passed:',findings,flush=True)
+    return findings
+
+pivot_sections=check_pivot_sections()
 reports={};all_bad=[]
 for ratio,items in b.assemblies.items():
     bad=[];nutfits=[]
@@ -141,7 +164,10 @@ for ratio,items in b.assemblies.items():
                     np.linalg.norm(axes['D'])+(38.75 if ratio==32 else 46.25) if ratio!=16 else 0)
     headroom=109-max(fixed_radius,pend_radius,gear_radius)
     assert all(a['tip_beyond_nut_mm']>=.39 for a in items if a.get('type')=='screw')
-    rep={'ratio':ratio,'nut_insertion_channels':nut_access,'static_unintended_intersections':bad,'intended_calibrated_nut_trap_intersections':nutfits,
+    rep={'ratio':ratio,'nut_insertion_channels':nut_access,'pivot_sections':pivot_sections,
+      'frame_gap_mm':layout['frame_gap_mm'],'case_width_mm':layout['case_width_mm'],
+      'B_gear_to_its_pivot_nut_min_axial_gap_mm':round(84+b.AXIAL_EXTENSION-.3-(80.9+2.4),3),
+      'static_unintended_intersections':bad,'intended_calibrated_nut_trap_intersections':nutfits,
       'axial_endplay_intersections':endbad,'gear_axial_float_mm':[-.3,.3],'carrier_to_rotor_axial_float_mm':[-.4,.4],'drive_hub_to_B_wheel_min_gap_with_endplay_mm':.5,
       'spur_samples':121,'max_spur_overlap_mm2':spurmax,'anchor_samples':241,'max_anchor_overlap_mm2':anchormax,
       'mechanism_3d_samples':41,'mechanism_intersections':mechbad,'pendulum_angle_range_deg':[-15,15],

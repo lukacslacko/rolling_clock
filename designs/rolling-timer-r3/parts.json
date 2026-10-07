@@ -16,12 +16,12 @@
     "file": "STL/common/02_square_case_post.stl",
     "color": "case",
     "dimensions_mm": [
-      166.0,
+      172.0,
       10.0,
       10.0
     ],
-    "volume_cm3": 16.146,
-    "print_note": "Long flat side on bed; both nut-slot mouths upward. Preload two M3 nuts. End bolts M3x16."
+    "volume_cm3": 16.746,
+    "print_note": "172 mm long. Long flat side on bed; both nut-slot mouths upward. Preload two M3 nuts. End bolts M3x16."
   },
   "common/03_square_main_axle": {
     "qty": 1,
@@ -29,11 +29,11 @@
     "color": "case",
     "dimensions_mm": [
       8.0,
-      180.0,
+      186.0,
       8.0
     ],
-    "volume_cm3": 10.597,
-    "print_note": "Long flat on bed; solid. Cross-holes at 6, 91 and 174 mm from the rear end."
+    "volume_cm3": 10.957,
+    "print_note": "186 mm long. Long flat on bed; solid. Cross-holes at 6, 97 and 180 mm from the rear end."
   },
   "common/05_shared_rear_frame": {
     "qty": 1,
@@ -64,12 +64,12 @@
     "file": "STL/common/07_square_frame_post.stl",
     "color": "frame",
     "dimensions_mm": [
-      48.0,
+      54.0,
       12.0,
       12.0
     ],
-    "volume_cm3": 6.425,
-    "print_note": "Long flat side on bed, nut slots up. Flat ends set the 48 mm frame gap; M3x10 at both ends."
+    "volume_cm3": 7.289,
+    "print_note": "Long flat side on bed, nut slots up. Flat ends set the 54 mm frame gap; M3x10 at both ends."
   },
   "common/08_open_ballast_bowl": {
     "qty": 1,
@@ -102,10 +102,10 @@
     "dimensions_mm": [
       12.0,
       12.0,
-      50.5
+      56.5
     ],
-    "volume_cm3": 2.75,
-    "print_note": "Square foot on bed; 8 mm journal up. One M3x10 at rear; tip has 0.5 mm clearance in the front blind seat."
+    "volume_cm3": 3.635,
+    "print_note": "Solid print, square foot on bed; 10.5 mm foot and solid 8 mm journal. One M3x10 at rear; tip has 0.5 mm clearance in the front blind seat."
   },
   "common/19_bolted_anchor_pivot": {
     "qty": 1,
@@ -114,10 +114,10 @@
     "dimensions_mm": [
       10.0,
       10.0,
-      83.5
+      89.5
     ],
-    "volume_cm3": 4.219,
-    "print_note": "Square foot on bed. M3x10 at rear; bridge supports the long tip."
+    "volume_cm3": 4.847,
+    "print_note": "Solid print, square foot on bed; 10.5 mm foot fully contains the nut slot. M3x10 at rear; bridge supports the long tip."
   },
   "16x/18_anchor_forward": {
     "qty": 1,
@@ -246,10 +246,10 @@
     "dimensions_mm": [
       12.0,
       12.0,
-      70.0
+      76.0
     ],
-    "volume_cm3": 3.399,
-    "print_note": "Flat annular end on bed, 70 mm long. Square bore keys to axle."
+    "volume_cm3": 3.69,
+    "print_note": "Flat annular end on bed, 76 mm long. Square bore keys to axle."
   },
   "common/37_front_round_journal": {
     "qty": 1,
