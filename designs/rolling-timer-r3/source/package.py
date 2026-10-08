@@ -44,7 +44,8 @@ For 16:1 use two, rather than three, copies of pivot 13.
 
 Fit collar 38 AROUND journal 36, between rear-frame collar 05 and washer 35.
 If you already printed the six corrected files, print ONLY collar 38 now.
-All other R3 print shapes are unchanged. Reuse the printed gears, anchor,
+This thrust-collar fix changes no other print shape. The separate smoother
+wheel 01 is available in the complete/selected kits. Reuse the printed gears, anchor,
 rear frame, anchor bridge and two bridge posts. The six replacement types
 above belong to the earlier 7 October pivot correction. If those are already
 printed, the only additional print for the rear-thrust correction is collar 38.
@@ -61,8 +62,9 @@ The orange gear's flat face points rearward; its raised hub points forward.
 PIVOT-STACKS.pdf shows spacer order, lengths and wheel orientation separately
 for 16:1, 32:1 and 64:1, including the anchor. Those diagrams are not 1:1.
 
-Clearance and pivot-section checks passed for all three ratios. The new
-pivots still need a physical print and strength/running test.
+Clearance and pivot-section checks passed for all three ratios. The builder
+subsequently reported that corrected R3 prints and rolls well. Every ratio,
+timing and durability have not been independently established.
 https://github.com/lukacslacko/rolling_clock
 '''
     pack(out/'rolling-timer-r3-pivot-fix.zip','rolling-timer-r3-pivot-fix',patch_files,{'READ-ME.txt':patch_note})
@@ -89,8 +91,12 @@ Print and try the two small joint coupons first.
 PLA / 0.4 mm nozzle / 0.2 mm layers. Keep the supplied orientations.
 The wheel is 248 mm diameter: no outside brim on the 256 mm P1S bed.
 
-The complete R3 mechanism is geometrically checked but has not yet been run.
-Start with 16:1 before trying a slower gear set.
+The builder reports that corrected R3 prints and rolls well. Every gearing
+option and the new smoother wheel have not been independently confirmed.
+Wheel 01 now uses 1536 outer segments, replacing the 192-side rolling rim.
+Try slicer Resolution 0.001 mm with Arc fitting on; 0.2 mm layers are fine.
+Only wheel 01 changes for this refinement. Print two copies to replace both
+drum wheels; all other current print files are unchanged.
 Pivot correction: 54 mm frame posts, 10.5 mm pivot feet, 186 mm axle,
 76 mm rear journal and 172 mm case posts. Older R3 gears, frames, anchor,
 bridge and bridge posts remain compatible. See README.md in the full package.

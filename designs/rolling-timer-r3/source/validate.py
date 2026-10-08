@@ -103,6 +103,26 @@ def check_main_thrust():
 
 MAIN_FLOAT,main_thrust=check_main_thrust()
 
+def check_rolling_rim():
+    # Inspect the exported STL, so a later mesh simplification cannot silently
+    # restore coarse flats even when the source circle has enough segments.
+    tm=trimesh.load(ROOT/'STL/common/01_case_wheel.stl',force='mesh')
+    centre=(tm.bounds[0,:2]+tm.bounds[1,:2])/2
+    xy=tm.vertices[:,:2]-centre
+    outer=xy[np.abs(np.linalg.norm(xy,axis=1)-124)<.002]
+    angles=np.sort(np.unique(np.round(np.arctan2(outer[:,1],outer[:,0]),7)))
+    increments=np.diff(np.r_[angles,angles[0]+2*math.pi])
+    widest=2*124*math.sin(float(increments.max())/2)
+    sagitta=124*(1-math.cos(float(increments.max())/2))
+    assert len(angles)==b.ROLLING_RIM_SEGMENTS and widest<.52 and sagitta<.0003
+    report={'exported_outer_segments':len(angles),'max_flat_width_mm':round(widest,6),
+            'max_ideal_chord_radial_error_mm':round(sagitta,7),
+            'nominal_diameter_mm':248,'previous_outer_segments':192}
+    print('Exported rolling rim:',report,flush=True)
+    return report
+
+rolling_rim=check_rolling_rim()
+
 def main_pose(item,dz):
     # Journals, thrust sleeves and the new round-bore collar are not axially
     # fastened. Let them take up their individual clearances at either stop.
@@ -235,7 +255,7 @@ for ratio,items in b.assemblies.items():
       'fixed_max_radius_mm':fixed_radius,'pendulum_max_radius_mm':pend_radius,'gear_max_swept_radius_mm':float(gear_radius),
       'case_post_inner_swept_radius_mm':109,'minimum_radial_case_post_gap_mm':float(headroom),
       'bob_to_frame_axial_gap_mm':9.4,'bob_screw_head_to_frame_axial_gap_mm':6.2,'bob_screw_tip_to_front_spokes_mm':15.6,
-      'rolling_rim_radius_mm':124,'post_body_max_radius_mm':math.hypot(119,5),
+      'rolling_rim_radius_mm':124,'rolling_rim_mesh':rolling_rim,'post_body_max_radius_mm':math.hypot(119,5),
       'print_meshes_watertight_connected_within_250mm':True,
       'hardware':{k:layout[k] for k in ('M3x10','M3x16')},
       'limits':f'Rigid CAD, sampled gear/pendulum motion and analytic radial bounds. No fit, friction, structural or wear simulation. Nominal nut AF: 5.5 mm; configured seat: {b.NUT_WIDTH:g} mm; insertion channel: {b.NUT_ENTRY_WIDTH:g} mm. The builder selected the 5.6 mm seat after printing fit coupons. Screw heads bounded by 6.5 mm diameter x 3.2 mm height.'}

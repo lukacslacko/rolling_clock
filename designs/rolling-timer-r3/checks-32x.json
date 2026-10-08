@@ -155,6 +155,13 @@
   "bob_screw_head_to_frame_axial_gap_mm": 6.2,
   "bob_screw_tip_to_front_spokes_mm": 15.6,
   "rolling_rim_radius_mm": 124,
+  "rolling_rim_mesh": {
+    "exported_outer_segments": 1536,
+    "max_flat_width_mm": 0.507259,
+    "max_ideal_chord_radial_error_mm": 0.0002594,
+    "nominal_diameter_mm": 248,
+    "previous_outer_segments": 192
+  },
   "post_body_max_radius_mm": 119.10499569707393,
   "print_meshes_watertight_connected_within_250mm": true,
   "hardware": {

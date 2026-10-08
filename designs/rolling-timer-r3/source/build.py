@@ -130,7 +130,10 @@ def cross_hub(m,z):
     return m
 
 # Deeper rolling rim; post screws have clearance and apply axial clamping only.
-ring=circle(124)-circle(111)
+# 192 sides made visible 4.06 mm flats on the rolling surface. Refine only
+# this outside circle; preserve every mounting feature and internal profile.
+ROLLING_RIM_SEGMENTS=1536
+ring=circle(124,quad_segs=ROLLING_RIM_SEGMENTS//4)-circle(111)
 for k in range(6):
     angle=k*60+30;q=polar(114,angle*D)
     ring|=bar(A,q,7)
@@ -142,7 +145,7 @@ for k in range(6):
     q=polar(114,(k*60+30)*D)
     wheel-=cyl(1.7,-1,10,q)
     wheel+=socket_lip((0,0),7,10).rotate((0,0,k*60+30)).translate((*q,0))
-register('01_case_wheel',wheel,2,note='Flat outer face on bed, hub and locating lips up. No outer brim; diameter 248 mm.',color='case')
+register('01_case_wheel',wheel,2,note='Flat outer face on bed, hub and locating lips up. Diameter 248 mm, 1536-side rolling rim. Slicer Resolution: try 0.001 mm; arc fitting on. No outer brim.',color='case')
 register('02_square_case_post',square_post(10,7,166+AXIAL_EXTENSION,5.5),6,rot=(0,90,0),note='172 mm long. Long flat side on bed; both nut-slot mouths upward. Preload two M3 nuts. End bolts M3x16.',color='case')
 shaft=extr(key_profile,0,W)
 for z in CROSS_HOLES:shaft-=hx(1.7,-6,0,z,12)

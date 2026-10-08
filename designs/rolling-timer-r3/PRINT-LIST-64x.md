@@ -6,7 +6,7 @@ Hardware: **16 M3x10**, **17 M3x16**, **33 plain M3 nuts**. Fit coupons are opti
 
 | File | Qty | Print envelope | Orientation / note |
 |---|---:|---|---|
-| [common/01_case_wheel.stl](STL/common/01_case_wheel.stl) | 2 | 248 x 248 x 12 | Flat outer face on bed, hub and locating lips up. No outer brim; diameter 248 mm. |
+| [common/01_case_wheel.stl](STL/common/01_case_wheel.stl) | 2 | 248 x 248 x 12 | Flat outer face on bed, hub and locating lips up. Diameter 248 mm, 1536-side rolling rim. Slicer Resolution: try 0.001 mm; arc fitting on. No outer brim. |
 | [common/02_square_case_post.stl](STL/common/02_square_case_post.stl) | 6 | 172 x 10 x 10 | 172 mm long. Long flat side on bed; both nut-slot mouths upward. Preload two M3 nuts. End bolts M3x16. |
 | [common/03_square_main_axle.stl](STL/common/03_square_main_axle.stl) | 1 | 8 x 186 x 8 | 186 mm long. Long flat on bed; solid. Cross-holes at 6, 97 and 180 mm from the rear end. |
 | [common/05_shared_rear_frame.stl](STL/common/05_shared_rear_frame.stl) | 1 | 171 x 186.353 x 10 | Flat outside face on bed; lips and main collar up. Universal 16/32/64 frame. |

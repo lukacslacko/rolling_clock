@@ -9,7 +9,7 @@ from shapely.geometry.polygon import orient
 D=math.pi/180
 MOD=1.25
 TOOTH_THINNING=.18
-def circle(r,c=(0,0)): return Point(c).buffer(r,quad_segs=48)
+def circle(r,c=(0,0),quad_segs=48): return Point(c).buffer(r,quad_segs=quad_segs)
 def bar(a,b,w): return LineString([a,b]).buffer(w/2,cap_style=1)
 def section(g):
     if g.geom_type=='Polygon': gs=[g]

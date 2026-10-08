@@ -15,10 +15,16 @@ Nut-access clarification: the originally requested 5.25 mm applied only to the f
 
 Physical coupon result: after printing and trying the coupons, the builder selected **5.6 mm** for all final nut seats. This supersedes the original 5.25 mm request. Current R3 production parts use 5.6 mm seats throughout, with the 5.8 mm insertion channels retained. The labelled comparison coupons remain unchanged.
 
-R3 is a response to these observations, not yet a physically validated replacement. The previous working version is preserved under the v0.1.0 repository tag.
+R3 is a response to these observations. Its subsequent running report is recorded below. The previous working version is preserved under the v0.1.0 repository tag.
 
 ## Pivot-foot issue - 7 October 2026
 
 The builder found in the slicer that the gear-pivot nut slot nearly severed the shaft from its base and could expose the nut near a gear. At this point the printed R3 parts were the four 32x wheels, reversed anchor, rear frame, anchor bridge, three frame posts and two bridge posts. Widening was acceptable.
 
-The CAD confirmed that the 2.8 mm nut pocket reached 1.2 mm above the original 4.5 mm foot into the 8 mm journal. Connected-mesh and collision checks had not caught this weak section. The correction uses 10.5 mm feet on both pivot types, a blind bolt bore below the shaft, and a 6 mm forward shift of the mechanism. Frame posts become 54 mm long and overall plastic width becomes 186 mm. Of the reported printed parts, only the three frame posts need replacement. Physical strength and running tests remain pending.
+The CAD confirmed that the 2.8 mm nut pocket reached 1.2 mm above the original 4.5 mm foot into the 8 mm journal. Connected-mesh and collision checks had not caught this weak section. The correction uses 10.5 mm feet on both pivot types, a blind bolt bore below the shaft, and a 6 mm forward shift of the mechanism. Frame posts become 54 mm long and overall plastic width becomes 186 mm. Of the reported printed parts, only the three frame posts need replacement. At that point, physical strength and running tests were pending.
+
+## Successful roll and faceted rim - 8 October 2026
+
+After printing and fitting the missing rear thrust collar 38, the builder reported: "Printed well, rolls well". The remaining reported issue was a visibly faceted outer rim: the wheel appeared to move from one flat face to the next, and the flats could be seen in reflected light and felt by hand. The ongoing build was prepared for 32:1; this message does not independently confirm trials of all three gear sets. Timing accuracy and durability remain unmeasured.
+
+Inspection of the exported wheel STL found exactly 192 outer angular vertices, 4.058 mm between neighbours and 0.01660 mm ideal radial chord error. The source circle used 48 segments per quadrant. The correction refines only that outside circle to 384 segments per quadrant (1,536 total), retaining all mounting features and every other print file. The revised STL and a finer slicing-resolution suggestion are ready for a new print; smoother physical rolling is not yet confirmed.

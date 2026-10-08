@@ -8,8 +8,8 @@
       248.0,
       12.0
     ],
-    "volume_cm3": 101.257,
-    "print_note": "Flat outer face on bed, hub and locating lips up. No outer brim; diameter 248 mm."
+    "volume_cm3": 101.317,
+    "print_note": "Flat outer face on bed, hub and locating lips up. Diameter 248 mm, 1536-side rolling rim. Slicer Resolution: try 0.001 mm; arc fitting on. No outer brim."
   },
   "common/02_square_case_post": {
     "qty": 6,

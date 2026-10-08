@@ -1,6 +1,6 @@
 # R3 - bolted frames and three gear ratios
 
-A new, **not yet physically tested** revision based on the first working lightweight clock and the observations recorded on 2 October 2026. The original build and its `v0.1.0` checkpoint remain unchanged.
+The builder reports that the corrected R3 **prints and rolls well** (8 October 2026), after adding rear thrust collar 38. Visible flat faces on the rolling rim led to the finer-mesh wheel below, which still needs a physical print. Running accuracy, durability and every gearing option have not been established. The original build and its `v0.1.0` checkpoint remain unchanged.
 
 ![Bolted R3 assembly](renders/assembled-16x.png)
 
@@ -14,6 +14,14 @@ A new, **not yet physically tested** revision based on the first working lightwe
 - Both carrier frames support **16:1, 32:1 and 64:1**. Gear shafts are bolted to the rear frame and supported in clearance-fit blind seats in the front frame. The anchor pivot is supported by the rear frame and the bolted bridge. No bought bearings are needed.
 
 The drum is **248 mm diameter x 186 mm between its outer plastic faces**, about **192.4 mm including the bounded screw heads**. Every individual part fits the 256 mm P1S volume. The wheel has a 13 mm radial rolling rim. The post body's furthest corner is 4.90 mm inside the rolling circle; the wider locating pads stay at least about 2.9 mm inside it. All post screws load the wheel axially.
+
+## Smoother rolling rim - 8 October 2026
+
+The printed rim's visible faces were present in the STL: the outside circle used **192 segments**, making each flat **4.058 mm wide** on the 248 mm wheel. The ideal chord lies up to **0.01660 mm** inside a true circle. This coarse approximation is a clear contributor to the reported faceted surface; the user's actual sliced toolpath was not inspected.
+
+The current [01_case_wheel.stl](STL/common/01_case_wheel.stl) uses **1,536 outer segments**, each about **0.507 mm wide**, with only **0.000259 mm ideal chord error**. Only the outside rolling contour changes. The hub, axle socket, six post seats, screw holes, inner rim and spokes keep their original geometry. The other 50 print files are unchanged. Print **two copies** when replacing the drum wheels; the revised wheel still fits the existing assembly.
+
+For this wheel, try **Bambu Studio Resolution = 0.001 mm** and **Arc fitting enabled** in Advanced settings. Resolution controls contour simplification, and arc fitting uses the same tolerance to generate G2/G3 moves; this is an engineering starting point for this rim, not a physically tested profile. The common Bambu process profile currently uses 0.012 mm resolution. See Bambu's [setting definitions](https://github.com/bambulab/BambuStudio/blob/master/src/libslic3r/PrintConfig.cpp) and [common process profile](https://github.com/bambulab/BambuStudio/blob/master/resources/profiles/BBL/process/fdm_process_common.json). Keep 0.2 mm layers: the issue is the circular contour in the XY plane. Avoid mesh simplification of the replacement STL.
 
 ## Pivot-base correction - 7 October 2026
 
@@ -42,9 +50,9 @@ The 6 mm widening advanced the orange gear, washer 35 and the end of journal 36,
 
 **Print one [38_rear_journal_thrust_collar.stl](STL/common/38_rear_journal_thrust_collar.stl), for any of the three ratios.** It is **6 mm long, 16 mm outside diameter, with a 12.4 mm round bore**. Print flat on either annular face, without supports. Slide it **around journal 36**, in front of the rear-frame bearing collar and behind washer 35. Washer 35 still goes onto the square axle, against the end of the journal. The nominal frame-to-collar clearance is 0.4 mm.
 
-Rear-to-front thrust path: **rear-frame collar 05 → new collar 38 → washer 35 → fixed orange gear 10**. Journal 36 runs inside collar 38. **All 50 previously supplied STL files are byte-for-byte unchanged; reuse every existing corrected print.** The new collar is included in all print lists, kits, the assembly meshes and the updated guide's page 6. No additional screw or nut is needed.
+Rear-to-front thrust path: **rear-frame collar 05 → new collar 38 → washer 35 → fixed orange gear 10**. Journal 36 runs inside collar 38. **The collar correction left all 50 previously supplied STL files byte-for-byte unchanged.** The later rolling-rim refinement above changes only wheel 01. The collar is included in all print lists, kits, the assembly meshes and the updated guide's page 6. No additional screw or nut is needed.
 
-The geometry checks now derive the actual axle stops from the thrust stacks and allow the loose sleeves to slide independently. With collar 38, the nominal rigid axle limits are **-0.8 to +0.8 mm** relative to the carrier; the previous check incorrectly assumed only -0.4 to +0.4 mm without checking that those stops existed. All three configurations pass the revised interference checks. The new collar still needs a physical fit/running test.
+The geometry checks now derive the actual axle stops from the thrust stacks and allow the loose sleeves to slide independently. With collar 38, the nominal rigid axle limits are **-0.8 to +0.8 mm** relative to the carrier; the previous check incorrectly assumed only -0.4 to +0.4 mm without checking that those stops existed. All three configurations pass the revised interference checks. The builder subsequently reported that collar 38 printed well and the clock rolled well.
 
 ## Files and printing
 
@@ -75,7 +83,7 @@ The final anti-rotation seats are **5.6 mm** wide throughout, selected by the bu
 
 To confirm the fit on another printer or with different nuts, print `40_nut_post_coupon_560.stl` and `41_post_seat_coupon.stl` in their supplied orientations, and try an actual nut and M3x10 screw. The nut should slide freely along the entry, then sit with its thread on the screw axis without rotating when tightened. The two flat faces must close without the locating lips spreading. The original 5.25 and 5.40 mm comparison coupons are retained at their labelled dimensions, all with the same 5.8 mm entry. If another seat width suits your nuts and printer, change `NUT_WIDTH` and regenerate; do not scale complete gear or frame files.
 
-The hardware models use nominal 5.5 mm-across-flats nuts, leaving 0.1 mm total clearance across the production seat. The physical coupon test determines the printed fit; the complete R3 assembly still awaits a running trial. Tighten plastic joints only until seated; use the nut, not a self-tapped plastic thread.
+The hardware models use nominal 5.5 mm-across-flats nuts, leaving 0.1 mm total clearance across the production seat. The physical coupon test determined the printed fit, and the corrected R3 has now been reported running. Tighten plastic joints only until seated; use the nut, not a self-tapped plastic thread.
 
 ## Hardware
 
@@ -115,9 +123,9 @@ A little periodic rocking can result from the pendulum exchanging angular moment
 
 The three assembled configurations include worst-case screw-head envelopes and real nut envelopes. Checks cover each exported mesh, actual involute engagement, both escapement directions, nominal assembly interference, the full gear and carrier axial endplay, a 61-position pendulum sweep from -15 to +15 degrees, and 73 drum positions through a full rotation. Analytic radial bounds also cover every drum angle within the checked pendulum range. The pivot correction adds cross-section area checks through both feet, verifies a substantial cap above each nut pocket, and checks that the full 8 mm shaft is solid. These geometric checks are not a strength or fatigue simulation.
 
-Nominal axial gaps: **9.4 mm bob to front frame**, **6.2 mm bob-screw head to frame**, and **15.6 mm screw tip to front wheel spokes**. Overall clearance to the rotating case posts is at least **2.35 mm** within the checked range. The screw/nut stacks have full nominal nut engagement, with at least 0.4 mm of screw extending beyond the nut. Gear axial endplay is 0.6 mm; blind pivot seats leave 0.5 mm end clearance. At the full combined axle and gear endplay limits, the input hub clears the large B wheel by **0.1 mm nominally**. That small extreme-position clearance, like the new collar's fit, remains subject to the physical running test.
+Nominal axial gaps: **9.4 mm bob to front frame**, **6.2 mm bob-screw head to frame**, and **15.6 mm screw tip to front wheel spokes**. Overall clearance to the rotating case posts is at least **2.35 mm** within the checked range. The screw/nut stacks have full nominal nut engagement, with at least 0.4 mm of screw extending beyond the nut. Gear axial endplay is 0.6 mm; blind pivot seats leave 0.5 mm end clearance. At the full combined axle and gear endplay limits, the input hub clears the large B wheel by **0.1 mm nominally**. The builder's successful roll is encouraging, but that small extreme-position clearance has not been measured physically.
 
-These checks do not simulate friction, extrusion errors, elastic deflection, creep, torque losses or running accuracy. R3 and all its ratio options need a physical trial. `checks-16x.json`, `checks-32x.json` and `checks-64x.json` contain the detailed results; [OBSERVATIONS.md](OBSERVATIONS.md) preserves the prior build's feedback.
+These checks do not simulate friction, extrusion errors, elastic deflection, creep, torque losses or running accuracy. The successful R3 report does not establish every gear ratio or the new smoother rim. `checks-16x.json`, `checks-32x.json` and `checks-64x.json` contain the detailed results, including the measured exported rim segmentation; [OBSERVATIONS.md](OBSERVATIONS.md) preserves the builder's feedback.
 
 ## Regenerate
 
