@@ -247,6 +247,11 @@ for name,z,h,r in [('34_main_front_thrust_sleeve',95.2,26.4,7.5),('35_main_rear_
     if name=='36_rear_round_journal':h+=AXIAL_EXTENSION
     else:z+=AXIAL_EXTENSION
     register(name,key_hole(cyl(r,z,h),z-1,h+2),note=f'Flat annular end on bed, {h:g} mm long. Square bore keys to axle.',color='pins')
+# The rear frame stays at Z72 while the gear/washer advance with the taller
+# pivot feet. This loose collar surrounds journal 36 and restores the rear
+# thrust path from washer 35 to the fixed frame collar, with 0.4 mm clearance.
+register('38_rear_journal_thrust_collar',cyl(8,82.4,AXIAL_EXTENSION)-cyl(6.2,81.4,AXIAL_EXTENSION+2),
+         note='Flat annular end on bed. 6 mm long, 16 mm OD, 12.4 mm ROUND bore. Slides around journal 36, between the rear-frame collar and washer 35. One for every ratio.',color='pins')
 
 # Standalone, small post/nut coupons. Print these before committing to the case.
 for width,suffix in [(5.25,'525'),(5.4,'540'),(5.6,'560')]:
@@ -326,6 +331,7 @@ for ratio in (16,32,64):
     screw('pendulum_clamp',(*(P+[-15,-6]),148+AXIAL_EXTENSION),(0,1,0),16)
     screw('bob_bolt',(*(P+[0,150]),141.4+AXIAL_EXTENSION),(0,0,1),16)
     for name in ('34_main_front_thrust_sleeve','35_main_rear_thrust_washer','36_rear_round_journal','37_front_round_journal'):place(name,group='rotor')
+    place('38_rear_journal_thrust_collar',group='rotor')
     assemblies[ratio]=current
     # Dimensional metadata is also consumed by the render and guide generators.
     layouts[ratio]={'ratio':ratio,'axes':{k:v.tolist() for k,v in [('A',A),('B',B),('C',C),('P',P)]+([('D',E)] if ratio!=16 else [])},'pinion_phase_rad':{'B':bp,'C':cp,**({'D':dp} if ratio!=16 else {})},'pairs':[[72,18],[72,18]]+([[60,30] if ratio==32 else [72,18]] if ratio!=16 else []),'direction_from_pendulum_side':'input counterclockwise; escape '+('counterclockwise' if ratio==16 else 'clockwise'),'M3x10':sum(x.get('length')==10 for x in current),'M3x16':sum(x.get('length')==16 for x in current),'nominal_seconds_per_metre':1000/(math.pi*248)*ratio*30*MODEL['period']}

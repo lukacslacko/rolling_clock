@@ -263,6 +263,18 @@
     "volume_cm3": 2.214,
     "print_note": "Flat annular end on bed, 45.6 mm long. Square bore keys to axle."
   },
+  "common/38_rear_journal_thrust_collar": {
+    "qty": 1,
+    "file": "STL/common/38_rear_journal_thrust_collar.stl",
+    "color": "pins",
+    "dimensions_mm": [
+      16.0,
+      16.0,
+      6.0
+    ],
+    "volume_cm3": 0.481,
+    "print_note": "Flat annular end on bed. 6 mm long, 16 mm OD, 12.4 mm ROUND bore. Slides around journal 36, between the rear-frame collar and washer 35. One for every ratio."
+  },
   "fit-tests/40_nut_post_coupon_525": {
     "qty": 1,
     "file": "STL/fit-tests/40_nut_post_coupon_525.stl",

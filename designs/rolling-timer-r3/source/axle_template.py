@@ -5,7 +5,7 @@ from reportlab.lib.units import mm
 
 W, H = 841.89, 595.28
 INK, MUTED, BLUE = '#243548', '#5D6C79', '#2868AF'
-COLORS = {'03': '#B7D2EF', '36': '#DAE1E8', '35': '#BFAED3',
+COLORS = {'03': '#B7D2EF', '36': '#DAE1E8', '35': '#BFAED3', '38': '#9DD5C3',
           '10': '#F4A568', '34': '#C9D7E2', '37': '#DAE1E8'}
 X0, YC, YBARE = 55, 295, 113
 
@@ -52,6 +52,10 @@ def draw_axle_template(c, root, page_number=1, total_pages=1):
     dimension(97, 186, 446, '89 mm to middle hole', 433)
     line([(x(97), 438), (x(97), YC-34)], BLUE, .55, (3, 3))
 
+    # Local section of the rear frame's bearing collar: OD20 / bore12.4,
+    # Z78..82. Its thrust face makes the purpose of collar 38 visible.
+    c.setFillColor(HexColor('#EDF0F2'));c.setStrokeColor(HexColor('#798C99'));c.setLineWidth(.6)
+    for y0 in (-10,6.2):c.rect(x(78),YC+y0*mm,4*mm,3.8*mm,fill=1,stroke=1)
     for name in parts: mesh_outline(name, YC)
     # Hidden axle edges establish its path through the sleeves and wheel.
     for y in (-4, 4): line([(x(12.4), YC+y*mm), (x(173.6), YC+y*mm)], BLUE, .45, (3, 3))
@@ -66,9 +70,13 @@ def draw_axle_template(c, root, page_number=1, total_pages=1):
     text(386, 355, '37  Front journal', 11, True)
     text(386, 340, '45.6 mm long', 10, color=MUTED)
     line([(471, 331), (471, YC+6*mm)], INK)
-    text(154, 231, '35  Rear washer', 11, True)
-    text(154, 216, '1.2 mm thick', 10, color=MUTED)
-    line([(253, 235), (x(89), 253), (x(89), YC-8*mm)], INK)
+    text(202, 378, '35 / 1.2 mm washer', 10, True)
+    line([(257,369),(x(89),347),(x(89),YC+8*mm)],INK)
+    text(105,265,'05  Rear-frame collar',10,True,color=MUTED)
+    line([(222,268),(x(82),270)],MUTED)
+    text(91,231,'38  NEW rear thrust collar',11,True)
+    text(91,216,'6 mm long / Ø12.4 mm ROUND bore',10,color=MUTED)
+    line([(246,235),(x(85.4),252),(x(85.4),YC-8*mm)],INK)
     text(375, 231, '34  Front thrust sleeve', 11, True)
     text(375, 216, '26.4 mm long', 10, color=MUTED)
     line([(402, 239), (402, YC-7.5*mm)], INK)
@@ -84,9 +92,9 @@ def draw_axle_template(c, root, page_number=1, total_pages=1):
     text(tx, 449, 'CHECK THE ASSEMBLY', 10, True, BLUE)
     notes = [(427, 'Long side of the middle hole:'), (412, 'REAR (97 mm).'),
              (382, 'Fix gear 10 at this middle hole'), (367, 'with one M3x16 screw + nut.'),
-             (337, 'Frames, drum wheels and'), (322, 'fasteners omitted for clarity.'),
+             (337, '38 surrounds rear journal 36.'), (322, 'It fits between frame 05'), (307, 'and rear thrust washer 35.'),
              (292, 'Parts are in their assembled'), (277, 'positions. Small gaps are'), (262, 'intentional; do not clamp tight.'),
-             (232, 'Side view along the screw holes.'), (217, 'Dashed blue: hidden square axle.'),
+             (232, 'Rear frame collar shown in section.'), (217, 'Other frame parts / drum omitted.'),
              (187, 'Lay the bare axle on the outline'), (172, 'below to identify its three holes.')]
     for py, value in notes: text(tx, py, value, 10)
 

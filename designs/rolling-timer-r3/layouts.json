@@ -73,7 +73,8 @@
       "common/34_main_front_thrust_sleeve": 1,
       "common/35_main_rear_thrust_washer": 1,
       "common/36_rear_round_journal": 1,
-      "common/37_front_round_journal": 1
+      "common/37_front_round_journal": 1,
+      "common/38_rear_journal_thrust_collar": 1
     }
   },
   "32": {
@@ -162,7 +163,8 @@
       "common/34_main_front_thrust_sleeve": 1,
       "common/35_main_rear_thrust_washer": 1,
       "common/36_rear_round_journal": 1,
-      "common/37_front_round_journal": 1
+      "common/37_front_round_journal": 1,
+      "common/38_rear_journal_thrust_collar": 1
     }
   },
   "64": {
@@ -251,7 +253,8 @@
       "common/34_main_front_thrust_sleeve": 1,
       "common/35_main_rear_thrust_washer": 1,
       "common/36_rear_round_journal": 1,
-      "common/37_front_round_journal": 1
+      "common/37_front_round_journal": 1,
+      "common/38_rear_journal_thrust_collar": 1
     }
   }
 }

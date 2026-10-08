@@ -10,6 +10,8 @@ Designed by László Lukács with OpenAI Codex for a Bambu Lab P1S, using PLA, a
 
 The [R3 design](designs/rolling-timer-r3/README.md) responds to the first build's physical feedback: square screw-fastened posts, a screw-fixed bob, more pendulum space, a deeper rolling rim and shared frames for 16:1, 32:1 and 64:1 gearing. It includes [a 17-page illustrated guide](designs/rolling-timer-r3/BUILD-GUIDE.pdf), a [1:1 axle identification sheet](designs/rolling-timer-r3/AXLE-1-TO-1.pdf) (also guide page 6), [per-ratio spacer and wheel-orientation drawings](designs/rolling-timer-r3/PIVOT-STACKS.pdf) (guide pages 7-9), and separate print lists. **R3 is CAD-checked but not yet physically tested.** The first working version remains below and under tag `v0.1.0`. The 7 October pivot correction adds taller pivot feet and 6 mm of width; see the R3 reuse table before printing the remaining parts.
 
+**R3 rear thrust correction:** add one [38_rear_journal_thrust_collar.stl](designs/rolling-timer-r3/STL/common/38_rear_journal_thrust_collar.stl). This 6 mm ring surrounds rear journal 36, between the rear frame and washer 35; it fills a gap omitted during the widening. All existing corrected print files remain unchanged. See the [R3 correction notes](designs/rolling-timer-r3/README.md#missing-rear-thrust-collar---correction) and updated guide page 6.
+
 ## Current state — first working build
 
 On **1 October 2026**, the complete lightweight **16:1** mechanism ran on its first physical trial, following a successful hand-driven bench test. This repository preserves that design before the next round of improvements. Running duration, timing accuracy and long-term wear have not yet been measured.

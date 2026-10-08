@@ -102,16 +102,36 @@
   "B_gear_to_its_pivot_nut_min_axial_gap_mm": 6.4,
   "static_unintended_intersections": [],
   "intended_calibrated_nut_trap_intersections": [],
+  "main_axle_thrust": {
+    "rear_frame_collar_face_z_mm": 82.0,
+    "rear_washer_z_mm": [
+      88.4,
+      89.60000000000001
+    ],
+    "added_collar_z_mm": [
+      82.4,
+      88.4
+    ],
+    "added_collar_length_mm": 6.0,
+    "round_bore_mm": 12.4,
+    "outside_diameter_mm": 16,
+    "nominal_frame_to_added_collar_gap_mm": 0.4,
+    "rigid_axle_float_limits_mm": [
+      -0.8,
+      0.8
+    ],
+    "loose_sleeves_can_slide_independently": true
+  },
   "axial_endplay_intersections": [],
   "gear_axial_float_mm": [
     -0.3,
     0.3
   ],
   "carrier_to_rotor_axial_float_mm": [
-    -0.4,
-    0.4
+    -0.8,
+    0.8
   ],
-  "drive_hub_to_B_wheel_min_gap_with_endplay_mm": 0.5,
+  "drive_hub_to_B_wheel_min_gap_with_endplay_mm": 0.1,
   "spur_samples": 121,
   "max_spur_overlap_mm2": 0,
   "anchor_samples": 241,

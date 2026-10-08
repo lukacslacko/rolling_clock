@@ -70,6 +70,56 @@ def check_pivot_sections():
     return findings
 
 pivot_sections=check_pivot_sections()
+
+def zrange(name):
+    bb=b.parts['common',name]['m'].bounding_box()
+    return float(bb[2]),float(bb[5])
+
+def check_main_thrust():
+    # Derive both axial stops from actual solids. Checking only a prescribed
+    # +/-0.4 movement missed the absent rear collar after the 6 mm widening.
+    collar=b.parts['common','38_rear_journal_thrust_collar']['m']
+    rear=b.parts['common','05_shared_rear_frame']['m']^cyl(8,70,80)
+    front=b.parts['common','06_shared_front_frame']['m']^cyl(8,70,80)
+    rear_face=float(rear.bounding_box()[5]);front_face=float(front.bounding_box()[2])
+    gear0,gear1=zrange('10_drive_72')
+    c0,c1=zrange('38_rear_journal_thrust_collar')
+    w0,w1=zrange('35_main_rear_thrust_washer')
+    f0,f1=zrange('34_main_front_thrust_sleeve')
+    float_range=(-(gear0-rear_face-(c1-c0)-(w1-w0)),front_face-gear1-(f1-f0))
+    assert abs((c1-c0)-b.AXIAL_EXTENSION)<1e-6
+    assert abs(c0-rear_face-.4)<1e-6 and abs(c1-w0)<1e-6
+    assert overlap(collar,b.parts['common','36_rear_round_journal']['m'])<1e-6
+    # Both stops must exist and restrict motion to under 1 mm in each direction.
+    assert -.81<float_range[0]<=0<=float_range[1]<.81,float_range
+    report={'rear_frame_collar_face_z_mm':rear_face,'rear_washer_z_mm':[w0,w1],
+            'added_collar_z_mm':[c0,c1],'added_collar_length_mm':c1-c0,
+            'round_bore_mm':12.4,'outside_diameter_mm':16,
+            'nominal_frame_to_added_collar_gap_mm':round(c0-rear_face,3),
+            'rigid_axle_float_limits_mm':[round(v,3) for v in float_range],
+            'loose_sleeves_can_slide_independently':True}
+    print('Main thrust stops:',report,flush=True)
+    return float_range,report
+
+MAIN_FLOAT,main_thrust=check_main_thrust()
+
+def main_pose(item,dz):
+    # Journals, thrust sleeves and the new round-bore collar are not axially
+    # fastened. Let them take up their individual clearances at either stop.
+    def clamp(nominal,lo,hi):
+        assert lo<=hi+1e-6,(item['name'],dz,lo,hi)
+        return max(lo,min(nominal,hi))
+    washer=clamp(88.4,max(88.,88.+dz),88.8+dz)
+    front=clamp(101.2,100.8+dz,min(101.6,102.+dz))
+    shifts={
+        '35_main_rear_thrust_washer':washer-88.4,
+        '36_rear_round_journal':clamp(12.4,12.+dz,washer-76.)-12.4,
+        '38_rear_journal_thrust_collar':clamp(82.4,82.,washer-6.)-82.4,
+        '34_main_front_thrust_sleeve':front-101.2,
+        '37_front_round_journal':clamp(128.,front+26.4,128.4+dz)-128.,
+    }
+    return item['m'].translate((0,0,shifts.get(item['name'],dz)))
+
 reports={};all_bad=[]
 for ratio,items in b.assemblies.items():
     bad=[];nutfits=[]
@@ -80,8 +130,8 @@ for ratio,items in b.assemblies.items():
                 row=[a['name'],c['name'],round(v,6)]
                 if allowed(a,c):nutfits.append(row)
                 else:bad.append(['static']+row)
-    # Gear endplay +/-0.3 mm and carrier-to-rotor axial float +/-0.4 mm.
-    # Check pairwise combinations: nominal clearances alone miss face contact.
+    # Gear endplay +/-0.3 mm; derive axle limits from both thrust stacks.
+    # Loose sleeves take up their clearances independently at the stops.
     endbad=[]
     for a in items:
         if a['group'] not in ('B','C','D','anchor'):continue
@@ -89,18 +139,27 @@ for ratio,items in b.assemblies.items():
             am=a['m'].translate((0,0,da))
             for c in items:
                 if c is a:continue
-                offsets=(-.3,.3) if c['group'] in ('B','C','D','anchor') else (-.4,.4) if c['group'] in ('case','rotor') else (0,)
+                offsets=(-.3,.3) if c['group'] in ('B','C','D','anchor') else MAIN_FLOAT if c['group'] in ('case','rotor') else (0,)
                 for dc in offsets:
-                    v=overlap(am,c['m'].translate((0,0,dc)))
+                    cm=main_pose(c,dc) if c['group'] in ('case','rotor') else c['m'].translate((0,0,dc))
+                    v=overlap(am,cm)
                     if v>.02:endbad.append([a['name'],c['name'],da,dc,round(v,6)])
     for a in items:
         if a['group'] not in ('case','rotor'):continue
-        for dz in (-.4,.4):
-            am=a['m'].translate((0,0,dz))
+        for dz in MAIN_FLOAT:
+            am=main_pose(a,dz)
             for c in items:
                 if c['group'] not in ('fixed','pendulum'):continue
                 v=overlap(am,c['m'])
                 if v>.02:endbad.append([a['name'],c['name'],dz,0,round(v,6)])
+    # Check the loose thrust stack against itself at both physical axle stops.
+    moving=[a for a in items if a['group'] in ('case','rotor')]
+    for dz in MAIN_FLOAT:
+        posed=[(a,main_pose(a,dz)) for a in moving]
+        for i,(a,am) in enumerate(posed):
+            for c,cm in posed[i+1:]:
+                v=overlap(am,cm)
+                if v>.02:endbad.append([a['name'],c['name'],dz,dz,round(v,6)])
     layout=b.layouts[ratio];axes={k:np.array(v) for k,v in layout['axes'].items()};ph=layout['pinion_phase_rad']
     # Actual involute sections, full tooth pitch, not pitch-circle approximations.
     spurmax=0
@@ -168,7 +227,8 @@ for ratio,items in b.assemblies.items():
       'frame_gap_mm':layout['frame_gap_mm'],'case_width_mm':layout['case_width_mm'],
       'B_gear_to_its_pivot_nut_min_axial_gap_mm':round(84+b.AXIAL_EXTENSION-.3-(80.9+2.4),3),
       'static_unintended_intersections':bad,'intended_calibrated_nut_trap_intersections':nutfits,
-      'axial_endplay_intersections':endbad,'gear_axial_float_mm':[-.3,.3],'carrier_to_rotor_axial_float_mm':[-.4,.4],'drive_hub_to_B_wheel_min_gap_with_endplay_mm':.5,
+      'main_axle_thrust':main_thrust,
+      'axial_endplay_intersections':endbad,'gear_axial_float_mm':[-.3,.3],'carrier_to_rotor_axial_float_mm':[round(v,3) for v in MAIN_FLOAT],'drive_hub_to_B_wheel_min_gap_with_endplay_mm':round(102-.3-(100.8+MAIN_FLOAT[1]),3),
       'spur_samples':121,'max_spur_overlap_mm2':spurmax,'anchor_samples':241,'max_anchor_overlap_mm2':anchormax,
       'mechanism_3d_samples':41,'mechanism_intersections':mechbad,'pendulum_angle_range_deg':[-15,15],
       'pendulum_sweep_samples':61,'pendulum_intersections':pendbad,'case_full_turn_samples':73,'case_intersections':rotorbad,

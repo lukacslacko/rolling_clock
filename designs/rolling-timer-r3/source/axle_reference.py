@@ -12,6 +12,7 @@ from shapely.ops import unary_union
 
 ROOT = Path(__file__).resolve().parents[1]
 NAMES = ('03_square_main_axle', '36_rear_round_journal',
+         '38_rear_journal_thrust_collar',
          '35_main_rear_thrust_washer', '10_drive_72',
          '34_main_front_thrust_sleeve', '37_front_round_journal')
 
@@ -43,7 +44,7 @@ def main():
     assert result['hole_centres_mm'] == [6, 97, 180]
     assert result['parts'][NAMES[0]]['bounds_mm'] == [[-4.0, -4.0, 0.0], [4.0, 4.0, 186.0]]
     (ROOT / 'axle-reference.json').write_text(json.dumps(result, indent=2) + '\n')
-    print('Projected six actual assembled meshes; identical core axle in all three ratios.')
+    print('Projected',len(NAMES),'actual assembled meshes; identical core axle in all three ratios.')
 
 
 if __name__ == '__main__':

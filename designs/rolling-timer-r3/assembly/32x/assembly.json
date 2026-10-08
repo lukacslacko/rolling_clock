@@ -1448,5 +1448,13 @@
     "color": "pins",
     "group": "rotor",
     "file": "106_37_front_round_journal.stl"
+  },
+  {
+    "part": "38_rear_journal_thrust_collar",
+    "folder": "common",
+    "name": "38_rear_journal_thrust_collar",
+    "color": "pins",
+    "group": "rotor",
+    "file": "107_38_rear_journal_thrust_collar.stl"
   }
 ]

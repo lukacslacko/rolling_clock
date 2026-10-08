@@ -36,6 +36,16 @@ For 16x, use two copies of pivot 13; the other quantities are the same. The 64x 
 
 ![Section through corrected gear pivot](renders/pivot-section.png)
 
+## Missing rear thrust collar - correction
+
+The 6 mm widening advanced the orange gear, washer 35 and the end of journal 36, but left the rear frame's bearing collar in place. A ring around the journal was omitted. This left a **6.4 mm gap between the rear-frame collar and washer 35**, allowing excessive rearward movement of the main axle relative to the carrier. This was a design error, not a missing assembly step or a part already present in the earlier kit.
+
+**Print one [38_rear_journal_thrust_collar.stl](STL/common/38_rear_journal_thrust_collar.stl), for any of the three ratios.** It is **6 mm long, 16 mm outside diameter, with a 12.4 mm round bore**. Print flat on either annular face, without supports. Slide it **around journal 36**, in front of the rear-frame bearing collar and behind washer 35. Washer 35 still goes onto the square axle, against the end of the journal. The nominal frame-to-collar clearance is 0.4 mm.
+
+Rear-to-front thrust path: **rear-frame collar 05 → new collar 38 → washer 35 → fixed orange gear 10**. Journal 36 runs inside collar 38. **All 50 previously supplied STL files are byte-for-byte unchanged; reuse every existing corrected print.** The new collar is included in all print lists, kits, the assembly meshes and the updated guide's page 6. No additional screw or nut is needed.
+
+The geometry checks now derive the actual axle stops from the thrust stacks and allow the loose sleeves to slide independently. With collar 38, the nominal rigid axle limits are **-0.8 to +0.8 mm** relative to the carrier; the previous check incorrectly assumed only -0.4 to +0.4 mm without checking that those stops existed. All three configurations pass the revised interference checks. The new collar still needs a physical fit/running test.
+
 ## Files and printing
 
 Start with [BUILD-GUIDE.pdf](BUILD-GUIDE.pdf), then use the exact quantities in [PRINT-LIST-16x.md](PRINT-LIST-16x.md). The other configurations have [32x](PRINT-LIST-32x.md) and [64x](PRINT-LIST-64x.md) lists. Do not print every file in every folder.
@@ -44,7 +54,7 @@ Start with [BUILD-GUIDE.pdf](BUILD-GUIDE.pdf), then use the exact quantities in 
 
 **Spacer and wheel orientation drawings:** guide pages **7, 8 and 9** cover **16:1, 32:1 and 64:1**, respectively. The same three pages are available separately as [PIVOT-STACKS.pdf](PIVOT-STACKS.pdf). Each shows the active pivot map, rear-to-front order, part numbers, spacer lengths, tooth counts and the direction of the pinions. The anchor row shows its sleeve passing through the front frame, the pendulum clamp, and the 7.7 mm front spacer before the bridge. These side diagrams use CAD axial positions with compressed diameters for readability; they are **not 1:1 templates**.
 
-The middle hole is **97 mm from the rear end** (main ballast bowl side), and **89 mm from the front end** (pendulum side). The orange wheel's **flat face points rearward**, toward the **76 mm journal 36**; its **raised hub points forward**, toward sleeve 34 and the pendulum. Its M3x16 screw goes through the middle hole. Rear-to-front order: **36 → 35 → 10 → 34 → 37**. The drawing preserves the intended small gaps; it is not an exploded view.
+The middle hole is **97 mm from the rear end** (main ballast bowl side), and **89 mm from the front end** (pendulum side). The orange wheel's **flat face points rearward**, toward the **76 mm journal 36**; its **raised hub points forward**, toward sleeve 34 and the pendulum. Its M3x16 screw goes through the middle hole. Rear-to-front order on the axle: **36 → 35 → 10 → 34 → 37**, with **38 around the front end of 36**, between the rear frame and washer 35. The drawing preserves the intended small gaps; it is not an exploded view.
 
 - `STL/common/`: shared case, frames, fastener posts, pivots, input gear, pendulum and bob.
 - `STL/16x/`, `STL/32x/`, `STL/64x/`: the selected gear train and its spacers.
@@ -105,7 +115,7 @@ A little periodic rocking can result from the pendulum exchanging angular moment
 
 The three assembled configurations include worst-case screw-head envelopes and real nut envelopes. Checks cover each exported mesh, actual involute engagement, both escapement directions, nominal assembly interference, the full gear and carrier axial endplay, a 61-position pendulum sweep from -15 to +15 degrees, and 73 drum positions through a full rotation. Analytic radial bounds also cover every drum angle within the checked pendulum range. The pivot correction adds cross-section area checks through both feet, verifies a substantial cap above each nut pocket, and checks that the full 8 mm shaft is solid. These geometric checks are not a strength or fatigue simulation.
 
-Nominal axial gaps: **9.4 mm bob to front frame**, **6.2 mm bob-screw head to frame**, and **15.6 mm screw tip to front wheel spokes**. Overall clearance to the rotating case posts is at least **2.35 mm** within the checked range. The screw/nut stacks have full nominal nut engagement, with at least 0.4 mm of screw extending beyond the nut. Gear axial endplay is 0.6 mm; blind pivot seats leave 0.5 mm end clearance. At the combined endplay limits, the input hub still clears the large B wheel by 0.5 mm.
+Nominal axial gaps: **9.4 mm bob to front frame**, **6.2 mm bob-screw head to frame**, and **15.6 mm screw tip to front wheel spokes**. Overall clearance to the rotating case posts is at least **2.35 mm** within the checked range. The screw/nut stacks have full nominal nut engagement, with at least 0.4 mm of screw extending beyond the nut. Gear axial endplay is 0.6 mm; blind pivot seats leave 0.5 mm end clearance. At the full combined axle and gear endplay limits, the input hub clears the large B wheel by **0.1 mm nominally**. That small extreme-position clearance, like the new collar's fit, remains subject to the physical running test.
 
 These checks do not simulate friction, extrusion errors, elastic deflection, creep, torque losses or running accuracy. R3 and all its ratio options need a physical trial. `checks-16x.json`, `checks-32x.json` and `checks-64x.json` contain the detailed results; [OBSERVATIONS.md](OBSERVATIONS.md) preserves the prior build's feedback.
 

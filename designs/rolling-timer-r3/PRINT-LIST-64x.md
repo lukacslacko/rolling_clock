@@ -26,6 +26,7 @@ Hardware: **16 M3x10**, **17 M3x16**, **33 plain M3 nuts**. Fit coupons are opti
 | [common/35_main_rear_thrust_washer.stl](STL/common/35_main_rear_thrust_washer.stl) | 1 | 16 x 16 x 1.2 | Flat annular end on bed, 1.2 mm long. Square bore keys to axle. |
 | [common/36_rear_round_journal.stl](STL/common/36_rear_round_journal.stl) | 1 | 12 x 12 x 76 | Flat annular end on bed, 76 mm long. Square bore keys to axle. |
 | [common/37_front_round_journal.stl](STL/common/37_front_round_journal.stl) | 1 | 12 x 12 x 45.6 | Flat annular end on bed, 45.6 mm long. Square bore keys to axle. |
+| [common/38_rear_journal_thrust_collar.stl](STL/common/38_rear_journal_thrust_collar.stl) | 1 | 16 x 16 x 6 | Flat annular end on bed. 6 mm long, 16 mm OD, 12.4 mm ROUND bore. Slides around journal 36, between the rear-frame collar and washer 35. One for every ratio. |
 | [64x/11_B_18_72.stl](STL/64x/11_B_18_72.stl) | 1 | 92.5 x 92.5 x 18 | Large wheel on bed; pinion teeth continue down to the bed. Pinion faces rear in assembly. |
 | [64x/12_escape_compound.stl](STL/64x/12_escape_compound.stl) | 1 | 67.741 x 67.99 x 13 | Escape face on bed; pinion extends through wheel. Use matching anchor direction. |
 | [64x/14_D_18_72.stl](STL/64x/14_D_18_72.stl) | 1 | 92.5 x 92.5 x 18 | Large wheel on bed; pinion faces rear. Both pivot ends supported. |

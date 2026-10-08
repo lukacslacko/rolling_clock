@@ -17,14 +17,16 @@ def main():
         print(json.dumps({'file':str(path),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()}))
     pack(out/'rolling-timer-r3-complete.zip','rolling-timer-r3',[(p,str(p.relative_to(ROOT))) for p in sorted(paths)])
     changed=['07_square_frame_post','13_bolted_gear_pivot','19_bolted_anchor_pivot',
-             '03_square_main_axle','36_rear_round_journal','02_square_case_post']
+             '03_square_main_axle','36_rear_round_journal','02_square_case_post',
+             '38_rear_journal_thrust_collar']
     patch_files=[(ROOT/f'STL/common/{name}.stl',name+'.stl') for name in changed]
     patch_files += [(ROOT/'LICENSE','LICENSE'),(ROOT/'renders/pivot-section.png','pivot-section.png'),
                     (ROOT/'AXLE-1-TO-1.pdf','AXLE-1-TO-1.pdf'),
                     (ROOT/'PIVOT-STACKS.pdf','PIVOT-STACKS.pdf')]
-    patch_note='''R3 pivot-base correction - 7 October 2026
+    patch_note='''R3 pivot-base and rear-thrust corrections
 
-These six STL files replace the earlier R3 versions with the same names.
+Six STL files replace the earlier R3 versions with the same names.
+Also included: new collar 38, which was omitted during the widening.
 The gear and anchor pivot feet are now 10.5 mm tall, fully containing the nut
 slots below a solid shaft root. Print both pivots solid (100% infill), foot down.
 Nut seats remain 5.6 mm; entry channels remain 5.8 mm. Screws are unchanged.
@@ -35,13 +37,17 @@ For the 32:1 or 64:1 core, print:
 1 x 19_bolted_anchor_pivot.stl     89.5 mm total, 10.5 mm foot
 1 x 03_square_main_axle.stl       186 mm; cross-holes at 6, 97, 180 mm
 1 x 36_rear_round_journal.stl      76 mm long
+1 x 38_rear_journal_thrust_collar.stl  6 mm long, round bore 12.4 mm
 For a complete drum, also print:
 6 x 02_square_case_post.stl       172 mm long
 For 16:1 use two, rather than three, copies of pivot 13.
 
+Fit collar 38 AROUND journal 36, between rear-frame collar 05 and washer 35.
+If you already printed the six corrected files, print ONLY collar 38 now.
 All other R3 print shapes are unchanged. Reuse the printed gears, anchor,
-rear frame, anchor bridge and two bridge posts. Of the builder's reported
-printed set, only the three frame posts require replacement.
+rear frame, anchor bridge and two bridge posts. The six replacement types
+above belong to the earlier 7 October pivot correction. If those are already
+printed, the only additional print for the rear-thrust correction is collar 38.
 
 Use the current build guide from the full kit or GitHub. The frame gap is
 54 mm and the drum plastic width is 186 mm. Earlier 48 mm frame posts,
@@ -88,6 +94,9 @@ Start with 16:1 before trying a slower gear set.
 Pivot correction: 54 mm frame posts, 10.5 mm pivot feet, 186 mm axle,
 76 mm rear journal and 172 mm case posts. Older R3 gears, frames, anchor,
 bridge and bridge posts remain compatible. See README.md in the full package.
+Rear thrust correction: add one 38_rear_journal_thrust_collar.stl around
+journal 36, between rear-frame collar 05 and washer 35. This new 6 mm collar
+fills the gap left during widening; all existing corrected prints are reusable.
 Do not substitute the six earlier short parts or parts from R1/R2.
 Source and full design: https://github.com/lukacslacko/rolling_clock
 License: MIT; see LICENSE.

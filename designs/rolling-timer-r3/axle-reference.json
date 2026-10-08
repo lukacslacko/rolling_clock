@@ -870,6 +870,44 @@
       ],
       "holes": []
     },
+    "38_rear_journal_thrust_collar": {
+      "source": "assembly/32x/107_38_rear_journal_thrust_collar.stl",
+      "bounds_mm": [
+        [
+          -8.0,
+          -8.0,
+          82.4000015258789
+        ],
+        [
+          8.0,
+          8.0,
+          88.4000015258789
+        ]
+      ],
+      "outline": [
+        [
+          82.4000015258789,
+          -8.0
+        ],
+        [
+          82.4000015258789,
+          8.0
+        ],
+        [
+          88.4000015258789,
+          8.0
+        ],
+        [
+          88.4000015258789,
+          -8.0
+        ],
+        [
+          82.4000015258789,
+          -8.0
+        ]
+      ],
+      "holes": []
+    },
     "35_main_rear_thrust_washer": {
       "source": "assembly/32x/104_35_main_rear_thrust_washer.stl",
       "bounds_mm": [
