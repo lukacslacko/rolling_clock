@@ -9,6 +9,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Paragraph
 from reportlab.lib.styles import ParagraphStyle
 from PIL import Image
+from axle_template import draw_axle_template
 ROOT=Path(__file__).resolve().parents[1];RAW=ROOT/'renders'
 LAY=json.loads((ROOT/'layouts.json').read_text());META=json.loads((RAW/'render-metadata.json').read_text())
 PARTS=json.loads((ROOT/'parts.json').read_text())
@@ -25,7 +26,9 @@ if not fonts:raise RuntimeError('Install Arial, Liberation Sans or DejaVu Sans; 
 for key,p in zip(('Body','Bold'),fonts):pdfmetrics.registerFont(TTFont(key,str(p)))
 pdfmetrics.registerFontFamily('Body',normal='Body',bold='Bold')
 W,H=841.89,595.28;INK='#243548';MUTED='#5D6C79';BG='#F6F4EF';LINE='#D7DFE3';BLUE='#2868AF';RED='#CC435C'
+PAGE_COUNT=14
 c=canvas.Canvas(str(ROOT/'BUILD-GUIDE.pdf'),pagesize=(W,H));c.setTitle('Rolling clock R3 - bolted assembly guide');c.setAuthor('László Lukács - CAD illustrations and guide created with OpenAI Codex')
+c.setViewerPreference('PrintScaling','None')
 page=0
 
 def text(x,y,s,size=11,color=INK,bold=False):
@@ -39,7 +42,7 @@ def heading(title,kicker):
     text(32,H-27,kicker.upper(),9,MUTED,True);text(32,H-64,title,26,INK,True)
     c.setStrokeColor(HexColor(LINE));c.line(32,29,W-32,29)
     text(32,16,'ROLLING CLOCK R3  |  248 mm drum  |  PLA / 0.4 mm nozzle / 0.2 mm layers',8,MUTED)
-    c.setFont('Body',8);c.drawRightString(W-32,16,f'{page} / 13')
+    c.setFont('Body',8);c.drawRightString(W-32,16,f'{page} / {PAGE_COUNT}')
 def picture(name,x,y,w,h,labels=False):
     im=Image.open(RAW/(name+'.png'));ow,oh=im.size
     bounds=im.getchannel('A').getbbox() if im.mode=='RGBA' else (0,0,ow,oh)
@@ -125,9 +128,13 @@ step_page('Bolt the rear frame and pivot feet','03 / begin the 16x mechanism','f
 step_page('Fit the square axle and orange gear','04 / replace all crosspins with screws','axle-detail',[
  'Use the corrected <b>186 mm axle 03</b>. Mark the rear end: the middle cross-hole is <b>97 mm</b> from it (89 mm from the other). End holes are 6 mm from each end.',
  'Slide long rear journal <b>36 (76 mm)</b> onto the axle and through A. Add rear thrust washer <b>35 (1.2 mm)</b>.',
- 'Preload a nut into the orange gear\'s hub slot. Slide on <b>10</b>, tall hub forward, align the middle cross-hole and fit an <b>M3x16</b> screw. Its head sits in the circular side recess.',
+ 'Slide on <b>10</b>: its <b>flat face points rearward</b>; the raised hub points toward the <b>short, 89 mm end / pendulum</b>. Load the hub nut, align the middle hole and fit <b>M3x16</b> in the side recess.',
  'Add keyed front thrust sleeve <b>34 (26.4 mm)</b> ahead of the orange hub. The square faces carry torque; the cross-screw holds the gear in position.'
-], 'Main stack, rear to front: rear wheel hub -> 36 -> 35 -> orange gear 10 -> 34 -> front journal 37 -> front wheel hub. Wheel hubs are fitted later. Keep loose sleeves from sliding off during the bench build.',True)
+], '<b>Next page: a 1:1 axle identification drawing.</b> Rear to front: rear wheel hub -> 36 -> 35 -> gear 10 -> 34 -> front journal 37 -> front wheel hub. Wheel hubs are fitted later. Keep loose sleeves from sliding off.',True)
+
+page+=1
+draw_axle_template(c,ROOT,page,PAGE_COUNT)
+c.showPage()
 
 step_page('Build the two gear stages','05 / 16x parts only','gear-stack',[
  'On the B16 pivot: add <b>15 (1.2 mm)</b>, then green <b>11</b> with its small pinion rearward, then <b>16 (23.7 mm)</b>. The small pinion engages the orange wheel.',
@@ -204,7 +211,13 @@ text(500,482,'One nut per screw',12,BLUE,True);y=453
 for loc,count in fasteners:text(500,y,loc,10.4);text(647,y,count,10.4);y-=30
 para('<b>R3 check results:</b> closed connected print meshes; no unintended nominal intersections; spur and pallet checks; -15 to +15 degree pendulum sweep; full drum rotation. Nominal gap to the rotating posts is at least 2.35 mm.',498,188,308,11,15)
 band('This guide documents a geometrically checked prototype, not a physically tested R3 clock. Keep the first working version as a reference. Report the selected ratio, slope, ballast, measured run time and any contact or skipped beats.')
-c.showPage();assert page==13;c.save()
+c.showPage();assert page==PAGE_COUNT;c.save()
+axle_canvas=canvas.Canvas(str(ROOT/'AXLE-1-TO-1.pdf'),pagesize=(W,H))
+axle_canvas.setTitle('Rolling clock R3 - main axle at 1:1 scale')
+axle_canvas.setAuthor('László Lukács - CAD reference created with OpenAI Codex')
+axle_canvas.setViewerPreference('PrintScaling','None')
+draw_axle_template(axle_canvas,ROOT)
+axle_canvas.showPage();axle_canvas.save()
 # Browser entry point uses the PDF as the complete numbered build guide.
-(ROOT/'guide.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rolling clock R3 build guide</title><style>body{max-width:1050px;margin:30px auto;padding:0 20px;background:#f6f4ef;color:#243548;font:17px/1.6 system-ui}img{max-width:100%;display:block}a{color:#2868af}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:700px){.grid{display:block}}h1{line-height:1.2}</style><h1>Build the bolted rolling clock</h1><p>R3: shared frames for 16:1, 32:1 and 64:1. Geometrically checked; not yet physically tested.</p><p><a href="BUILD-GUIDE.pdf"><b>Open the complete 13-page illustrated build guide</b></a></p><p><b>Pivot correction:</b> 10.5 mm pivot feet, 54 mm frame posts, 186 mm axle and 76 mm rear journal. Existing R3 gears, frames, anchor bridge and bridge posts remain compatible.</p><p>Print lists: <a href="PRINT-LIST-16x.md">16x</a> / <a href="PRINT-LIST-32x.md">32x</a> / <a href="PRINT-LIST-64x.md">64x</a>. Begin with the nut-post and seat coupons, then the 16x mechanism. <a href="README.md">Full design notes</a>.</p><img src="renders/assembled-16x.png" alt="Assembled R3 clock"><div class="grid"><div><h2>Captive-nut posts</h2><img src="renders/post-nut-detail.png" alt="Square post and metal screw and nut"></div><div><h2>Screw-fixed bob</h2><img src="renders/bob-detail.png" alt="Thin-wall bob with screw and nut"></div></div><h2>Same frames, slower gearing</h2><div class="grid"><img src="renders/mechanism-32x.png" alt="32 to 1 mechanism"><img src="renders/mechanism-64x.png" alt="64 to 1 mechanism"></div></html>''')
+(ROOT/'guide.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rolling clock R3 build guide</title><style>body{max-width:1050px;margin:30px auto;padding:0 20px;background:#f6f4ef;color:#243548;font:17px/1.6 system-ui}img{max-width:100%;display:block}a{color:#2868af}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:700px){.grid{display:block}}h1{line-height:1.2}</style><h1>Build the bolted rolling clock</h1><p>R3: shared frames for 16:1, 32:1 and 64:1. Geometrically checked; not yet physically tested.</p><p><a href="BUILD-GUIDE.pdf"><b>Open the complete 14-page illustrated build guide</b></a></p><p><a href="AXLE-1-TO-1.pdf"><b>Print the 1:1 main-axle identification sheet</b></a> (also page 6 of the guide). A4 landscape, 100% / Actual size, with Fit / Shrink disabled. Check the 50 mm bar.</p><p><b>Pivot correction:</b> 10.5 mm pivot feet, 54 mm frame posts, 186 mm axle and 76 mm rear journal. Existing R3 gears, frames, anchor bridge and bridge posts remain compatible.</p><p>Print lists: <a href="PRINT-LIST-16x.md">16x</a> / <a href="PRINT-LIST-32x.md">32x</a> / <a href="PRINT-LIST-64x.md">64x</a>. Begin with the nut-post and seat coupons, then the 16x mechanism. <a href="README.md">Full design notes</a>.</p><img src="renders/assembled-16x.png" alt="Assembled R3 clock"><div class="grid"><div><h2>Captive-nut posts</h2><img src="renders/post-nut-detail.png" alt="Square post and metal screw and nut"></div><div><h2>Screw-fixed bob</h2><img src="renders/bob-detail.png" alt="Thin-wall bob with screw and nut"></div></div><h2>Same frames, slower gearing</h2><div class="grid"><img src="renders/mechanism-32x.png" alt="32 to 1 mechanism"><img src="renders/mechanism-64x.png" alt="64 to 1 mechanism"></div></html>''')
 print('Created',ROOT/'BUILD-GUIDE.pdf','pages',page)

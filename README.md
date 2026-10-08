@@ -8,7 +8,7 @@ Designed by László Lukács with OpenAI Codex for a Bambu Lab P1S, using PLA, a
 
 ## New prototype - bolted R3
 
-The [R3 design](designs/rolling-timer-r3/README.md) responds to the first build's physical feedback: square screw-fastened posts, a screw-fixed bob, more pendulum space, a deeper rolling rim and shared frames for 16:1, 32:1 and 64:1 gearing. It includes [a new 13-page illustrated guide](designs/rolling-timer-r3/BUILD-GUIDE.pdf) and separate print lists. **R3 is CAD-checked but not yet physically tested.** The first working version remains below and under tag `v0.1.0`. The 7 October pivot correction adds taller pivot feet and 6 mm of width; see the R3 reuse table before printing the remaining parts.
+The [R3 design](designs/rolling-timer-r3/README.md) responds to the first build's physical feedback: square screw-fastened posts, a screw-fixed bob, more pendulum space, a deeper rolling rim and shared frames for 16:1, 32:1 and 64:1 gearing. It includes [a 14-page illustrated guide](designs/rolling-timer-r3/BUILD-GUIDE.pdf), a [1:1 axle identification sheet](designs/rolling-timer-r3/AXLE-1-TO-1.pdf) (also guide page 6), and separate print lists. **R3 is CAD-checked but not yet physically tested.** The first working version remains below and under tag `v0.1.0`. The 7 October pivot correction adds taller pivot feet and 6 mm of width; see the R3 reuse table before printing the remaining parts.
 
 ## Current state — first working build
 

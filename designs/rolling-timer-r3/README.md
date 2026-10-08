@@ -40,6 +40,10 @@ For 16x, use two copies of pivot 13; the other quantities are the same. The 64x 
 
 Start with [BUILD-GUIDE.pdf](BUILD-GUIDE.pdf), then use the exact quantities in [PRINT-LIST-16x.md](PRINT-LIST-16x.md). The other configurations have [32x](PRINT-LIST-32x.md) and [64x](PRINT-LIST-64x.md) lists. Do not print every file in every folder.
 
+**Axle orientation, updated 8 October:** page 6 of the 14-page guide is a **1:1 side view of the assembled main axle**, with a second outline of the bare axle and all three holes. It is also available as a one-page [AXLE-1-TO-1.pdf](AXLE-1-TO-1.pdf). Print A4 landscape at **100% / Actual size**, disable Fit / Shrink, and verify the **50 mm calibration bar**. The drawing uses the actual corrected assembly meshes and is shared by all three ratios.
+
+The middle hole is **97 mm from the rear end** (main ballast bowl side), and **89 mm from the front end** (pendulum side). The orange wheel's **flat face points rearward**, toward the **76 mm journal 36**; its **raised hub points forward**, toward sleeve 34 and the pendulum. Its M3x16 screw goes through the middle hole. Rear-to-front order: **36 → 35 → 10 → 34 → 37**. The drawing preserves the intended small gaps; it is not an exploded view.
+
 - `STL/common/`: shared case, frames, fastener posts, pivots, input gear, pendulum and bob.
 - `STL/16x/`, `STL/32x/`, `STL/64x/`: the selected gear train and its spacers.
 - `STL/slow-common/`: the reversed anchor shared by 32x and 64x.
@@ -111,6 +115,6 @@ With Python 3.11+ and `source/requirements.txt` installed:
 python source/validate.py
 ```
 
-This regenerates all R3 meshes and runs the checks. It does not modify earlier designs. Generate the dimensioned pivot section with `python source/pivot_section.py` (requires Matplotlib). For illustrations, run `blender -b --factory-startup -t 6 --python source/render.py`. Rebuild the guide and print lists with `python source/make_guide.py` using ReportLab and Pillow. Create the complete archive and selected print kits with `python source/package.py --output /path/to/output-folder`. The checked-in outputs are ready to use without these tools.
+This regenerates all R3 meshes and runs the checks. It does not modify earlier designs. Generate the dimensioned pivot section with `python source/pivot_section.py` (requires Matplotlib). For illustrations, run `blender -b --factory-startup -t 6 --python source/render.py`. After any CAD change, run `python source/axle_reference.py` to project the actual assembled axle meshes and verify that they match across all ratios. Rebuild the guide, standalone 1:1 axle sheet and print lists with `python source/make_guide.py` using ReportLab and Pillow. Create the complete archive and selected print kits with `python source/package.py --output /path/to/output-folder`. The checked-in outputs are ready to use without these tools.
 
 Released under the [MIT License](LICENSE), as part of [lukacslacko/rolling_clock](https://github.com/lukacslacko/rolling_clock).

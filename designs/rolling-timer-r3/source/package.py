@@ -19,7 +19,8 @@ def main():
     changed=['07_square_frame_post','13_bolted_gear_pivot','19_bolted_anchor_pivot',
              '03_square_main_axle','36_rear_round_journal','02_square_case_post']
     patch_files=[(ROOT/f'STL/common/{name}.stl',name+'.stl') for name in changed]
-    patch_files += [(ROOT/'LICENSE','LICENSE'),(ROOT/'renders/pivot-section.png','pivot-section.png')]
+    patch_files += [(ROOT/'LICENSE','LICENSE'),(ROOT/'renders/pivot-section.png','pivot-section.png'),
+                    (ROOT/'AXLE-1-TO-1.pdf','AXLE-1-TO-1.pdf')]
     patch_note='''R3 pivot-base correction - 7 October 2026
 
 These six STL files replace the earlier R3 versions with the same names.
@@ -46,13 +47,18 @@ Use the current build guide from the full kit or GitHub. The frame gap is
 short pivots, 180 mm axle, 70 mm rear journal and 166 mm case posts must
 not be mixed into this corrected stack.
 
+AXLE-1-TO-1.pdf identifies the assembled axle at actual size. Print A4
+landscape at 100% / Actual size, disable Fit / Shrink, and check its 50 mm bar.
+Rear end: 97 mm from the middle hole. Front end: 89 mm from the middle hole.
+The orange gear's flat face points rearward; its raised hub points forward.
+
 Clearance and pivot-section checks passed for all three ratios. The new
 pivots still need a physical print and strength/running test.
 https://github.com/lukacslacko/rolling_clock
 '''
     pack(out/'rolling-timer-r3-pivot-fix.zip','rolling-timer-r3-pivot-fix',patch_files,{'READ-ME.txt':patch_note})
     for ratio,l in layouts.items():
-        files=[(ROOT/'BUILD-GUIDE.pdf','BUILD-GUIDE.pdf'),(ROOT/f'PRINT-LIST-{ratio}x.md','PRINT-LIST.md'),(ROOT/'LICENSE','LICENSE')]
+        files=[(ROOT/'BUILD-GUIDE.pdf','BUILD-GUIDE.pdf'),(ROOT/'AXLE-1-TO-1.pdf','AXLE-1-TO-1.pdf'),(ROOT/f'PRINT-LIST-{ratio}x.md','PRINT-LIST.md'),(ROOT/'LICENSE','LICENSE')]
         files += [(ROOT/parts[key]['file'],parts[key]['file']) for key in l['print_quantities']]
         files += [(p,str(p.relative_to(ROOT))) for p in sorted((ROOT/'STL/fit-tests').glob('*.stl'))]
         note=f'''R3 {ratio}:1 print kit
@@ -60,6 +66,9 @@ https://github.com/lukacslacko/rolling_clock
 Use PRINT-LIST.md for quantities and BUILD-GUIDE.pdf for assembly.
 Only the selected ratio's print files are included, plus optional fit coupons.
 The guide also describes the other ratios for future changes.
+Page 6 is the actual-size axle drawing, also supplied as AXLE-1-TO-1.pdf.
+Print that sheet A4 landscape at 100% / Actual size, disable Fit / Shrink,
+and check its 50 mm calibration bar before comparing the printed axle.
 
 Hardware: {l['M3x10']} M3x10 screws, {l['M3x16']} M3x16 screws,
 and {l['M3x10']+l['M3x16']} plain M3 nuts (about 2.4 mm thick).
