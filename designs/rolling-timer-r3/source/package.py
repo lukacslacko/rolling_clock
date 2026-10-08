@@ -20,7 +20,8 @@ def main():
              '03_square_main_axle','36_rear_round_journal','02_square_case_post']
     patch_files=[(ROOT/f'STL/common/{name}.stl',name+'.stl') for name in changed]
     patch_files += [(ROOT/'LICENSE','LICENSE'),(ROOT/'renders/pivot-section.png','pivot-section.png'),
-                    (ROOT/'AXLE-1-TO-1.pdf','AXLE-1-TO-1.pdf')]
+                    (ROOT/'AXLE-1-TO-1.pdf','AXLE-1-TO-1.pdf'),
+                    (ROOT/'PIVOT-STACKS.pdf','PIVOT-STACKS.pdf')]
     patch_note='''R3 pivot-base correction - 7 October 2026
 
 These six STL files replace the earlier R3 versions with the same names.
@@ -51,6 +52,8 @@ AXLE-1-TO-1.pdf identifies the assembled axle at actual size. Print A4
 landscape at 100% / Actual size, disable Fit / Shrink, and check its 50 mm bar.
 Rear end: 97 mm from the middle hole. Front end: 89 mm from the middle hole.
 The orange gear's flat face points rearward; its raised hub points forward.
+PIVOT-STACKS.pdf shows spacer order, lengths and wheel orientation separately
+for 16:1, 32:1 and 64:1, including the anchor. Those diagrams are not 1:1.
 
 Clearance and pivot-section checks passed for all three ratios. The new
 pivots still need a physical print and strength/running test.
@@ -58,7 +61,7 @@ https://github.com/lukacslacko/rolling_clock
 '''
     pack(out/'rolling-timer-r3-pivot-fix.zip','rolling-timer-r3-pivot-fix',patch_files,{'READ-ME.txt':patch_note})
     for ratio,l in layouts.items():
-        files=[(ROOT/'BUILD-GUIDE.pdf','BUILD-GUIDE.pdf'),(ROOT/'AXLE-1-TO-1.pdf','AXLE-1-TO-1.pdf'),(ROOT/f'PRINT-LIST-{ratio}x.md','PRINT-LIST.md'),(ROOT/'LICENSE','LICENSE')]
+        files=[(ROOT/'BUILD-GUIDE.pdf','BUILD-GUIDE.pdf'),(ROOT/'AXLE-1-TO-1.pdf','AXLE-1-TO-1.pdf'),(ROOT/'PIVOT-STACKS.pdf','PIVOT-STACKS.pdf'),(ROOT/f'PRINT-LIST-{ratio}x.md','PRINT-LIST.md'),(ROOT/'LICENSE','LICENSE')]
         files += [(ROOT/parts[key]['file'],parts[key]['file']) for key in l['print_quantities']]
         files += [(p,str(p.relative_to(ROOT))) for p in sorted((ROOT/'STL/fit-tests').glob('*.stl'))]
         note=f'''R3 {ratio}:1 print kit
@@ -69,6 +72,8 @@ The guide also describes the other ratios for future changes.
 Page 6 is the actual-size axle drawing, also supplied as AXLE-1-TO-1.pdf.
 Print that sheet A4 landscape at 100% / Actual size, disable Fit / Shrink,
 and check its 50 mm calibration bar before comparing the printed axle.
+Pages 7-9 show each ratio's spacer order and wheel orientation, also supplied
+as PIVOT-STACKS.pdf. Use the page for {ratio}:1. These diagrams are not 1:1.
 
 Hardware: {l['M3x10']} M3x10 screws, {l['M3x16']} M3x16 screws,
 and {l['M3x10']+l['M3x16']} plain M3 nuts (about 2.4 mm thick).

@@ -10,6 +10,7 @@ from reportlab.platypus import Paragraph
 from reportlab.lib.styles import ParagraphStyle
 from PIL import Image
 from axle_template import draw_axle_template
+from pivot_sheets import draw_pivot_sheet
 ROOT=Path(__file__).resolve().parents[1];RAW=ROOT/'renders'
 LAY=json.loads((ROOT/'layouts.json').read_text());META=json.loads((RAW/'render-metadata.json').read_text())
 PARTS=json.loads((ROOT/'parts.json').read_text())
@@ -26,7 +27,7 @@ if not fonts:raise RuntimeError('Install Arial, Liberation Sans or DejaVu Sans; 
 for key,p in zip(('Body','Bold'),fonts):pdfmetrics.registerFont(TTFont(key,str(p)))
 pdfmetrics.registerFontFamily('Body',normal='Body',bold='Bold')
 W,H=841.89,595.28;INK='#243548';MUTED='#5D6C79';BG='#F6F4EF';LINE='#D7DFE3';BLUE='#2868AF';RED='#CC435C'
-PAGE_COUNT=14
+PAGE_COUNT=17
 c=canvas.Canvas(str(ROOT/'BUILD-GUIDE.pdf'),pagesize=(W,H));c.setTitle('Rolling clock R3 - bolted assembly guide');c.setAuthor('László Lukács - CAD illustrations and guide created with OpenAI Codex')
 c.setViewerPreference('PrintScaling','None')
 page=0
@@ -136,6 +137,11 @@ page+=1
 draw_axle_template(c,ROOT,page,PAGE_COUNT)
 c.showPage()
 
+for ratio in (16,32,64):
+    page+=1
+    draw_pivot_sheet(c,ROOT,ratio,page,PAGE_COUNT)
+    c.showPage()
+
 step_page('Build the two gear stages','05 / 16x parts only','gear-stack',[
  'On the B16 pivot: add <b>15 (1.2 mm)</b>, then green <b>11</b> with its small pinion rearward, then <b>16 (23.7 mm)</b>. The small pinion engages the orange wheel.',
  'On C: add <b>17 (13.2 mm)</b>, then yellow <b>12</b> with its small pinion rearward, then <b>27 (4.7 mm)</b>. Its small pinion engages the large green wheel.',
@@ -218,6 +224,12 @@ axle_canvas.setAuthor('László Lukács - CAD reference created with OpenAI Code
 axle_canvas.setViewerPreference('PrintScaling','None')
 draw_axle_template(axle_canvas,ROOT)
 axle_canvas.showPage();axle_canvas.save()
+pivot_canvas=canvas.Canvas(str(ROOT/'PIVOT-STACKS.pdf'),pagesize=(W,H))
+pivot_canvas.setTitle('Rolling clock R3 - spacers and wheel directions for 16x, 32x and 64x')
+for index,ratio in enumerate((16,32,64),1):
+    draw_pivot_sheet(pivot_canvas,ROOT,ratio,index,3)
+    pivot_canvas.showPage()
+pivot_canvas.save()
 # Browser entry point uses the PDF as the complete numbered build guide.
-(ROOT/'guide.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rolling clock R3 build guide</title><style>body{max-width:1050px;margin:30px auto;padding:0 20px;background:#f6f4ef;color:#243548;font:17px/1.6 system-ui}img{max-width:100%;display:block}a{color:#2868af}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:700px){.grid{display:block}}h1{line-height:1.2}</style><h1>Build the bolted rolling clock</h1><p>R3: shared frames for 16:1, 32:1 and 64:1. Geometrically checked; not yet physically tested.</p><p><a href="BUILD-GUIDE.pdf"><b>Open the complete 14-page illustrated build guide</b></a></p><p><a href="AXLE-1-TO-1.pdf"><b>Print the 1:1 main-axle identification sheet</b></a> (also page 6 of the guide). A4 landscape, 100% / Actual size, with Fit / Shrink disabled. Check the 50 mm bar.</p><p><b>Pivot correction:</b> 10.5 mm pivot feet, 54 mm frame posts, 186 mm axle and 76 mm rear journal. Existing R3 gears, frames, anchor bridge and bridge posts remain compatible.</p><p>Print lists: <a href="PRINT-LIST-16x.md">16x</a> / <a href="PRINT-LIST-32x.md">32x</a> / <a href="PRINT-LIST-64x.md">64x</a>. Begin with the nut-post and seat coupons, then the 16x mechanism. <a href="README.md">Full design notes</a>.</p><img src="renders/assembled-16x.png" alt="Assembled R3 clock"><div class="grid"><div><h2>Captive-nut posts</h2><img src="renders/post-nut-detail.png" alt="Square post and metal screw and nut"></div><div><h2>Screw-fixed bob</h2><img src="renders/bob-detail.png" alt="Thin-wall bob with screw and nut"></div></div><h2>Same frames, slower gearing</h2><div class="grid"><img src="renders/mechanism-32x.png" alt="32 to 1 mechanism"><img src="renders/mechanism-64x.png" alt="64 to 1 mechanism"></div></html>''')
+(ROOT/'guide.html').write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rolling clock R3 build guide</title><style>body{max-width:1050px;margin:30px auto;padding:0 20px;background:#f6f4ef;color:#243548;font:17px/1.6 system-ui}img{max-width:100%;display:block}a{color:#2868af}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:700px){.grid{display:block}}h1{line-height:1.2}</style><h1>Build the bolted rolling clock</h1><p>R3: shared frames for 16:1, 32:1 and 64:1. Geometrically checked; not yet physically tested.</p><p><a href="BUILD-GUIDE.pdf"><b>Open the complete 17-page illustrated build guide</b></a></p><p><a href="AXLE-1-TO-1.pdf"><b>Print the 1:1 main-axle identification sheet</b></a> (also page 6 of the guide). A4 landscape, 100% / Actual size, with Fit / Shrink disabled. Check the 50 mm bar.</p><p><a href="PIVOT-STACKS.pdf"><b>Spacer order and wheel direction drawings: 16x / 32x / 64x</b></a> (guide pages 7-9). Each sheet shows the pivot map, spacer lengths and front/rear orientation, including the anchor.</p><p><b>Pivot correction:</b> 10.5 mm pivot feet, 54 mm frame posts, 186 mm axle and 76 mm rear journal. Existing R3 gears, frames, anchor bridge and bridge posts remain compatible.</p><p>Print lists: <a href="PRINT-LIST-16x.md">16x</a> / <a href="PRINT-LIST-32x.md">32x</a> / <a href="PRINT-LIST-64x.md">64x</a>. Begin with the nut-post and seat coupons, then the 16x mechanism. <a href="README.md">Full design notes</a>.</p><img src="renders/assembled-16x.png" alt="Assembled R3 clock"><div class="grid"><div><h2>Captive-nut posts</h2><img src="renders/post-nut-detail.png" alt="Square post and metal screw and nut"></div><div><h2>Screw-fixed bob</h2><img src="renders/bob-detail.png" alt="Thin-wall bob with screw and nut"></div></div><h2>Same frames, slower gearing</h2><div class="grid"><img src="renders/mechanism-32x.png" alt="32 to 1 mechanism"><img src="renders/mechanism-64x.png" alt="64 to 1 mechanism"></div></html>''')
 print('Created',ROOT/'BUILD-GUIDE.pdf','pages',page)
