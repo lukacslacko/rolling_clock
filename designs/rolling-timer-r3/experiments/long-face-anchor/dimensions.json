@@ -1,0 +1,49 @@
+{
+  "status": "experimental; physical trial pending",
+  "face_length_mm": 8.0,
+  "face_rotation_deg": 30.0,
+  "faces": {
+    "entry": {
+      "old_lock": [
+        -24.205821,
+        -22.545559
+      ],
+      "release": [
+        -20.635142,
+        -22.570291
+      ],
+      "deep": [
+        -27.590884035557625,
+        -26.522208602225106
+      ],
+      "old_length_mm": 3.5707646510047417,
+      "new_length_mm": 8.0,
+      "face_edge_index": 1
+    },
+    "exit": {
+      "old_lock": [
+        24.938975,
+        -26.757964
+      ],
+      "release": [
+        24.866026,
+        -23.187944
+      ],
+      "deep": [
+        29.006731010869917,
+        -30.032983226546243
+      ],
+      "old_length_mm": 3.5707652340921263,
+      "new_length_mm": 8.0,
+      "face_edge_index": 1
+    }
+  },
+  "plate_thickness_mm": 4,
+  "bore_mm": 8.35,
+  "sleeve_od_mm": 12,
+  "sleeve_length_mm": 30,
+  "rim_segments": 16384,
+  "rim_diameter_mm": 248,
+  "nominal_flat_width_mm": 0.047553404133054415,
+  "release_endpoints_unchanged": true
+}

@@ -16,6 +16,12 @@ def main():
             assert len(z.namelist())==len(set(z.namelist())),path
         print(json.dumps({'file':str(path),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()}))
     pack(out/'rolling-timer-r3-complete.zip','rolling-timer-r3',[(p,str(p.relative_to(ROOT))) for p in sorted(paths)])
+    trial=ROOT/'experiments/long-face-anchor'
+    if (trial/'checks.json').exists():
+        trial_files=[(p,str(p.relative_to(trial))) for p in sorted(trial.rglob('*'))
+                     if p.is_file() and p.suffix not in ('.pyc','.zip','.log') and p.name!='.DS_Store']
+        trial_files.append((ROOT/'LICENSE','LICENSE'))
+        pack(out/'rolling-timer-r3-long-face-trial.zip','rolling-timer-r3-long-face-trial',trial_files)
     changed=['07_square_frame_post','13_bolted_gear_pivot','19_bolted_anchor_pivot',
              '03_square_main_axle','36_rear_round_journal','02_square_case_post',
              '38_rear_journal_thrust_collar']

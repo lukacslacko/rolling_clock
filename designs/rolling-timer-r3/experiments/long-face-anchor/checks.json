@@ -1,0 +1,111 @@
+{
+  "contact_checks": [
+    {
+      "center_deg": 3,
+      "amplitude_deg": 5,
+      "anchor_range_deg": [
+        -2,
+        8
+      ],
+      "samples": 1201,
+      "net_escape_advance_deg": 11.999999999999998,
+      "pallet_changes_per_cycle": 2,
+      "max_full_profile_overlap_mm2": 3.155443620884047e-29,
+      "min_other_tooth_clearance_mm": 0.6749905731321468,
+      "min_distance_to_deep_ramp_end_mm": 3.0586043663116063,
+      "min_restoring_dq_dalpha": 0.10327394661668876,
+      "every_contact_on_slanted_face": true
+    },
+    {
+      "center_deg": 1,
+      "amplitude_deg": 5,
+      "anchor_range_deg": [
+        -4,
+        6
+      ],
+      "samples": 1201,
+      "net_escape_advance_deg": 11.999999999999998,
+      "pallet_changes_per_cycle": 2,
+      "max_full_profile_overlap_mm2": 3.155443620884047e-29,
+      "min_other_tooth_clearance_mm": 0.6734169314377567,
+      "min_distance_to_deep_ramp_end_mm": 1.9406058534679884,
+      "min_restoring_dq_dalpha": 0.13985006430683455,
+      "every_contact_on_slanted_face": true
+    },
+    {
+      "center_deg": 5,
+      "amplitude_deg": 5,
+      "anchor_range_deg": [
+        0,
+        10
+      ],
+      "samples": 1201,
+      "net_escape_advance_deg": 11.999999999999998,
+      "pallet_changes_per_cycle": 2,
+      "max_full_profile_overlap_mm2": 1.262177448353619e-29,
+      "min_other_tooth_clearance_mm": 0.670903359478087,
+      "min_distance_to_deep_ramp_end_mm": 1.8566345523446828,
+      "min_restoring_dq_dalpha": 0.06746184277872658,
+      "every_contact_on_slanted_face": true
+    },
+    {
+      "center_deg": 3,
+      "amplitude_deg": 7,
+      "anchor_range_deg": [
+        -4,
+        10
+      ],
+      "samples": 1201,
+      "net_escape_advance_deg": 11.999999999999998,
+      "pallet_changes_per_cycle": 2,
+      "max_full_profile_overlap_mm2": 6.310887241768095e-30,
+      "min_other_tooth_clearance_mm": 0.6751376265492153,
+      "min_distance_to_deep_ramp_end_mm": 1.8566345523446828,
+      "min_restoring_dq_dalpha": 0.06746184277872658,
+      "every_contact_on_slanted_face": true
+    }
+  ],
+  "assembly_checks": [
+    {
+      "ratio": 16,
+      "sampled_cycle_positions": 61,
+      "anchor_range_deg_forward_convention": [
+        -4,
+        10
+      ],
+      "max_3d_intersection_mm3": 5.3645374787163394e-17,
+      "mounting_sleeve_identical": true
+    },
+    {
+      "ratio": 32,
+      "sampled_cycle_positions": 61,
+      "anchor_range_deg_forward_convention": [
+        -4,
+        10
+      ],
+      "max_3d_intersection_mm3": 2.056346604883091e-18,
+      "mounting_sleeve_identical": true
+    },
+    {
+      "ratio": 64,
+      "sampled_cycle_positions": 61,
+      "anchor_range_deg_forward_convention": [
+        -4,
+        10
+      ],
+      "max_3d_intersection_mm3": 2.056346604883091e-18,
+      "mounting_sleeve_identical": true
+    }
+  ],
+  "both_handednesses_checked": true,
+  "fine_wheel": {
+    "exported_segments": 16384,
+    "max_flat_width_mm": 0.04757879970815833,
+    "mounting_geometry_difference_inside_r122_mm3": 0.0,
+    "max_stl_vertex_radius_error_mm": 1.0564916266275759e-05,
+    "binary_stl_float32_quantization_included": true,
+    "diameter_mm": 248.0,
+    "watertight": true
+  },
+  "limitations": "Rigid, quasi-static contact checks. No impact dynamics, friction, backlash, elastic deflection or printed tolerances. Allows recoil; physical trial pending."
+}

@@ -14,6 +14,8 @@ The [R3 design](designs/rolling-timer-r3/README.md) responds to the first build'
 
 **Smoother R3 rim:** [wheel 01](designs/rolling-timer-r3/STL/common/01_case_wheel.stl) now has **1,536 outer segments** instead of 192 (0.507 mm flats instead of 4.058 mm). The 248 mm diameter and all mounting features are retained; the other 50 print files are unchanged. Try Bambu Studio Resolution 0.001 mm and Arc fitting on. Details and evidence are in the [R3 notes](designs/rolling-timer-r3/README.md#smoother-rolling-rim---8-october-2026).
 
+**Optional trial, 13 October:** [longer anchor faces and a 16,384-segment rim](designs/rolling-timer-r3/experiments/long-face-anchor/README.md) address the reported deeper engagement after a sudden roll. The 8 mm faces pass geometric checks through two extra degrees on either side and use the existing pivot, spacers and frames. The anchor permits recoil; physical recovery remains untested. Trial files have separate names and leave the standard print kits unchanged.
+
 ## Current state — first working build
 
 On **1 October 2026**, the complete lightweight **16:1** mechanism ran on its first physical trial, following a successful hand-driven bench test. This repository preserves that design before the next round of improvements. Running duration, timing accuracy and long-term wear have not yet been measured.

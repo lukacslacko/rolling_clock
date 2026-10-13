@@ -23,6 +23,12 @@ The current [01_case_wheel.stl](STL/common/01_case_wheel.stl) uses **1,536 outer
 
 For this wheel, try **Bambu Studio Resolution = 0.001 mm** and **Arc fitting enabled** in Advanced settings. Resolution controls contour simplification, and arc fitting uses the same tolerance to generate G2/G3 moves; this is an engineering starting point for this rim, not a physically tested profile. The common Bambu process profile currently uses 0.012 mm resolution. See Bambu's [setting definitions](https://github.com/bambulab/BambuStudio/blob/master/src/libslic3r/PrintConfig.cpp) and [common process profile](https://github.com/bambulab/BambuStudio/blob/master/resources/profiles/BBL/process/fdm_process_common.json). Keep 0.2 mm layers: the issue is the circular contour in the XY plane. Avoid mesh simplification of the replacement STL.
 
+## Optional long-face anchor and finer rim - 13 October 2026
+
+The builder reports that a sudden roll from one flat to the next shifts the pendulum's relative position and can jam the anchor in deeper engagement. A separately named [long-face anchor trial](experiments/long-face-anchor/README.md) uses 8 mm slanted faces, with a gentler angle and unchanged mounting dimensions. The geometry passes quasi-static contact and assembly checks through two additional degrees at each end of the normal excursion. It permits recoil and still needs a physical trial.
+
+For 32x or 64x, print **one [18_anchor_reversed_long_faces.stl](experiments/long-face-anchor/STL/18_anchor_reversed_long_faces.stl)**. The optional [16,384-segment case wheel](experiments/long-face-anchor/STL/01_case_wheel_16384.stl) is also supplied there; print two for a complete rim replacement. Its facets are about 0.0476 mm wide. These trial files are separate from the standard STLs and selected print kits. The existing guides, spacers and supports remain applicable; the trial notes include replacement instructions and an exact profile drawing.
+
 ## Pivot-base correction - 7 October 2026
 
 The original 4.5 mm pivot foot was too short: its nut channel reached 1.2 mm into the 8 mm journal, leaving a weak connection. Both pivot types now have **10.5 mm square feet**, **4.8 mm of material above the nut channel**, and a blind screw bore that stops **3.7 mm below the shaft root**. The 8 mm shaft is solid from its root upward. Print pivots 13 and 19 with **100% infill**, foot down. Nut fit remains 5.6 mm with a 5.8 mm entry.
