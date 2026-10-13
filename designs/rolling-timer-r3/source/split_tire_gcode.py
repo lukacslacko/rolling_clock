@@ -169,6 +169,11 @@ def generate():
                       'outer_centerline_radius_mm':d['outer_radii'][0],'rolling_wall_width_mm':ow,
                       'outer_commands':4,'infill_paths':len(d['paths']),
                       'nominal_motion_seconds':float(w.seconds-t0),'filament_mm':float(w.print_e-e0)})
+    return write_job(w,stats)
+
+
+def write_job(w,stats,out=OUT,name=NAME,outline=None,wall_loops=3,
+              description='Analytic circle, 248 mm OD / 222 mm ID / 4 mm thick, six 3.4 mm holes.'):
     w.add('; HANDCRAFTED_TIRE_BODY_END');w.add('M1003 S0');w.add('M106 S0');w.add('M106 P2 S0');w.add('M981 S0 P20000')
     start=(OUT/'printer/p1s-start.gcode.in').read_text()
     end=(OUT/'printer/p1s-end.gcode.in').read_text().format(end_lift_z=f'{TIRE_H+.5:.1f}')
@@ -176,7 +181,7 @@ def generate():
     estimated_seconds=int(math.ceil(w.seconds*1.12+431))
     weight=w.print_e*FA*PROFILE['filament_density_g_cm3']/1000
     config=json.loads((OUT/'printer/project-settings.json').read_text())
-    config.update({'sparse_infill_density':'100%','sparse_infill_pattern':'zig-zag','layer_height':'0.2','wall_loops':'3',
+    config.update({'sparse_infill_density':'100%','sparse_infill_pattern':'zig-zag','layer_height':'0.2','wall_loops':str(wall_loops),
                    'outer_wall_speed':['40','40'],'outer_wall_acceleration':['500','500'],
                    'enable_arc_fitting':'1','resolution':'0.001','brim_type':'no_brim',
                    'brim_width':'0','enable_support':'0','seam_position':'random',
@@ -222,7 +227,7 @@ def generate():
 ; printable_height = 250
 ; bed_exclude_area = 0x0,18x0,18x28,0x28
 ; CONFIG_BLOCK_END
-; Analytic circle, 248 mm OD / 222 mm ID / 4 mm thick, six 3.4 mm holes.
+; {description}
 ; First layers: radial compensation 0.15 / 0.075 / 0 mm; full dense fill.
 ; Requires the same P1S 0.4 / PLA / textured PEI setup as the supplied job.
 ; Retains source T0 / AMS slot 0 selection. Inspect preview before printing.
@@ -232,7 +237,7 @@ def generate():
     # preview subset above. These comments never generate printer motion.
     small=header[header.index('; CONFIG_BLOCK_START'):header.index('; CONFIG_BLOCK_END')]
     overrides=dict(re.findall(r'^; (\w+) = (.*)$',small,re.M))
-    overrides.update({'wall_loops':'3','outer_wall_speed':'40,40',
+    overrides.update({'wall_loops':str(wall_loops),'outer_wall_speed':'40,40',
                       'outer_wall_acceleration':'500,500','brim_type':'no_brim',
                       'brim_width':'0','enable_support':'0',
                       'upward_compatible_machine':'"Bambu Lab P1S 0.4 nozzle"'})
@@ -241,19 +246,19 @@ def generate():
         preview_config=re.sub(r'^; '+key+r' = .*$',lambda m: '; '+key+' = '+value,preview_config,flags=re.M)
     header=re.sub(r'; CONFIG_BLOCK_START.*?; CONFIG_BLOCK_END\n',lambda m:preview_config,header,flags=re.S)
     text=header+f'M73 P0 R{math.ceil(estimated_seconds/60)}\n'+start+'\n'.join(w.lines)+'\n'+end
-    (OUT/'GCODE').mkdir(parents=True,exist_ok=True)
-    path=OUT/'GCODE'/f'{NAME}.gcode';path.write_text(text)
+    (out/'GCODE').mkdir(parents=True,exist_ok=True)
+    path=out/'GCODE'/f'{name}.gcode';path.write_text(text)
     summary={'layers':stats,'height_mm':4,'layer_count':20,'body_filament_mm':w.print_e,
              'body_weight_g':weight,'nominal_motion_seconds':float(w.seconds),
              'estimated_total_seconds':estimated_seconds,'estimate_not_firmware_simulation':True,
              'startup_purge_excluded_from_body_totals':True,'profile':PROFILE,'raw_gcode_sha256':hashlib.sha256(path.read_bytes()).hexdigest()}
-    (OUT/'toolpath-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
-    package(path,config,summary)
+    (out/'toolpath-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+    package(path,config,summary,name=name,outline=outline)
     print('Generated',path,'weight',round(weight,2),'g; estimated',round(estimated_seconds/60),'min',flush=True)
     return summary
 
 
-def package(gcode,config,summary):
+def package(gcode,config,summary,name=NAME,outline=None):
     from PIL import Image,ImageDraw
     def thumb(size):
         im=Image.new('RGBA',(size,size),'#f3f6f9');draw=ImageDraw.Draw(im)
@@ -261,8 +266,13 @@ def package(gcode,config,summary):
         def ellipse(q,r,fill):
             x,y=center+q[0]*scale,center-q[1]*scale;t=r*scale
             draw.ellipse((x-t,y-t,x+t,y+t),fill=fill)
-        ellipse((0,0),124,'#edba43');ellipse((0,0),111,'#f3f6f9')
-        for q in CENTERS:ellipse(q,1.7,'#f3f6f9')
+        if outline is None:
+            ellipse((0,0),124,'#edba43');ellipse((0,0),111,'#f3f6f9')
+            for q in CENTERS:ellipse(q,1.7,'#f3f6f9')
+        else:
+            def project(ring):return [(center+x*scale,center-y*scale) for x,y in ring.coords]
+            draw.polygon(project(outline.exterior),fill='#edba43')
+            for hole in outline.interiors:draw.polygon(project(hole),fill='#f3f6f9')
         b=io.BytesIO();im.save(b,format='PNG');return b.getvalue()
     model='''<?xml version="1.0" encoding="UTF-8"?>
 <model unit="millimeter" xml:lang="en-US" xmlns="http://schemas.microsoft.com/3dmanufacturing/core/2015/02" xmlns:BambuStudio="http://schemas.bambulab.com/package/2021" xmlns:p="http://schemas.microsoft.com/3dmanufacturing/production/2015/06" requiredextensions="p">
@@ -271,15 +281,15 @@ def package(gcode,config,summary):
     rels='''<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Target="/3D/3dmodel.model" Id="rel-1" Type="http://schemas.microsoft.com/3dmanufacturing/2013/01/3dmodel"/><Relationship Target="/Metadata/plate_1.png" Id="rel-2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail"/></Relationships>'''
     types='''<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="model" ContentType="application/vnd.ms-package.3dmanufacturing-3dmodel+xml"/><Default Extension="png" ContentType="image/png"/><Default Extension="gcode" ContentType="text/x.gcode"/></Types>'''
     modelsettings='''<?xml version="1.0" encoding="UTF-8"?><config><plate><metadata key="plater_id" value="1"/><metadata key="plater_name" value="Analytic tire"/><metadata key="locked" value="false"/><metadata key="filament_map_mode" value="Auto For Flush"/><metadata key="filament_maps" value="1"/><metadata key="filament_volume_maps" value="0"/><metadata key="gcode_file" value="Metadata/plate_1.gcode"/><metadata key="thumbnail_file" value="Metadata/plate_1.png"/><metadata key="thumbnail_no_light_file" value="Metadata/plate_no_light_1.png"/><metadata key="top_file" value="Metadata/top_1.png"/><metadata key="pick_file" value="Metadata/pick_1.png"/><metadata key="pattern_bbox_file" value="Metadata/plate_1.json"/></plate></config>'''
-    slicemeta=f'''<?xml version="1.0" encoding="UTF-8"?><config><header><header_item key="X-BBL-Client-Type" value="slicer"/><header_item key="X-BBL-Client-Version" value="02.05.00.66"/></header><plate><metadata key="index" value="1"/><metadata key="extruder_type" value="0"/><metadata key="nozzle_volume_type" value="0"/><metadata key="printer_model_id" value="C12"/><metadata key="nozzle_diameters" value="0.4"/><metadata key="timelapse_type" value="0"/><metadata key="prediction" value="{summary['estimated_total_seconds']}"/><metadata key="weight" value="{summary['body_weight_g']:.2f}"/><metadata key="first_layer_time" value="{summary['layers'][0]['nominal_motion_seconds']:.2f}"/><metadata key="outside" value="false"/><metadata key="support_used" value="false"/><metadata key="label_object_enabled" value="false"/><metadata key="filament_maps" value="1"/><metadata key="limit_filament_maps" value="0"/><object identify_id="1" name="{NAME}" skipped="false"/><filament id="1" tray_info_idx="GFA00" type="PLA" color="#FEC600" used_m="{summary['body_filament_mm']/1000:.3f}" used_g="{summary['body_weight_g']:.2f}" used_for_object="true" used_for_support="false" group_id="0" nozzle_diameter="0.40" volume_type="Standard"/><layer_filament_lists><layer_filament_list filament_list="0" layer_ranges="0 19"/></layer_filament_lists></plate></config>'''
-    bbox={'bbox_all':[4,4,252,252],'bbox_objects':[{'area':math.pi*(124**2-111**2)-6*math.pi*1.7**2,'bbox':[4,4,252,252],'id':1,'layer_height':.2,'name':NAME}], 'bed_type':'textured_plate','filament_colors':['#FEC600'],'filament_ids':[0],'first_extruder':0,'first_layer_time':summary['layers'][0]['nominal_motion_seconds'],'is_seq_print':False,'nozzle_diameter':.4,'version':2}
+    slicemeta=f'''<?xml version="1.0" encoding="UTF-8"?><config><header><header_item key="X-BBL-Client-Type" value="slicer"/><header_item key="X-BBL-Client-Version" value="02.05.00.66"/></header><plate><metadata key="index" value="1"/><metadata key="extruder_type" value="0"/><metadata key="nozzle_volume_type" value="0"/><metadata key="printer_model_id" value="C12"/><metadata key="nozzle_diameters" value="0.4"/><metadata key="timelapse_type" value="0"/><metadata key="prediction" value="{summary['estimated_total_seconds']}"/><metadata key="weight" value="{summary['body_weight_g']:.2f}"/><metadata key="first_layer_time" value="{summary['layers'][0]['nominal_motion_seconds']:.2f}"/><metadata key="outside" value="false"/><metadata key="support_used" value="false"/><metadata key="label_object_enabled" value="false"/><metadata key="filament_maps" value="1"/><metadata key="limit_filament_maps" value="0"/><object identify_id="1" name="{name}" skipped="false"/><filament id="1" tray_info_idx="GFA00" type="PLA" color="#FEC600" used_m="{summary['body_filament_mm']/1000:.3f}" used_g="{summary['body_weight_g']:.2f}" used_for_object="true" used_for_support="false" group_id="0" nozzle_diameter="0.40" volume_type="Standard"/><layer_filament_lists><layer_filament_list filament_list="0" layer_ranges="0 19"/></layer_filament_lists></plate></config>'''
+    bbox={'bbox_all':[4,4,252,252],'bbox_objects':[{'area':outline.area if outline is not None else math.pi*(124**2-111**2)-6*math.pi*1.7**2,'bbox':[4,4,252,252],'id':1,'layer_height':.2,'name':name}], 'bed_type':'textured_plate','filament_colors':['#FEC600'],'filament_ids':[0],'first_extruder':0,'first_layer_time':summary['layers'][0]['nominal_motion_seconds'],'is_seq_print':False,'nozzle_diameter':.4,'version':2}
     files={'[Content_Types].xml':types,'_rels/.rels':rels,'3D/3dmodel.model':model,
            'Metadata/plate_1.gcode':gcode.read_bytes(),'Metadata/plate_1.gcode.md5':hashlib.md5(gcode.read_bytes()).hexdigest(),
            'Metadata/project_settings.config':json.dumps(config),'Metadata/model_settings.config':modelsettings,
            'Metadata/slice_info.config':slicemeta,'Metadata/plate_1.json':json.dumps(bbox),
            'Metadata/filament_sequence.json':'{"plate_1":{"sequence":[1]}}',
            'Metadata/_rels/model_settings.config.rels':'''<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Target="/Metadata/plate_1.gcode" Id="rel-1" Type="http://schemas.bambulab.com/package/2021/gcode"/></Relationships>'''}
-    for name in ['plate_1','plate_no_light_1','top_1','pick_1']:files[f'Metadata/{name}.png']=thumb(512)
+    for thumbnail_name in ['plate_1','plate_no_light_1','top_1','pick_1']:files[f'Metadata/{thumbnail_name}.png']=thumb(512)
     files['Metadata/plate_1_small.png']=thumb(128)
     target=gcode.with_suffix('.gcode.3mf')
     with zipfile.ZipFile(target,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:

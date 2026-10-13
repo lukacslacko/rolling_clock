@@ -45,3 +45,8 @@ The builder observed irregular move lengths in Bambu Studio at 0.001 mm resoluti
 The optional `experiments/split-tire` set has a Ø248 / Ø222 × 4 mm solid tire, six Ø3.4 holes on Ø228 PCD, and four tangent outer arcs per layer. Perimeter speed is 40 mm/s (25 first), with 0.15/0.075/0 mm boundary compensation and distributed seams. A matching spider keeps the original hub, post lips and mounting planes; 4 mm tire + 3 mm pads preserve the M3×16 stack and existing axle/posts. Pads require removable supports. The pilot is a slip fit with 0.10 mm radial clearance, requiring careful centering.
 
 CAD compatibility, independently parsed command/coverage checks and Bambu Studio preview pass. Actual printing, concentricity and improved rolling remain untested. Standard 51 STL files are unchanged.
+
+
+## 13 October 2026 — narrower five-pass tire
+
+The builder requested a roughly 2 mm radial ring to avoid the wide tire's three-hour print. The new `split-tire/narrow-five-pass` job keeps Ø248 mm and 4 mm axial thickness, but uses five complete concentric circular paths per layer between six inward screw pads. Local infill is confined to those pads. The spoke frame is byte-identical and screw/axle/post stacks remain unchanged. Bambu Studio preview estimates 1 h 5 min and 11.34 g, compared with 3 h 16 min / 48.28 g for the wide tire. The command/CAD geometry is checked; the thinner ring's flexibility and roundness under load require a physical trial.

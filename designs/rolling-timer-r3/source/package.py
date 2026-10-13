@@ -22,6 +22,12 @@ def main():
                      if p.is_file() and p.suffix not in ('.pyc','.zip','.log') and p.name!='.DS_Store']
         split_files.append((ROOT/'LICENSE','LICENSE'))
         pack(out/'rolling-timer-r3-split-tire-kit.zip','rolling-timer-r3-split-tire',split_files)
+        narrow=split/'narrow-five-pass'
+        if (narrow/'checks.json').exists():
+            narrow_files=[(p,str(p.relative_to(narrow))) for p in sorted(narrow.rglob('*'))
+                          if p.is_file() and p.suffix not in ('.pyc','.zip','.log') and p.name!='.DS_Store']
+            narrow_files.append((ROOT/'LICENSE','LICENSE'))
+            pack(out/'rolling-timer-r3-narrow-tire-kit.zip','rolling-timer-r3-narrow-tire',narrow_files)
     trial=ROOT/'experiments/long-face-anchor'
     if (trial/'checks.json').exists():
         trial_files=[(p,str(p.relative_to(trial))) for p in sorted(trial.rglob('*'))

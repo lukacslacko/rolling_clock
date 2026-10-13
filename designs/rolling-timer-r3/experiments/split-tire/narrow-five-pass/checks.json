@@ -1,0 +1,43 @@
+{
+  "tire_watertight_connected": true,
+  "no_collision_with_existing_spider": true,
+  "six_screw_bearing_patches_retained": true,
+  "M3x16_stack_still_7mm": true,
+  "same_spider_sha256": "f276ebd0c308683afaffe19b5d66ec1c05d7d1ff55fc2c8e7916001a601e542c",
+  "outer_diameter_mm": 248,
+  "radial_ring_width_mm": 2,
+  "axial_thickness_mm": 4,
+  "mount_hole_diameter_mm": 3.4,
+  "mount_bolt_circle_mm": 228,
+  "mount_inner_pilot_radius_mm": 111,
+  "mount_angle_width_deg": 6,
+  "raw_gcode_sha256": "6c899366ba5e3a0b302e5b2cf613fc80ee917b085de51847aac48a87b179b6ca",
+  "twenty_layers_with_five_complete_concentric_circles_each": true,
+  "rolling_ring_has_no_raster_infill": true,
+  "all_six_bores_clear": true,
+  "body_bounds_and_bed_exclusion_passed": true,
+  "max_deposition_mm3_s": 4.787433898794532,
+  "nominal_coverage": [
+    {
+      "layer": 1,
+      "nominal_coverage_percent": 99.99008374547725,
+      "no_void_with_0_13mm_inradius": true
+    },
+    {
+      "layer": 2,
+      "nominal_coverage_percent": 99.98546607364092,
+      "no_void_with_0_13mm_inradius": true
+    },
+    {
+      "layer": 3,
+      "nominal_coverage_percent": 99.98382927035948,
+      "no_void_with_0_13mm_inradius": true
+    },
+    {
+      "layer": 4,
+      "nominal_coverage_percent": 99.98372668767283,
+      "no_void_with_0_13mm_inradius": true
+    }
+  ],
+  "limits": "Command and CAD geometry checks only; flexibility, shrinkage and printed roundness remain untested."
+}

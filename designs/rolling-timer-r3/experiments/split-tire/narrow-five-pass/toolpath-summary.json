@@ -1,0 +1,431 @@
+{
+  "layers": [
+    {
+      "layer": 1,
+      "height_mm": 0.2,
+      "edge_compensation_mm": 0.15,
+      "outer_centerline_radius_mm": 123.6628318530718,
+      "rolling_wall_width_mm": 0.374336293856406,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.6628318530718,
+        123.3314159265359,
+        123.0,
+        122.6685840734641,
+        122.3371681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 138,
+      "nominal_motion_seconds": 248.21972846395502,
+      "filament_mm": 166.16535222881384
+    },
+    {
+      "layer": 2,
+      "height_mm": 0.4,
+      "edge_compensation_mm": 0.075,
+      "outer_centerline_radius_mm": 123.7228318530718,
+      "rolling_wall_width_mm": 0.4043362938564071,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7228318530718,
+        123.3614159265359,
+        123.0,
+        122.6385840734641,
+        122.2771681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 127.5438956299723,
+      "filament_mm": 176.61554258809332
+    },
+    {
+      "layer": 3,
+      "height_mm": 0.6000000000000001,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.1392740743459,
+      "filament_mm": 187.12633024586916
+    },
+    {
+      "layer": 4,
+      "height_mm": 0.8,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.50523879029612,
+      "filament_mm": 187.1153709892825
+    },
+    {
+      "layer": 5,
+      "height_mm": 1.0,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.11179340958836,
+      "filament_mm": 187.12633024586682
+    },
+    {
+      "layer": 6,
+      "height_mm": 1.2000000000000002,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.01853962269809,
+      "filament_mm": 187.11537098928181
+    },
+    {
+      "layer": 7,
+      "height_mm": 1.4000000000000001,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.255663286021,
+      "filament_mm": 187.12633024587262
+    },
+    {
+      "layer": 8,
+      "height_mm": 1.6,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.28912664181428,
+      "filament_mm": 187.11537098928807
+    },
+    {
+      "layer": 9,
+      "height_mm": 1.8,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.37361846772478,
+      "filament_mm": 187.12633024587262
+    },
+    {
+      "layer": 10,
+      "height_mm": 2.0,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 127.97861591923947,
+      "filament_mm": 187.11537098928807
+    },
+    {
+      "layer": 11,
+      "height_mm": 2.2,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.0258193563468,
+      "filament_mm": 187.12633024587262
+    },
+    {
+      "layer": 12,
+      "height_mm": 2.4000000000000004,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.48235367573398,
+      "filament_mm": 187.11537098928966
+    },
+    {
+      "layer": 13,
+      "height_mm": 2.6,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.19473147153076,
+      "filament_mm": 187.12633024587285
+    },
+    {
+      "layer": 14,
+      "height_mm": 2.8000000000000003,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.21287541007837,
+      "filament_mm": 187.11537098928966
+    },
+    {
+      "layer": 15,
+      "height_mm": 3.0,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.09800054837592,
+      "filament_mm": 187.12633024587285
+    },
+    {
+      "layer": 16,
+      "height_mm": 3.2,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.23975464827913,
+      "filament_mm": 187.11537098928966
+    },
+    {
+      "layer": 17,
+      "height_mm": 3.4000000000000004,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.43063718459734,
+      "filament_mm": 187.12633024587285
+    },
+    {
+      "layer": 18,
+      "height_mm": 3.6,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.11568221828838,
+      "filament_mm": 187.11537098928966
+    },
+    {
+      "layer": 19,
+      "height_mm": 3.8000000000000003,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 127.90921449132475,
+      "filament_mm": 187.12633024587285
+    },
+    {
+      "layer": 20,
+      "height_mm": 4.0,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.7828318530718,
+      "rolling_wall_width_mm": 0.43433629385640826,
+      "concentric_passes": 5,
+      "concentric_radii_mm": [
+        123.7828318530718,
+        123.3914159265359,
+        123.0,
+        122.6085840734641,
+        122.2171681469282
+      ],
+      "outer_commands": 4,
+      "local_pad_fill_paths": 126,
+      "nominal_motion_seconds": 128.40600732632902,
+      "filament_mm": 187.11537098928966
+    }
+  ],
+  "height_mm": 4,
+  "layer_count": 20,
+  "body_filament_mm": 3710.956205933341,
+  "body_weight_g": 11.246628585215522,
+  "nominal_motion_seconds": 2683.5505706365398,
+  "estimated_total_seconds": 3437,
+  "estimate_not_firmware_simulation": true,
+  "startup_purge_excluded_from_body_totals": true,
+  "profile": {
+    "source_file": "01_case_wheel.gcode.3mf",
+    "source_sha256": "ab56734e1c6bc31bf09f27588fb1a402fdc9ce5ba6f6dfe72b91430dac8c436a",
+    "slicer": "BambuStudio 02.05.00.66",
+    "printer": "Bambu Lab P1S",
+    "nozzle_diameter_mm": 0.4,
+    "filament": "Bambu PLA Basic",
+    "filament_diameter_mm": 1.75,
+    "filament_flow_ratio": 0.98,
+    "filament_density_g_cm3": 1.26,
+    "bed": "Textured PEI Plate",
+    "nozzle_c": 220,
+    "bed_c": 55,
+    "extruder_offset_mm": [
+      0,
+      2
+    ],
+    "model_center_mm": [
+      128,
+      128
+    ],
+    "gcode_center_mm": [
+      128,
+      126
+    ],
+    "ams_selection": "T0 / M620 S0A, as in the supplied job",
+    "retract_mm": 0.8,
+    "retract_speed_mm_s": 30,
+    "source_outer_wall_speed_mm_s": 200,
+    "source_resolution_mm": 0.001,
+    "source_arc_fitting": true
+  },
+  "raw_gcode_sha256": "6c899366ba5e3a0b302e5b2cf613fc80ee917b085de51847aac48a87b179b6ca",
+  "radial_ring_width_mm": 2,
+  "axial_thickness_mm": 4,
+  "passes_per_ring_layer": 5,
+  "mounting_pad_count": 6,
+  "same_spider_stl": true,
+  "ring_has_no_raster_infill": true
+}

@@ -13,13 +13,14 @@ from shapely.ops import unary_union
 from split_tire import OUT,CENTERS
 
 
-def parse(path):
+def parse(path,outline_for_comp=None):
     lines=path.read_text().splitlines()
     start=lines.index('; HANDCRAFTED_TIRE_BODY_START')
     stop=lines.index('; HANDCRAFTED_TIRE_BODY_END')
     profile=json.loads((OUT/'printer/profile.json').read_text());center=np.array(profile['gcode_center_mm'])
     pos=np.array([18.,1.5,.2]);width=None;feed=None;layer=0;rolling=False;result=[];relative_e=False
     max_accel=0;previous_print_z=0
+    outlines={c:outline_for_comp(c).buffer(.002) for c in [0,.075,.15]} if outline_for_comp else {}
     for number in range(start+1,stop):
         line=lines[number]
         if line=='; CHANGE_LAYER':layer+=1
@@ -51,7 +52,8 @@ def parse(path):
             rend=float(np.linalg.norm(pos[:2]-c));assert abs(r-rend)<.00003,(number,r,rend)
             a=math.atan2(*(old[:2]-c)[::-1]);b=math.atan2(*(pos[:2]-c)[::-1]);sign=1 if cmd=='G3' else -1
             sweep=(sign*(b-a))%(2*math.pi)
-            assert abs(sweep-math.pi/2)<.00003,(number,sweep)
+            if outline_for_comp is None or rolling:
+                assert abs(sweep-math.pi/2)<.00003,(number,sweep)
             ts=a+sign*np.linspace(0,sweep,max(8,int(r*sweep/.15)+1))
             points=c+r*np.column_stack([np.cos(ts),np.sin(ts)])
             length=r*sweep;arc={'center':c.tolist(),'radius':r,'sweep':sweep}
@@ -63,6 +65,11 @@ def parse(path):
         assert radial.min()-width/2>=ri-.00004,(number,'inside ID',radial.min(),width)
         for q in CENTERS:
             assert np.linalg.norm(pp-q,axis=1).min()-width/2>=rh-.00005,(number,'screw hole')
+        if outline_for_comp is not None:
+            allowed=outlines[comp]
+            footprint_local=LineString(pp).buffer(width/2,quad_segs=12)
+            excess=footprint_local.difference(allowed).area
+            assert excess<.0002,(number,'outside narrow tire',excess)
         # Material footprint avoids the P1S excluded lower-left rectangle.
         footprint=LineString(points+np.array(profile['extruder_offset_mm'])).buffer(width/2,quad_segs=4)
         assert footprint.intersection(box(0,0,18,28)).area<1e-6

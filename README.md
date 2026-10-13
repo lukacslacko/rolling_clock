@@ -18,6 +18,8 @@ The [R3 design](designs/rolling-timer-r3/README.md) responds to the first build'
 
 **Optional split wheel, 13 October:** [4 mm circular G-code tires and separate spoke frames](designs/rolling-timer-r3/experiments/split-tire/README.md) reuse the existing axle, posts and M3×16 screws. Includes a P1S/PLA/Textured-PEI sliced job, frame STL and assembly drawing. Command/CAD checks and Bambu preview pass; physical results are pending. The uploaded slicer job already uses arcs with less than 0.002 mm measured radial variation within rim layers, so unequal preview command lengths are not themselves evidence of large flats.
 
+**Faster split tire:** the [2 mm radial, five-pass version](designs/rolling-timer-r3/experiments/split-tire/narrow-five-pass/README.md) keeps the same spoke frame and hardware. Estimated **1 h 5 min / 11.34 g per tire**, with six inward screw pads. Physical stiffness and rolling results are pending.
+
 ## Current state — first working build
 
 On **1 October 2026**, the complete lightweight **16:1** mechanism ran on its first physical trial, following a successful hand-driven bench test. This repository preserves that design before the next round of improvements. Running duration, timing accuracy and long-term wear have not yet been measured.
