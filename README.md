@@ -16,6 +16,8 @@ The [R3 design](designs/rolling-timer-r3/README.md) responds to the first build'
 
 **Optional trial, 13 October:** [longer anchor faces and a 16,384-segment rim](designs/rolling-timer-r3/experiments/long-face-anchor/README.md) address the reported deeper engagement after a sudden roll. The 8 mm faces pass geometric checks through two extra degrees on either side and use the existing pivot, spacers and frames. The anchor permits recoil; physical recovery remains untested. Trial files have separate names and leave the standard print kits unchanged.
 
+**Optional split wheel, 13 October:** [4 mm circular G-code tires and separate spoke frames](designs/rolling-timer-r3/experiments/split-tire/README.md) reuse the existing axle, posts and M3×16 screws. Includes a P1S/PLA/Textured-PEI sliced job, frame STL and assembly drawing. Command/CAD checks and Bambu preview pass; physical results are pending. The uploaded slicer job already uses arcs with less than 0.002 mm measured radial variation within rim layers, so unequal preview command lengths are not themselves evidence of large flats.
+
 ## Current state — first working build
 
 On **1 October 2026**, the complete lightweight **16:1** mechanism ran on its first physical trial, following a successful hand-driven bench test. This repository preserves that design before the next round of improvements. Running duration, timing accuracy and long-term wear have not yet been measured.

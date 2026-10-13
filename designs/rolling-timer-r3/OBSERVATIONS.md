@@ -36,3 +36,12 @@ The builder clarified the observed failure: while resting on a flat, the pendulu
 An optional long-face anchor is supplied in [experiments/long-face-anchor](experiments/long-face-anchor/README.md), separately from the existing working anchor. Both faces are 8 mm long, with their angles changed by 30 degrees toward the locking-arc tangents and their release endpoints retained. A straight extension at the original angle intersected a neighbouring tooth in the geometric trial. The revised slope clears the complete tooth shapes and the assembled R3 mechanism over the original swing plus two extra degrees at either end. It allows recoil and is not yet physically tested; geometric feasibility does not establish recovery from a sudden impact.
 
 The previously suggested 16,384-segment rim is now generated as the separately named `01_case_wheel_16384.stl` in the same trial folder. The standard `01_case_wheel.stl` remains the 1,536-segment version. All 51 standard print files and the existing assembled models are unchanged by this optional trial.
+
+
+## 13 October 2026 — split tire and supplied G-code inspection
+
+The builder observed irregular move lengths in Bambu Studio at 0.001 mm resolution and proposed a hand-generated solid tire with a conventionally sliced spoke frame. The supplied `01_case_wheel.gcode.3mf` confirms arc fitting: layer 2 has 59 G3 / 21 G1 outer moves and a 0.001261 mm radial range about the offset-corrected center. All 35 rim layers have less than 0.002 mm within-layer radial variation. This does not identify the physical cause of visible faceting.
+
+The optional `experiments/split-tire` set has a Ø248 / Ø222 × 4 mm solid tire, six Ø3.4 holes on Ø228 PCD, and four tangent outer arcs per layer. Perimeter speed is 40 mm/s (25 first), with 0.15/0.075/0 mm boundary compensation and distributed seams. A matching spider keeps the original hub, post lips and mounting planes; 4 mm tire + 3 mm pads preserve the M3×16 stack and existing axle/posts. Pads require removable supports. The pilot is a slip fit with 0.10 mm radial clearance, requiring careful centering.
+
+CAD compatibility, independently parsed command/coverage checks and Bambu Studio preview pass. Actual printing, concentricity and improved rolling remain untested. Standard 51 STL files are unchanged.

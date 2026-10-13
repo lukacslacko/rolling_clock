@@ -1,0 +1,40 @@
+{
+  "raw_gcode_sha256": "b4be31becbb177b616efe2ad94df1a07ffa19517fb61f13086af81207d1df518",
+  "layer_count": 20,
+  "outer_circle_commands_each_layer": 4,
+  "outer_wall_arcs_share_one_center": true,
+  "max_arc_center_rounding_error_allowed_mm": 2e-05,
+  "max_body_deposition_volumetric_rate_mm3_s": 4.787552115510822,
+  "deposition_filament_mm": 15897.836868000519,
+  "nominal_coverage": [
+    {
+      "layer": 1,
+      "nominal_bead_footprint_coverage_percent": 99.87785849358,
+      "uncovered_area_mm2": 11.373293542015551,
+      "no_uncovered_region_with_0_12mm_inradius": true
+    },
+    {
+      "layer": 2,
+      "nominal_bead_footprint_coverage_percent": 99.93196094038083,
+      "uncovered_area_mm2": 6.414339544957354,
+      "no_uncovered_region_with_0_12mm_inradius": true
+    },
+    {
+      "layer": 3,
+      "nominal_bead_footprint_coverage_percent": 99.93305232196613,
+      "uncovered_area_mm2": 6.38887768077266,
+      "no_uncovered_region_with_0_12mm_inradius": true
+    },
+    {
+      "layer": 4,
+      "nominal_bead_footprint_coverage_percent": 99.93301113534467,
+      "uncovered_area_mm2": 6.392808157441961,
+      "no_uncovered_region_with_0_12mm_inradius": true
+    }
+  ],
+  "body_bounds_and_bed_exclusion_passed": true,
+  "all_six_holes_clear": true,
+  "relative_extrusion_and_monotonic_print_heights": true,
+  "gcode_3mf_md5_and_contents_verified": true,
+  "limits": "Geometric/command checks and nominal bead coverage only. No firmware/thermal/extrusion/printed-roundness simulation. Startup is retained from the supplied P1S job."
+}

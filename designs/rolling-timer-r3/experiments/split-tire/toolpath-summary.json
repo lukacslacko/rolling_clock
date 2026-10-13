@@ -1,0 +1,265 @@
+{
+  "layers": [
+    {
+      "layer": 1,
+      "height_mm": 0.2,
+      "edge_compensation_mm": 0.15,
+      "outer_centerline_radius_mm": 123.6,
+      "rolling_wall_width_mm": 0.5,
+      "outer_commands": 4,
+      "infill_paths": 120,
+      "nominal_motion_seconds": 740.3911147900136,
+      "filament_mm": 776.5653620305637
+    },
+    {
+      "layer": 2,
+      "height_mm": 0.4,
+      "edge_compensation_mm": 0.075,
+      "outer_centerline_radius_mm": 123.715,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 144,
+      "nominal_motion_seconds": 451.8980055140779,
+      "filament_mm": 786.8622489493533
+    },
+    {
+      "layer": 3,
+      "height_mm": 0.6,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 135,
+      "nominal_motion_seconds": 453.6847710556351,
+      "filament_mm": 796.3662294952087
+    },
+    {
+      "layer": 4,
+      "height_mm": 0.8,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 137,
+      "nominal_motion_seconds": 454.6663077471585,
+      "filament_mm": 796.3459112298997
+    },
+    {
+      "layer": 5,
+      "height_mm": 1.0,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 135,
+      "nominal_motion_seconds": 455.1670827099065,
+      "filament_mm": 796.3662294952314
+    },
+    {
+      "layer": 6,
+      "height_mm": 1.2,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 137,
+      "nominal_motion_seconds": 454.9622521232927,
+      "filament_mm": 796.3459112299156
+    },
+    {
+      "layer": 7,
+      "height_mm": 1.4,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 135,
+      "nominal_motion_seconds": 455.82582374660296,
+      "filament_mm": 796.3662294952546
+    },
+    {
+      "layer": 8,
+      "height_mm": 1.6,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 137,
+      "nominal_motion_seconds": 456.2369113234181,
+      "filament_mm": 796.3459112299015
+    },
+    {
+      "layer": 9,
+      "height_mm": 1.8,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 135,
+      "nominal_motion_seconds": 455.1780578866578,
+      "filament_mm": 796.3662294952546
+    },
+    {
+      "layer": 10,
+      "height_mm": 2.0,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 137,
+      "nominal_motion_seconds": 455.7904139619204,
+      "filament_mm": 796.3459112299015
+    },
+    {
+      "layer": 11,
+      "height_mm": 2.2,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 135,
+      "nominal_motion_seconds": 453.18222890486595,
+      "filament_mm": 796.3662294951309
+    },
+    {
+      "layer": 12,
+      "height_mm": 2.4,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 137,
+      "nominal_motion_seconds": 455.04080946996874,
+      "filament_mm": 796.345911229766
+    },
+    {
+      "layer": 13,
+      "height_mm": 2.6,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 135,
+      "nominal_motion_seconds": 454.9594351929345,
+      "filament_mm": 796.36622949511
+    },
+    {
+      "layer": 14,
+      "height_mm": 2.8,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 137,
+      "nominal_motion_seconds": 454.7504575139601,
+      "filament_mm": 796.345911229766
+    },
+    {
+      "layer": 15,
+      "height_mm": 3.0,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 135,
+      "nominal_motion_seconds": 455.6627071678922,
+      "filament_mm": 796.36622949511
+    },
+    {
+      "layer": 16,
+      "height_mm": 3.2,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 137,
+      "nominal_motion_seconds": 456.03697249119523,
+      "filament_mm": 796.345911229766
+    },
+    {
+      "layer": 17,
+      "height_mm": 3.4,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 135,
+      "nominal_motion_seconds": 455.5206394886709,
+      "filament_mm": 796.36622949511
+    },
+    {
+      "layer": 18,
+      "height_mm": 3.6,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 137,
+      "nominal_motion_seconds": 456.07326187460876,
+      "filament_mm": 796.345911229766
+    },
+    {
+      "layer": 19,
+      "height_mm": 3.8,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 135,
+      "nominal_motion_seconds": 453.45043818828344,
+      "filament_mm": 796.36622949511
+    },
+    {
+      "layer": 20,
+      "height_mm": 4.0,
+      "edge_compensation_mm": 0,
+      "outer_centerline_radius_mm": 123.79,
+      "rolling_wall_width_mm": 0.42,
+      "outer_commands": 4,
+      "infill_paths": 137,
+      "nominal_motion_seconds": 455.3344463637659,
+      "filament_mm": 796.345911229766
+    }
+  ],
+  "height_mm": 4,
+  "layer_count": 20,
+  "body_filament_mm": 15897.836877504886,
+  "body_weight_g": 48.18086141349942,
+  "nominal_motion_seconds": 9383.81213751483,
+  "estimated_total_seconds": 10941,
+  "estimate_not_firmware_simulation": true,
+  "startup_purge_excluded_from_body_totals": true,
+  "profile": {
+    "source_file": "01_case_wheel.gcode.3mf",
+    "source_sha256": "ab56734e1c6bc31bf09f27588fb1a402fdc9ce5ba6f6dfe72b91430dac8c436a",
+    "slicer": "BambuStudio 02.05.00.66",
+    "printer": "Bambu Lab P1S",
+    "nozzle_diameter_mm": 0.4,
+    "filament": "Bambu PLA Basic",
+    "filament_diameter_mm": 1.75,
+    "filament_flow_ratio": 0.98,
+    "filament_density_g_cm3": 1.26,
+    "bed": "Textured PEI Plate",
+    "nozzle_c": 220,
+    "bed_c": 55,
+    "extruder_offset_mm": [
+      0,
+      2
+    ],
+    "model_center_mm": [
+      128,
+      128
+    ],
+    "gcode_center_mm": [
+      128,
+      126
+    ],
+    "ams_selection": "T0 / M620 S0A, as in the supplied job",
+    "retract_mm": 0.8,
+    "retract_speed_mm_s": 30,
+    "source_outer_wall_speed_mm_s": 200,
+    "source_resolution_mm": 0.001,
+    "source_arc_fitting": true
+  },
+  "raw_gcode_sha256": "b4be31becbb177b616efe2ad94df1a07ffa19517fb61f13086af81207d1df518"
+}

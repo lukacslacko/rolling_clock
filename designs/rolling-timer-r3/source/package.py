@@ -16,6 +16,12 @@ def main():
             assert len(z.namelist())==len(set(z.namelist())),path
         print(json.dumps({'file':str(path),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()}))
     pack(out/'rolling-timer-r3-complete.zip','rolling-timer-r3',[(p,str(p.relative_to(ROOT))) for p in sorted(paths)])
+    split=ROOT/'experiments/split-tire'
+    if (split/'gcode-checks.json').exists():
+        split_files=[(p,str(p.relative_to(split))) for p in sorted(split.rglob('*'))
+                     if p.is_file() and p.suffix not in ('.pyc','.zip','.log') and p.name!='.DS_Store']
+        split_files.append((ROOT/'LICENSE','LICENSE'))
+        pack(out/'rolling-timer-r3-split-tire-kit.zip','rolling-timer-r3-split-tire',split_files)
     trial=ROOT/'experiments/long-face-anchor'
     if (trial/'checks.json').exists():
         trial_files=[(p,str(p.relative_to(trial))) for p in sorted(trial.rglob('*'))

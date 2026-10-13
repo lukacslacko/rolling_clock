@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-13",
+  "application": "Bambu Studio 02.05.00.66",
+  "gcode_3mf_sha256": "5fb120137553557eebc1ccca45754311236e495f095338f871614d586c997d91",
+  "opened_successfully": true,
+  "configuration_warning_free": true,
+  "visible_layers": 20,
+  "visible_height_mm": 4,
+  "visible_tire_and_six_holes": true,
+  "displayed_total_time": "3h16m",
+  "displayed_filament_m": 15.93,
+  "displayed_weight_g": 48.28,
+  "print_sent_or_started": false
+}

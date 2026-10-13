@@ -1,0 +1,32 @@
+{
+  "source_file": "01_case_wheel.gcode.3mf",
+  "source_sha256": "ab56734e1c6bc31bf09f27588fb1a402fdc9ce5ba6f6dfe72b91430dac8c436a",
+  "slicer": "BambuStudio 02.05.00.66",
+  "printer": "Bambu Lab P1S",
+  "nozzle_diameter_mm": 0.4,
+  "filament": "Bambu PLA Basic",
+  "filament_diameter_mm": 1.75,
+  "filament_flow_ratio": 0.98,
+  "filament_density_g_cm3": 1.26,
+  "bed": "Textured PEI Plate",
+  "nozzle_c": 220,
+  "bed_c": 55,
+  "extruder_offset_mm": [
+    0,
+    2
+  ],
+  "model_center_mm": [
+    128,
+    128
+  ],
+  "gcode_center_mm": [
+    128,
+    126
+  ],
+  "ams_selection": "T0 / M620 S0A, as in the supplied job",
+  "retract_mm": 0.8,
+  "retract_speed_mm_s": 30,
+  "source_outer_wall_speed_mm_s": 200,
+  "source_resolution_mm": 0.001,
+  "source_arc_fitting": true
+}

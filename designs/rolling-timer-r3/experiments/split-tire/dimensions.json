@@ -1,0 +1,90 @@
+{
+  "outer_diameter_mm": 248,
+  "inner_diameter_mm": 222,
+  "tire_thickness_mm": 4,
+  "screw_holes_mm": 3.4,
+  "bolt_circle_diameter_mm": 228,
+  "hole_angles_deg": [
+    30,
+    90,
+    150,
+    210,
+    270,
+    330
+  ],
+  "pilot_diameter_mm": 221.8,
+  "nominal_radial_centering_clearance_mm": 0.1,
+  "spider_pad_thickness_mm": 3,
+  "case_post_face_z_mm": 7,
+  "hub_retained_exactly": true,
+  "same_axle_posts_and_M3x16_screws": true,
+  "mounts": [
+    {
+      "center_mm": [
+        98.72689603142601,
+        56.99999999999999
+      ],
+      "clamped_thickness_mm": 7,
+      "nut_near_z_mm": 12.5,
+      "nut_far_z_mm": 14.9,
+      "M3x16_tip_beyond_nut_mm": 1.1
+    },
+    {
+      "center_mm": [
+        6.980486755139913e-15,
+        114.0
+      ],
+      "clamped_thickness_mm": 7,
+      "nut_near_z_mm": 12.5,
+      "nut_far_z_mm": 14.9,
+      "M3x16_tip_beyond_nut_mm": 1.1
+    },
+    {
+      "center_mm": [
+        -98.72689603142601,
+        56.99999999999999
+      ],
+      "clamped_thickness_mm": 7,
+      "nut_near_z_mm": 12.5,
+      "nut_far_z_mm": 14.9,
+      "M3x16_tip_beyond_nut_mm": 1.1
+    },
+    {
+      "center_mm": [
+        -98.726896031426,
+        -57.000000000000014
+      ],
+      "clamped_thickness_mm": 7,
+      "nut_near_z_mm": 12.5,
+      "nut_far_z_mm": 14.9,
+      "M3x16_tip_beyond_nut_mm": 1.1
+    },
+    {
+      "center_mm": [
+        -2.094146026541974e-14,
+        -114.0
+      ],
+      "clamped_thickness_mm": 7,
+      "nut_near_z_mm": 12.5,
+      "nut_far_z_mm": 14.9,
+      "M3x16_tip_beyond_nut_mm": 1.1
+    },
+    {
+      "center_mm": [
+        98.72689603142598,
+        -57.00000000000005
+      ],
+      "clamped_thickness_mm": 7,
+      "nut_near_z_mm": 12.5,
+      "nut_far_z_mm": 14.9,
+      "M3x16_tip_beyond_nut_mm": 1.1
+    }
+  ],
+  "spider_print_bounds_mm": [
+    216.30494263768196,
+    241.79999999701977,
+    12.0
+  ],
+  "spider_watertight_connected": true,
+  "supports": "Build-plate supports under six raised pads; remove and clean their seating faces."
+}
