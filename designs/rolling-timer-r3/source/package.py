@@ -34,6 +34,12 @@ def main():
                           if p.is_file() and p.suffix not in ('.pyc','.zip','.log') and p.name!='.DS_Store']
             ribbed_files.append((ROOT/'LICENSE','LICENSE'))
             pack(out/'rolling-timer-r3-wide-zigzag-tire-kit.zip','rolling-timer-r3-wide-zigzag-tire',ribbed_files)
+        covered=split/'covered-zigzag'
+        if (covered/'checks.json').exists():
+            covered_files=[(p,str(p.relative_to(covered))) for p in sorted(covered.rglob('*'))
+                           if p.is_file() and p.suffix not in ('.pyc','.zip','.log') and p.name!='.DS_Store']
+            covered_files.append((ROOT/'LICENSE','LICENSE'))
+            pack(out/'rolling-timer-r3-covered-zigzag-tire-kit.zip','rolling-timer-r3-covered-zigzag-tire',covered_files)
     trial=ROOT/'experiments/long-face-anchor'
     if (trial/'checks.json').exists():
         trial_files=[(p,str(p.relative_to(trial))) for p in sorted(trial.rglob('*'))

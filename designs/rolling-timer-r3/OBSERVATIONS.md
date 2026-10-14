@@ -57,3 +57,10 @@ The builder requested a roughly 2 mm radial ring to avoid the wide tire's three-
 The builder printed the 2 mm radial tire and reported that it was very flimsy. The new `split-tire/wide-zigzag` job restores the original Ø248 / Ø222 × 4 mm envelope. Three outer circular passes and two inner passes are joined by a 0.5 mm repeated zigzag web, interrupted by six solid screw seats. There are no top/bottom skins or roofs. The existing split-wheel spider, axle, case posts and M3×16 screws are unchanged.
 
 Bambu Studio preview estimates 1 h 14 min / 14.44 g per tire, compared with 3 h 16 min / 48.28 g for the solid wide tire, and 1 h 5 min / 11.34 g for the narrow trial. Geometry, emitted commands, layer support and mounting checks pass. Physical stiffness and loaded roundness of the new ribbed version remain to be tested. Enable Bed leveling in the print dialog.
+
+
+## 14 October 2026 — covered zigzag tire for torsion
+
+The builder requested a few full layers on the bottom and top of the wide zigzag tire to resist torsion. The separate `split-tire/covered-zigzag` job adds three 0.2 mm concentric solid layers on each face, leaving a 2.8 mm zigzag core inside the original 4 mm thickness. All six screw bores and solid mounting seats remain; the spoke frame, axle, posts and M3×16 screws are unchanged.
+
+The first top layer is printed at 25 mm/s across the core cells with full part cooling, with every skin path beginning on a solid pad or bore wall. Bambu Studio displays 1 h 54 min and approximately 24.5 g per tire. Geometric/command and preview checks are recorded with the job; physical bridging quality, torsional stiffness and loaded roundness remain untested.

@@ -13,7 +13,7 @@ from shapely.ops import unary_union
 from split_tire import OUT,CENTERS
 
 
-def parse(path,outline_for_comp=None):
+def parse(path,outline_for_comp=None,allow_partial_arcs=False):
     lines=path.read_text().splitlines()
     start=lines.index('; HANDCRAFTED_TIRE_BODY_START')
     stop=lines.index('; HANDCRAFTED_TIRE_BODY_END')
@@ -52,7 +52,7 @@ def parse(path,outline_for_comp=None):
             rend=float(np.linalg.norm(pos[:2]-c));assert abs(r-rend)<.00003,(number,r,rend)
             a=math.atan2(*(old[:2]-c)[::-1]);b=math.atan2(*(pos[:2]-c)[::-1]);sign=1 if cmd=='G3' else -1
             sweep=(sign*(b-a))%(2*math.pi)
-            if outline_for_comp is None or rolling:
+            if (outline_for_comp is None and not allow_partial_arcs) or rolling:
                 assert abs(sweep-math.pi/2)<.00003,(number,sweep)
             ts=a+sign*np.linspace(0,sweep,max(8,int(r*sweep/.15)+1))
             points=c+r*np.column_stack([np.cos(ts),np.sin(ts)])

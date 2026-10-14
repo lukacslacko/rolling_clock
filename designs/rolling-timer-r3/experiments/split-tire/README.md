@@ -1,6 +1,6 @@
 # Split wheel: circular G-code tire and sliced spoke frame
 
-**Current lightweight trial:** the [wide zigzag tire](wide-zigzag/README.md) restores this tire's 13 mm radial width with open ribs and solid screw seats. Bambu Studio estimates **1 h 14 min / 14.44 g**, versus **3 h 16 min / 48.28 g** for this solid wide tire. Same spoke frame and hardware. Physical stiffness and rolling remain untested. The earlier [2 mm-wide tire](narrow-five-pass/README.md) was printed and reported too flimsy on 14 October.
+**Current closed-face trial:** the [covered zigzag tire](covered-zigzag/README.md) has three solid concentric layers on each face around a sparse zigzag core, within the original Ø248 / Ø222 × 4 mm envelope. Bambu Studio estimates **1 h 54 min / about 24.5 g**, versus 3 h 16 min / 48.28 g for this solid tire. Same spoke frame and hardware. The [open zigzag version](wide-zigzag/README.md) remains available; the [2 mm-wide tire](narrow-five-pass/README.md) was printed and reported too flimsy. Physical stiffness and rolling of the new covered version remain untested.
 
 Optional R3 experiment, 13 October 2026. Replaces each complete case wheel with a **4 mm solid tire** and a **spoke frame**. The original axle, six case posts, captive nuts and twelve M3×16 case screws are reused. Fits the existing 16:1, 32:1 and 64:1 drum assemblies without widening.
 

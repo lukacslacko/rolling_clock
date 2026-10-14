@@ -1,5 +1,7 @@
 # Wide tire with open zigzag ribs
 
+**Covered-face revision:** the [covered zigzag tire](../covered-zigzag/README.md) adds three solid concentric layers on each face for the requested torsional stiffness, retaining the same total thickness and hardware. This open version is preserved separately.
+
 This version responds to the 14 October report that the 2 mm-wide printed ring was too flimsy. It restores the original **248 mm OD, 222 mm ID and 4 mm axial thickness**, while removing most of the interior material.
 
 Bambu Studio preview estimates **1 h 14 min and 14.44 g per tire**, including 7 min 12 s preparation. The solid wide tire displayed 3 h 16 min and 48.28 g: approximately **62% less time and 70% less material**. Compared with the narrow trial, this uses about 3.1 g more PLA and 9 minutes more time. Estimates are software predictions; physical stiffness and loaded roundness still need testing.

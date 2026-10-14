@@ -1,0 +1,82 @@
+{
+  "tire_watertight_connected": true,
+  "no_collision_with_existing_spider": true,
+  "six_solid_screw_seats": true,
+  "same_M3x16_screws_and_7mm_stack": true,
+  "spider_sha256": "f276ebd0c308683afaffe19b5d66ec1c05d7d1ff55fc2c8e7916001a601e542c",
+  "bottom_skin_mm": 0.6,
+  "core_height_mm": 2.8,
+  "top_skin_mm": 0.6,
+  "enclosed_core_cells": 114,
+  "outer_diameter_mm": 248,
+  "inner_diameter_mm": 222,
+  "axial_thickness_mm": 4,
+  "raw_gcode_sha256": "6dec8018b2e1525a00f08f1b4c97fa4b24dd9090a190d773012b59d79d89e5cd",
+  "solid_skin_layers": [
+    1,
+    2,
+    3,
+    18,
+    19,
+    20
+  ],
+  "solid_skins_are_concentric": true,
+  "first_roof_max_unsupported_arc_mm": 11.789370606302802,
+  "first_roof_unsupported_spans": 2880,
+  "first_roof_fill_starts_supported": true,
+  "first_roof_speed_mm_s": 25,
+  "body_bounds_and_bed_exclusion_passed": true,
+  "all_six_bores_clear": true,
+  "max_deposition_mm3_s": 4.787413327812223,
+  "coverage": [
+    {
+      "layer": 1,
+      "solid_skin": true,
+      "coverage_percent": 99.99483886249537,
+      "connected_material": true
+    },
+    {
+      "layer": 2,
+      "solid_skin": true,
+      "coverage_percent": 99.99887230604108,
+      "connected_material": true
+    },
+    {
+      "layer": 3,
+      "solid_skin": true,
+      "coverage_percent": 99.99810327918621,
+      "connected_material": true
+    },
+    {
+      "layer": 4,
+      "solid_skin": false,
+      "coverage_percent": 99.98432352131174,
+      "connected_material": true
+    },
+    {
+      "layer": 17,
+      "solid_skin": false,
+      "coverage_percent": 99.98451085030709,
+      "connected_material": true
+    },
+    {
+      "layer": 18,
+      "solid_skin": true,
+      "coverage_percent": 99.99810822619887,
+      "connected_material": true
+    },
+    {
+      "layer": 19,
+      "solid_skin": true,
+      "coverage_percent": 99.99808459724832,
+      "connected_material": true
+    },
+    {
+      "layer": 20,
+      "solid_skin": true,
+      "coverage_percent": 99.998072927875,
+      "connected_material": true
+    }
+  ],
+  "limits": "Geometric/command checks only. Bridging quality, torsional stiffness, adhesion and loaded roundness require a physical trial."
+}
