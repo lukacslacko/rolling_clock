@@ -1,5 +1,7 @@
 # Narrow tire — five circular passes per layer
 
+**Physical feedback, 14 October 2026:** the builder printed this version and found it very flimsy. Use the new [13 mm-wide zigzag trial](../wide-zigzag/README.md) for the next test. This narrow version remains available as a record; its printed stiffness was insufficient.
+
 The tire now has a **2 mm radial wall** between its **248 mm OD and 244 mm ID**, with six inward mounting pads. Its **4 mm axial thickness** is unchanged. All twenty 0.2 mm layers have **five uninterrupted concentric circles** around the rolling ring. Only the six mounting pads have local solid infill.
 
 Bambu Studio 02.05.00.66 preview estimates **1 h 5 min and 11.34 g per tire**, including 7 min 12 s preparation. The earlier 13 mm-wide tire displayed 3 h 16 min and 48.28 g: approximately **67% less time and 76.5% less material**. These are software estimates; no physical printing or improved roundness is claimed.

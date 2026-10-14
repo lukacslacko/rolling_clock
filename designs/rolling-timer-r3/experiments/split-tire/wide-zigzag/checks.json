@@ -1,0 +1,51 @@
+{
+  "tire_watertight_connected": true,
+  "same_spider_sha256": "f276ebd0c308683afaffe19b5d66ec1c05d7d1ff55fc2c8e7916001a601e542c",
+  "no_collision_with_existing_spider": true,
+  "six_solid_screw_bearing_patches": true,
+  "same_M3x16_screws_and_7mm_stack": true,
+  "outer_diameter_mm": 248,
+  "inner_diameter_mm": 222,
+  "axial_thickness_mm": 4,
+  "mount_hole_diameter_mm": 3.4,
+  "bolt_circle_mm": 228,
+  "raw_gcode_sha256": "e04f7235ec7508f59e1be91e7d097cea7f28566735091c9994017affce5d116a",
+  "twenty_layers_with_three_outer_and_two_inner_circles": true,
+  "rib_width_mm": 0.5,
+  "no_top_bottom_skins_or_roofs": true,
+  "stable_full_height_web": true,
+  "body_bounds_and_bed_exclusion_passed": true,
+  "all_six_bores_clear": true,
+  "max_deposition_mm3_s": 4.787415345936404,
+  "coverage": [
+    {
+      "layer": 1,
+      "nominal_material_coverage_percent": 99.97496765489686,
+      "connected_wall_web_and_screw_pads": true,
+      "solid_screw_seats": true,
+      "intentional_open_area_mm2": 6234.0841789336355
+    },
+    {
+      "layer": 2,
+      "nominal_material_coverage_percent": 99.99400079619409,
+      "connected_wall_web_and_screw_pads": true,
+      "solid_screw_seats": true,
+      "intentional_open_area_mm2": 6493.556441916164
+    },
+    {
+      "layer": 3,
+      "nominal_material_coverage_percent": 99.98439465082627,
+      "connected_wall_web_and_screw_pads": true,
+      "solid_screw_seats": true,
+      "intentional_open_area_mm2": 6576.953080375062
+    },
+    {
+      "layer": 4,
+      "nominal_material_coverage_percent": 99.98432352131174,
+      "connected_wall_web_and_screw_pads": true,
+      "solid_screw_seats": true,
+      "intentional_open_area_mm2": 6576.953080375062
+    }
+  ],
+  "limits": "Geometric/command checks only; physical stiffness, adhesion, shrinkage and loaded roundness remain untested."
+}

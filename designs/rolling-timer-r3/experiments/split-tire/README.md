@@ -1,6 +1,6 @@
 # Split wheel: circular G-code tire and sliced spoke frame
 
-**Faster option:** the [2 mm-wide, five-pass tire](narrow-five-pass/README.md) uses the same spoke frame and hardware. Bambu Studio estimates **1 h 5 min / 11.34 g**, versus **3 h 16 min / 48.28 g** for this original wide tire. Its thinner ring needs a physical stiffness/rolling trial.
+**Current lightweight trial:** the [wide zigzag tire](wide-zigzag/README.md) restores this tire's 13 mm radial width with open ribs and solid screw seats. Bambu Studio estimates **1 h 14 min / 14.44 g**, versus **3 h 16 min / 48.28 g** for this solid wide tire. Same spoke frame and hardware. Physical stiffness and rolling remain untested. The earlier [2 mm-wide tire](narrow-five-pass/README.md) was printed and reported too flimsy on 14 October.
 
 Optional R3 experiment, 13 October 2026. Replaces each complete case wheel with a **4 mm solid tire** and a **spoke frame**. The original axle, six case posts, captive nuts and twelve M3×16 case screws are reused. Fits the existing 16:1, 32:1 and 64:1 drum assemblies without widening.
 

@@ -50,3 +50,10 @@ CAD compatibility, independently parsed command/coverage checks and Bambu Studio
 ## 13 October 2026 — narrower five-pass tire
 
 The builder requested a roughly 2 mm radial ring to avoid the wide tire's three-hour print. The new `split-tire/narrow-five-pass` job keeps Ø248 mm and 4 mm axial thickness, but uses five complete concentric circular paths per layer between six inward screw pads. Local infill is confined to those pads. The spoke frame is byte-identical and screw/axle/post stacks remain unchanged. Bambu Studio preview estimates 1 h 5 min and 11.34 g, compared with 3 h 16 min / 48.28 g for the wide tire. The command/CAD geometry is checked; the thinner ring's flexibility and roundness under load require a physical trial.
+
+
+## 14 October 2026 — narrow tire too flimsy; wide zigzag replacement
+
+The builder printed the 2 mm radial tire and reported that it was very flimsy. The new `split-tire/wide-zigzag` job restores the original Ø248 / Ø222 × 4 mm envelope. Three outer circular passes and two inner passes are joined by a 0.5 mm repeated zigzag web, interrupted by six solid screw seats. There are no top/bottom skins or roofs. The existing split-wheel spider, axle, case posts and M3×16 screws are unchanged.
+
+Bambu Studio preview estimates 1 h 14 min / 14.44 g per tire, compared with 3 h 16 min / 48.28 g for the solid wide tire, and 1 h 5 min / 11.34 g for the narrow trial. Geometry, emitted commands, layer support and mounting checks pass. Physical stiffness and loaded roundness of the new ribbed version remain to be tested. Enable Bed leveling in the print dialog.

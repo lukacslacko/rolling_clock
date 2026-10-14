@@ -35,7 +35,7 @@ The [split-wheel experiment](experiments/split-tire/README.md) separates a 4 mm 
 
 Inspection of the builder's uploaded sliced 3MF found that its long perimeter moves are predominantly arcs. Layer 2 varies only 0.001261 mm radially, and every measured rim layer stays below 0.002 mm peak-to-peak. Thus long/short moves in the preview are not, by themselves, corresponding flat faces. The experiment controls the print path and makes the rolling rim replaceable; it does not promise physical roundness. See the linked notes for measurements, setup and assembly.
 
-**Faster tire option:** the [narrow five-pass tire](experiments/split-tire/narrow-five-pass/README.md) reduces radial width from 13 mm to 2 mm between six mounting pads, retaining the 4 mm axial thickness and identical spoke frame. Bambu Studio estimates **1 h 5 min and 11.34 g** per tire, versus 3 h 16 min / 48.28 g. Five complete concentric paths form each ring layer; only the small screw pads have local infill. Printed stiffness and roundness remain untested.
+**Wide zigzag tire, 14 October:** the [open ribbed tire](experiments/split-tire/wide-zigzag/README.md) restores the full 13 mm radial width, retaining the 4 mm axial thickness, solid screw seats and identical spoke frame. Bambu Studio estimates **1 h 14 min and 14.44 g** per tire, versus 3 h 16 min / 48.28 g for the solid wide ring. Three outer and two inner circular passes are joined by a repeated 0.5 mm zigzag web; there are no top/bottom skins. Geometry and preview checks pass; physical stiffness and rolling remain untested. The earlier [2 mm narrow tire](experiments/split-tire/narrow-five-pass/README.md) was printed and reported too flimsy.
 
 ## Pivot-base correction - 7 October 2026
 

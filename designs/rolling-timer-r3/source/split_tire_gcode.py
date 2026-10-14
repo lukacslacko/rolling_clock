@@ -173,7 +173,8 @@ def generate():
 
 
 def write_job(w,stats,out=OUT,name=NAME,outline=None,wall_loops=3,
-              description='Analytic circle, 248 mm OD / 222 mm ID / 4 mm thick, six 3.4 mm holes.'):
+              description='Analytic circle, 248 mm OD / 222 mm ID / 4 mm thick, six 3.4 mm holes.',
+              fill_description='full dense fill',config_extra=None):
     w.add('; HANDCRAFTED_TIRE_BODY_END');w.add('M1003 S0');w.add('M106 S0');w.add('M106 P2 S0');w.add('M981 S0 P20000')
     start=(OUT/'printer/p1s-start.gcode.in').read_text()
     end=(OUT/'printer/p1s-end.gcode.in').read_text().format(end_lift_z=f'{TIRE_H+.5:.1f}')
@@ -186,6 +187,7 @@ def write_job(w,stats,out=OUT,name=NAME,outline=None,wall_loops=3,
                    'enable_arc_fitting':'1','resolution':'0.001','brim_type':'no_brim',
                    'brim_width':'0','enable_support':'0','seam_position':'random',
                    'upward_compatible_machine':['Bambu Lab P1S 0.4 nozzle']})
+    if config_extra:config.update(config_extra)
     # Explicit subset consumed by the G-code preview. Metadata settings retain
     # the source machine profile; the actual paths below are already generated.
     header=f'''; HEADER_BLOCK_START
@@ -228,7 +230,7 @@ def write_job(w,stats,out=OUT,name=NAME,outline=None,wall_loops=3,
 ; bed_exclude_area = 0x0,18x0,18x28,0x28
 ; CONFIG_BLOCK_END
 ; {description}
-; First layers: radial compensation 0.15 / 0.075 / 0 mm; full dense fill.
+; First layers: radial compensation 0.15 / 0.075 / 0 mm; {fill_description}.
 ; Requires the same P1S 0.4 / PLA / textured PEI setup as the supplied job.
 ; Retains source T0 / AMS slot 0 selection. Inspect preview before printing.
 '''
@@ -241,6 +243,7 @@ def write_job(w,stats,out=OUT,name=NAME,outline=None,wall_loops=3,
                       'outer_wall_acceleration':'500,500','brim_type':'no_brim',
                       'brim_width':'0','enable_support':'0',
                       'upward_compatible_machine':'"Bambu Lab P1S 0.4 nozzle"'})
+    if config_extra:overrides.update({key:str(value) for key,value in config_extra.items()})
     preview_config=(OUT/'printer/gcode-settings.gcode.in').read_text()
     for key,value in overrides.items():
         preview_config=re.sub(r'^; '+key+r' = .*$',lambda m: '; '+key+' = '+value,preview_config,flags=re.M)
